@@ -59,7 +59,7 @@ This dashboard contains business, economic, 311 service requests, crime, and oth
 </div>
 
 <div class="footer">
-  Data is updated accordingly. For more information please visit the About the Data page at the end of the dashboard or click the icon.
+  Data is updated accordingly. For more information please visit the About the Data page at the end of the dashboard.
 </div>
 
 
