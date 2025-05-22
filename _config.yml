@@ -24,8 +24,8 @@ author:
 baseurl: '/guides-template'
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
-logourl: assets/img/dpob-staff-community-clean.jpg
-logoalt: The DPOB Team
+logourl: assets/img/dpob black and white banner.png
+logoalt: The DPOB Logo
 
 # Navigation
 # List links that should appear in the site sidebar here
