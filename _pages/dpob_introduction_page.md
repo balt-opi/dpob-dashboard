@@ -5,7 +5,7 @@ title: Downtown Partnership of Baltimore Dashboard
 ---
 
 .hero {
-  background-image: url('https://github.com/user-attachments/assets/edfb1121-3fd4-4117-a22f-9159ac49bdc9');
+  background-image: url('assets/img/dpob-staff-community-clean.jpg');
   background-size: cover;
   background-position: center;
   padding: 60px 20px;
