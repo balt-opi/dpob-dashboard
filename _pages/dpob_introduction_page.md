@@ -70,19 +70,3 @@ This dashboard contains business, economic, 311 service requests, crime, and oth
 
 
 
-
-
-
-
-
-
-
-![dpob-staff-community-clean](https://github.com/user-attachments/assets/edfb1121-3fd4-4117-a22f-9159ac49bdc9)
-
-
-
-
-
-
-
-
