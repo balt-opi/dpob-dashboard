@@ -6,13 +6,18 @@ title: Introduction
 
 ## Downtown Partnership of Baltimore
 
-The template is derived from [CFPB/DOCter](https://github.com/CFPB/DOCter) and [18F/guides-template](https://github.com/18F/guides-template). It uses [Jekyll](http://jekyllrb.com/) as the rendering engine.
+### WE ARE DPOB!
 
-DCgov guides sites are intended for documenting **best practice standards** (e.g. design, accessibility, analytics, licensing). They may also be used to provide **background information** on project repositories, but you really should try to do so in your repository's README file. [18F's open source style guide](https://pages.18f.gov/open-source-guide/) provides excellent advice for making your projects easy to use and understand!
+## Our Mission: 
 
-## Create a new guide
+Activating Downtown spaces is an important part of the work we do.
 
-To get started on a new guide, follow [the "Getting started" instructions in the DCgov/guides-template GitHub repository](https://github.com/DCgov/guides-template/#getting-started) to create a local clone of this template.
+## Who We Are!
 
-Once you've created a clone, click the _Add a New Page_ entry in the table of
-contents to begin the rest of the steps.
+When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all DPOB, and we’ve been making Baltimore great for over 35 years.
+
+## What We Do!
+
+Public Safety and Hospitality, Beautification, Economic Development and Advocacy, Membership and Networking, Events, and Marketing and Promotions.
+
+# In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.
