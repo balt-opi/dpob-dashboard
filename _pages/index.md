@@ -3,13 +3,11 @@ layout: page
 permalink: /dpob_introduction_page
 title: Downtown Partnership of Baltimore
 ---
-<link rel="stylesheet" href="/css/dpob_cleanup.css">
+<link rel="stylesheet" href="/dpob_cleanup.css">
 
 <div class="hero">
-  <h1>Welcome to Downtown Baltimore</h1>
+  <h1>WE ARE DPOB!</h1>
 </div>
-
-### WE ARE DPOB!
 
 In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.
 
