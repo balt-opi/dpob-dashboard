@@ -35,8 +35,11 @@ The Downtown Partnership of Baltimore (DPOB) dashboard highlights the economic g
 
 ## Links 
 https://www.downtownbaltimorerise.com/
+
 https://godowntownbaltimore.com/
+
 https://opi.baltimorecity.gov/
+
 https://www.baltimorecity.gov/
 
 ## Dashboard Direct Link
