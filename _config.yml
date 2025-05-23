@@ -50,7 +50,7 @@ navigation:
 # Repo list
 # List repos that you would like to appear on the homepage here
 repos:
-- name: guides-template
+- name: dpob-github
   description: 
   url: https://github.com/balt-opi/dpob-dashboard
 
