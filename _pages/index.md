@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: /dpob_introduction_page
-title: Introduction
 ---
 
 ## Introduction
