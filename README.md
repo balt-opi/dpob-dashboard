@@ -1,86 +1,60 @@
-## DCgov Guides Template
+READme 
 
-This repository is at once a skeleton template for DCgov Guides sites and a set of instructions for setting up your own DCgov Guide. 
+Project Information 
 
-DCgov guides sites are intended for documenting **best practice standards** (e.g. design, accessibility, analytics, licensing). They may also be used to provide **background information** on project repositories, but you really should try to do so in your repository's README file. [18F's open source style guide](https://pages.18f.gov/open-source-guide/) provides excellent advice for making your projects easy to use and understand!
+The Downtown Partnership of Baltimore (DPOB) dashboard highlights the economic geography of Baltimore’s Central Business District (CBD) and the downtown management area. This dashboard aims to be user-friendly, publicly accessible, and available to stakeholders both within and outside the city. By integrating a variety of datasets and analytical methods, the dashboard will provide valuable insights to support DPOB in identifying and addressing the services Baltimore needs to remain sustainable and thrive. 
+ 
+Datasets 
 
-The template is based on [CFPB/DOCter](https://github.com/CFPB/DOCter)-based, using [Jekyll](http://jekyllrb.com/) as the rendering engine. The guide's text is based on the [18F/guides-template](https://github.com/18F/guides-template).
+311 Service Requests 
 
+Baltimore City Labor Force 1 and 5 year data 
 
-### Getting started
+Citywide Conventions 
 
-#### Installing Ruby
+Dumpsters installed 
 
-You will need [Ruby](https://www.ruby-lang.org) ( > version 2.0 ). To check
-whether it's already installed on a UNIX-like system, open up a terminal
-window (e.g. Terminal on OS X) and type `ruby -v` at the command prompt. For
-example, you should see something similar to the following:
+Employment Rates 
 
-```shell
-$ ruby -v
-ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
-```
+Group A Crime 
 
-If the version number is less than 2.0, or instead you see something like:
+Larceny and Shoplifting 
 
-```shell
-$ ruby -v
--bash: ruby: command not found
-```
+Hotel Count 
 
-Then Ruby is not installed, and you should choose one of the installation
-methods below. [The "Installing Ruby" page of the official
-Ruby language web
-site](https://www.ruby-lang.org/en/documentation/installation/) explains how
-to do this in a number of ways across many different systems.
+Health Services 
 
-##### Quickest Ruby install/upgrade for OS X
+Large Events 
 
-On OS X, you can use [Homebrew](http://brew.sh/) to install Ruby in
-`/usr/local/bin`, which may require you to update your `$PATH` environment
-variable:
+Number of Trees planted 
 
-```shell
-$ brew update
-$ brew install ruby
-```
+Number of Tree Wells 
 
-##### Optional: using a version manager
+Number of planters installed 
 
-Whether or not Ruby is already installed, we strongly recommend using a Ruby
-version manager such as [rbenv](https://github.com/sstephenson/rbenv) or
-[rvm](https://rvm.io/) to help ensure that Ruby version upgrades don't mean
-all your [gems](https://rubygems.org/) will need to be rebuilt.
+Other Businesses 
 
-#### Install Dependencies
+Restaurants and Bars 
 
-To install all of the site's dependencies, run the following commands:
+Total Businesses 
 
-```shell
-$ gem install bundler
-$ bundle install
-```
+Trash Cans installed 
 
-#### Cloning and serving the Guides Template locally
+Unemployment Rate 
 
-To create a new guide and serve it locally, where `MY-NEW-GUIDE` is the name
-of your new repository:
+Methods 
 
-```shell
-$ git clone https://github.com/DCgov/guides-template.git MY-NEW-GUIDE
-$ cd MY-NEW-GUIDE
-$ ./go serve
-```
+PowerBI 
 
-This will launch a running instance at `http://localhost:4000/`.
+VScode 
 
-#### Follow the template instructions
+Ruby 
 
-The Guides Template (either [running locally](http://localhost:4000) or the
-[published version](https://dcgov.github.io/guides-template/)) will walk you
-through the rest of the steps to edit and publish your guide.
+Rstudio 
 
+Github/Github pages 
 
-## Public Domain
+Links 
 
-This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the CC0 1.0 Universal public domain dedication. For more information, see [LICENSE.md](https://github.com/DCgov/license/blob/master/LICENSE.md).
+https://app.powerbigov.us/view?r=eyJrIjoiMzIwNjExMDUtYTIwZC00ZmVjLWE1ZmMtYmRlYjRiMzEzMDI1IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9
+ 
