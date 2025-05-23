@@ -3,7 +3,7 @@ layout: page
 permalink: /dpob_introduction_page
 title: Downtown Partnership of Baltimore
 ---
-<link rel="stylesheet" href="/dpob_logo_2.jpg">
+image: dpob_logo_2.jpg
 
 <div class="hero">
   <h1>WE ARE DPOB!</h1>
