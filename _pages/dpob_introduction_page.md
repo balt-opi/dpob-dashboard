@@ -1,6 +1,6 @@
 <style>
 .hero {
-  background-image: url('../assets/img/dpob-staff-community-clean.jpg');
+  background-image: url('/img/dpob-staff-community-clean.jpg');
   background-size: cover;
   background-position: center;
   padding: 60px 20px;
