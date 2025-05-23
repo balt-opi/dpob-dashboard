@@ -1,7 +1,6 @@
 ---
-layout: page
-permalink: /dpob_introduction_page
-title: Introduction
+layout: redirect
+redirect: /dpob_introduction_page
 ---
 
 ## Introduction
