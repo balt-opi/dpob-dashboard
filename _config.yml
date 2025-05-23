@@ -31,7 +31,7 @@ logoalt: The DPOB Logo
 navigation:
 - text: Introduction
   internal: true
-  url: _pages/dpob_introduction_page.md
+  url: _pages/dpob_introduction_page/
 - text: Add a new page
   internal: true
   url: add-a-new-page
