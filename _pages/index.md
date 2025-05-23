@@ -4,7 +4,7 @@ permalink: /dpob_introduction_page
 title: Downtown Partnership of Baltimore
 ---
 
-<img src="/img/dpob_logo_2.jpg" alt="DPOB Logo" style="max-width: 300px;">
+<img src="/dpob-dashboard/images/dpob_banner.png" alt="DPOB Banner" style="width: 100%; height: auto; margin-bottom: 20px;">
 
 # WE ARE DPOB!
 
