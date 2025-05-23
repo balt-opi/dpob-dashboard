@@ -31,7 +31,7 @@ logoalt: The DPOB Logo
 navigation:
 - text: Introduction
   internal: true
-  url: _pages/dpob_introduction_page/
+  url: /dpob_introduction_page/
 - text: Add a new page
   internal: true
   url: add-a-new-page
@@ -43,7 +43,7 @@ navigation:
   url: github
 - text: Create a Glossary
   glossary: true
-- text: Edit this Repo
+- text: Data Dictionary
   internal: false
   url: https://github.com/DCgov/guides-template
 
