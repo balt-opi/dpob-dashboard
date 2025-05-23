@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /
+permalink: /dpob_introduction_page
 title: Introduction
 ---
 
