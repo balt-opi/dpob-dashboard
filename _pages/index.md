@@ -3,7 +3,11 @@ layout: page
 permalink: /dpob_introduction_page
 title: Downtown Partnership of Baltimore
 ---
-<img src="{{ site.baseurl }}/img/dpob-staff-community-clean.jpg" alt="DPOB Staff Community Clean Up" style="width:100%; max-height:500px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+<link rel="stylesheet" href="/css/dpob_cleanup.css">
+
+<div class="hero">
+  <h1>Welcome to Downtown Baltimore</h1>
+</div>
 
 ### WE ARE DPOB!
 
