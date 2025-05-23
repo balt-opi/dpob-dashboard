@@ -1,19 +1,54 @@
----
-layout: page
-permalink: /dpob_introduction_page
-title: Introduction
----
+<style>
+.hero {
+  background-image: url('/img/dpob-staff-community-clean.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: black;
+  min-height: 90vh;
+}
+.overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  max-width: 960px;
+  margin: auto;
+  border-radius: 6px;
+}
+h1.hero-title {
+  background-color: #00ab66;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.footer {
+  background-color: #00ab66;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+</style>
 
-## Introduction
+<div class="hero">
+  <div class="overlay">
+    <h1 class="hero-title">Downtown Partnership of Baltimore</h1>
 
-The template is derived from [CFPB/DOCter](https://github.com/CFPB/DOCter) and [18F/guides-template](https://github.com/18F/guides-template). It uses [Jekyll](http://jekyllrb.com/) as the rendering engine.
+    <h3>WE ARE DPOB!</h3>
 
-DCgov guides sites are intended for documenting **best practice standards** (e.g. design, accessibility, analytics, licensing). They may also be used to provide **background information** on project repositories, but you really should try to do so in your repository's README file. [18F's open source style guide](https://pages.18f.gov/open-source-guide/) provides excellent advice for making your projects easy to use and understand!
+    <p><strong>Mission:</strong> Activating Downtown spaces is an important part of the work we do.</p>
 
-## Create a new guide
+    <p><strong>Who we are:</strong> When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all DPOB, and we’ve been making Baltimore great for over 35 years.</p>
 
-To get started on a new guide, follow [the "Getting started" instructions in the DCgov/guides-template GitHub repository](https://github.com/DCgov/guides-template/#getting-started) to create a local clone of this template.
+    <p><strong>What we do:</strong> Public Safety and Hospitality, Beautification, Economic Development and Advocacy, Membership and Networking, Events, and Marketing and Promotions.</p>
 
-Once you've created a clone, click the _Add a New Page_ entry in the table of
-contents to begin the rest of the steps.
+    <blockquote>In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.</blockquote>
 
+    <p>This dashboard contains business, economic, 311 service requests, crime, and other demographic data within the Downtown Management Area of Baltimore City.</p>
+  </div>
+</div>
+
+<div class="footer">
+  Data is updated accordingly. For more information please visit the <a href="/about-the-data/">About the Data page</a>.
+</div>
