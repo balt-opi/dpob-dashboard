@@ -23,7 +23,7 @@ author:
 baseurl: '/dpob-dashboard'
 
 # Point the logo URL at a file in your repo or hosted elsewhere by your organization
-logourl: '/dpob-dashboard/images/dpob_banner.png'
+logourl: '/dpob-dashboard/images/dpob.jpg'
 logoalt: The DPOB Logo
 
 # Navigation
