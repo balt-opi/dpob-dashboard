@@ -5,7 +5,6 @@ title: Business and Economy
 
 **Employment and Labor**
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
