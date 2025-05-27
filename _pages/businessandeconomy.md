@@ -26,36 +26,24 @@ title: Business and Economy
       line: { color: '#00d084' },
       marker: { size: 8 }
     }];
-   const occupancyLayout = {
-     title: {
-       text: 'Baltimore CBD Office Occupancy (Quarterly)<br><sup>Source: Baltimore Development Corp, 2024</sup>',
-       font: { color: 'black', size: 20 },
-       x: 0.5,
-       xanchor: 'center'
-     },
-     plot_bgcolor: "white",
-     paper_bgcolor: "white",
-     font: { color: "black" },
-     xaxis: { 
-       title: "Year (Quarterly)",
-       linecolor: "black",  // darker vertical axis line
-       linewidth: 2,
-       gridcolor: "#444444",   // darker grid lines (gray)
-       gridwidth: 1.5          // a bit thicker
-  },
-  yaxis: { 
-    title: "Average", 
-    range: [0.75, 0.785],
-    linecolor: "black",
-    linewidth: 1,
-    gridcolor: "#444444",
-    gridwidth: 0.5
-  }
-};
-   
-   Plotly.newPlot('occupancy', occupancyData, occupancyLayout);
-   
-   // Plot 2: Employment Rates
+
+    const occupancyLayout = {
+      title: {
+        text: 'Baltimore CBD Office Occupancy (Quarterly)<br><sup>Source: Baltimore Development Corp, 2024</sup>',
+        font: { color: 'black', size: 20 },
+        x: 0.5,
+        xanchor: 'center'
+      },
+      plot_bgcolor: "white",
+      paper_bgcolor: "white",
+      font: { color: "black" },
+      xaxis: { title: "Year (Quarterly)" },
+      yaxis: { title: "Average", range: [0.75, 0.785] }
+    };
+
+    Plotly.newPlot('occupancy', occupancyData, occupancyLayout);
+
+    // Plot 2: Employment Rates
     const employmentData = [{
       x: [
         "2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06",
@@ -81,26 +69,18 @@ title: Business and Economy
       xaxis: {
         title: "Month",
         tickformat: "%b %Y",
-        tickangle: -45,
-        linecolor: "black",
-        linewidth: 1,
-        gridcolor: "#444444",   // darker grid lines (gray)
-        gridwidth: 1.5          // a bit thicker
-  },
-  yaxis: { 
-    title: "Average", 
-    range: [0.75, 0.785],
-    linecolor: "black",
-    linewidth: 2,
-    gridcolor: "#444444",
-    gridwidth: 0.5
-  }
-};
-   
-   Plotly.newPlot('employment', employmentData, employmentLayout);
- </script>
- </body>
- </html>
+        tickangle: -45
+      },
+      yaxis: {
+        title: "Percentage (%)",
+        range: [60.5, 62.0]
+      }
+    };
+
+    Plotly.newPlot('employment', employmentData, employmentLayout);
+  </script>
+</body>
+</html>
 
 
 <!-- KPI Section -->
