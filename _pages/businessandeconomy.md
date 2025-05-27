@@ -87,15 +87,21 @@ title: Business and Economy
 <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 30px; font-family: Arial;">
 
   <!-- Box 1 -->
-  <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #00d084; font-weight: bold; font-size: 16px;">Number of Hotels</div>
-    <div style="color: #007bff; font-weight: bold; font-size: 28px;">13</div>
+  <div style="background-color: #8ed1fc; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #7bdcb5; font-weight: bold; font-size: 16px;">Number of Hotels</div>
+    <div style="color: #000000; font-weight: bold; font-size: 28px;">13</div>
   </div>
 
   <!-- Box 2 -->
-  <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #00d084; font-weight: bold; font-size: 16px;">Employment Rate</div>
-    <div style="color: #007bff; font-weight: bold; font-size: 28px;">61.9%</div>
+  <div style="background-color: #8ed1fc; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #7bdcb5; font-weight: bold; font-size: 16px;">Number of Other Businesses</div>
+    <div style="color: #000000; font-weight: bold; font-size: 28px;">115</div>
+  </div>
+
+    <!-- Box 3 -->
+  <div style="background-color: #8ed1fc; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #7bdcb5; font-weight: bold; font-size: 16px;">Number of Other Businesses</div>
+    <div style="color: #000000; font-weight: bold; font-size: 28px;">115</div>
   </div>
 
 </div>
