@@ -14,8 +14,7 @@ title: Business and Economy
 <body style="background-color: #FFFFFF; color: black; font-family: Arial">
   
   <div id="occupancy" style="width:600px;height:400px;"></div>
-  
-  <div id="employment" style="width:600px;height:400px;"></div>
+  <div id="employment" style="width:100%;max-width:700px;height:400px; margin-bottom: 40px;"></div>
 
  <script>
     // Plot 1: Office Occupancy
