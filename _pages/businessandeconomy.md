@@ -47,9 +47,9 @@ title: Business and Economy
     title: "Average", 
     range: [0.75, 0.785],
     linecolor: "black",
-    linewidth: 2,
+    linewidth: 1,
     gridcolor: "#444444",
-    gridwidth: 1.5
+    gridwidth: 0.5
   }
 };
    
@@ -83,7 +83,7 @@ title: Business and Economy
         tickformat: "%b %Y",
         tickangle: -45,
         linecolor: "black",
-        linewidth: 2,
+        linewidth: 1,
         gridcolor: "#444444",   // darker grid lines (gray)
         gridwidth: 1.5          // a bit thicker
   },
@@ -93,7 +93,7 @@ title: Business and Economy
     linecolor: "black",
     linewidth: 2,
     gridcolor: "#444444",
-    gridwidth: 1.5
+    gridwidth: 0.5
   }
 };
    
@@ -108,14 +108,14 @@ title: Business and Economy
 
   <!-- Box 1 -->
   <div style="background-color: #00d084; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #000000; font-weight: bold; font-size: 16px;">Number of Hotels</div>
-    <div style="color: #000000; font-weight: bold; font-size: 28px;">13</div>
-  </div>
+    <div style="color: #000000; font-weight: bold; font-size: 16px;">Number of Other Businesses</div>
+    <div style="color: #000000; font-weight: bold; font-size: 28px;">115</div>
+  </div>  
 
   <!-- Box 2 -->
   <div style="background-color: #00d084; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #000000; font-weight: bold; font-size: 16px;">Number of Other Businesses</div>
-    <div style="color: #000000; font-weight: bold; font-size: 28px;">115</div>
+    <div style="color: #000000; font-weight: bold; font-size: 16px;">Number of Hotels</div>
+    <div style="color: #000000; font-weight: bold; font-size: 28px;">13</div>
   </div>
 
     <!-- Box 3 -->
