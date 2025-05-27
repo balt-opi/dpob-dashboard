@@ -40,9 +40,9 @@ navigation:
 - text: Business and Economy
   internal: true
   url: /businessandeconomy
-- text: Configure the Guide
+- text: 311 Service Requests
   internal: true
-  url: configure-the-guide
+  url: /311service-requests
 - text: GitHub Setup
   internal: true
   url: github
