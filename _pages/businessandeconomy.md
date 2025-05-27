@@ -12,11 +12,9 @@ title: Business and Economy
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body style="background-color: #FFFFFF; color: black; font-family: Arial">
-
-  <h2 style="color:black">Baltimore CBD Office Occupancy (Quarterly)</h2>
+  
   <div id="occupancy" style="width:600px;height:400px;"></div>
-
-  <h2 style="color:black; margin-top: 50px;">Employment Rates Over Time</h2>
+  
   <div id="employment" style="width:600px;height:400px;"></div>
 
  <script>
@@ -85,4 +83,19 @@ title: Business and Economy
 </body>
 </html>
 
+<!-- KPI Section -->
+<div style="display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 30px; font-family: Arial;">
 
+  <!-- Box 1 -->
+  <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #00d084; font-weight: bold; font-size: 16px;">Number of Hotels</div>
+    <div style="color: #007bff; font-weight: bold; font-size: 28px;">13</div>
+  </div>
+
+  <!-- Box 2 -->
+  <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #00d084; font-weight: bold; font-size: 16px;">Employment Rate</div>
+    <div style="color: #007bff; font-weight: bold; font-size: 28px;">61.9%</div>
+  </div>
+
+</div>
