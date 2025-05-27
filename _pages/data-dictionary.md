@@ -12,13 +12,13 @@ permalink: /data-dictionary/
     font-size: 14px;
   }
   .excel-table th, .excel-table td {
-    border: 1px solid #00d084;
+    border: 1px solid #000000;
     padding: 8px;
     text-align: left;
     vertical-align: top;
   }
   .excel-table thead {
-    background-color: #e6f0ff;
+    background-color: #00d084;
     font-weight: bold;
   }
   .excel-table tbody tr:nth-child(even) {
@@ -252,13 +252,33 @@ permalink: /data-dictionary/
   </tr>
   <tr>
     <td>Total Businesses</td>
-    <td></td>
+    <td>The total number of businesses currently active, as collected by Data Axle from secretaries of state, county courthouses, utility providers, departments of revenue, departments of taxation, local business and legal journals, and other sources that record new business transactions. Active businesses are those that Data Axle has been able to contact by phone in the last 18 months.</td>
+    <td>This information is helpful to contextualize the number of new businesses and other indicators in the Small Business tab of the dashboard.</td>
+    <td>Baltimore City</td>
+    <td>Baltimore Development Corporation/Data Axel</td>
+    <td>Quarterly</td>
+    <td>Satisfactory</td>
+    <td>Some of the data needs cleaning and there are rows that are not relevant to what is needed for the dashboard. This data comes from BDC who have to wait to get the data from another source.</td>
   </tr>
   <tr>
     <td>Trash Cans Installed</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Baltimore City</td>
+    <td>Department of Transport</td>
+    <td>Quarterly</td>
+    <td>N/A</td>
+    <td></td>
   </tr>
   <tr>
     <td>Unemployment Rate</td>
+    <td>Unemployment data refers to statistics that describe the status, trends, and characteristics of the workforce—who are not working. In the U.S., the Bureau of Labor Statistics (BLS) is the primary source for this information.</td>
+    <td>Measures the number of jobs lost in the economy each month. Reported by industry (e.g., construction, healthcare, retail).</td>
+    <td>Baltimore City</td>
+    <td>Bureau of Labor Statistics</td>
+    <td>Monthly/Annually/Quarterly</td>
+    <td>Healthy</td>
+    <td>Data needs extraneous columns to be removed but otherwise it is fine. The data is current.</td>
   </tr>
 </tbody>
 </table>
