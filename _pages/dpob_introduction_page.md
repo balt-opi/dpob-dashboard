@@ -50,5 +50,5 @@ h1.hero-title {
 </div>
 
 <div class="footer">
-  Data is updated accordingly. For more information please visit the <a href="/about-the-data/">About the Data page</a>.
+  Data is updated accordingly. For more information please visit the <a href="/data-dictionary">Data Dictionary page</a>.
 </div>
