@@ -115,16 +115,6 @@ permalink: /data-dictionary/
     <td>Data is not given and must be created for the report by the user.</td>
   </tr>
   <tr>
-    <td>Dumpsters Installed</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Baltimore City</td>
-    <td>Department of Transportation</td>
-    <td>Quarterly</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
     <td>Employee Rates</td>
     <td>Employment data refers to statistics that describe the status, trends, and characteristics of the workforce—who is working, where, how much they earn, and in what industries. In the U.S., the Bureau of Labor Statistics (BLS) is the primary source for this information.</td>
     <td>Measures the number of jobs added in the economy each month. Reported by industry (e.g., construction, healthcare, retail).</td>
@@ -273,16 +263,6 @@ permalink: /data-dictionary/
     <td>Quarterly</td>
     <td>Satisfactory</td>
     <td>Some of the data needs cleaning and there are rows that are not relevant to what is needed for the dashboard. This data comes from BDC who have to wait to get the data from another source.</td>
-  </tr>
-  <tr>
-    <td>Trash Cans Installed</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>Baltimore City</td>
-    <td>Department of Transport</td>
-    <td>Quarterly</td>
-    <td>N/A</td>
-    <td></td>
   </tr>
   <tr>
     <td>Unemployment Rate</td>
