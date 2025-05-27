@@ -49,8 +49,8 @@ navigation:
 - text: Create a Glossary
   glossary: true
 - text: Data Dictionary
-  internal: false
-  url: data-dictionary
+  internal: true
+  url: /data-dictionary
 
 # Repo list
 # List repos that you would like to appear on the homepage here
