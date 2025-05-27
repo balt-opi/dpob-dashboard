@@ -117,14 +117,14 @@ title: Business and Economy
   </div>
 
     <!-- Box 6 -->
-  <div style="background-color: #abb8c3; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #00d084; font-weight: bold; font-size: 16px;">Number of Health Services</div>
+  <div style="background-color: #00d084; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #000000; font-weight: bold; font-size: 16px;">Number of Health Services</div>
     <div style="color: #000000; font-weight: bold; font-size: 28px;">53</div>
   </div>
 
     <!-- Box 3 -->
-  <div style="background-color: #abb8c3; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #00d084; font-weight: bold; font-size: 16px;">Labor Force Participation Rate for Baltimore City (2023)</div>
+  <div style="background-color: #00d084; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #000000; font-weight: bold; font-size: 16px;">Labor Force Participation Rate for Baltimore City (2023)</div>
     <div style="color: #000000; font-weight: bold; font-size: 28px;">62.4</div>
   </div>
 
