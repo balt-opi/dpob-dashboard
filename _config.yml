@@ -37,9 +37,9 @@ navigation:
 - text: Introduction
   internal: true
   url: /dpob_introduction_page
-- text: Add a new page
+- text: Business and Economy
   internal: true
-  url: add-a-new-page
+  url: /businessandeconomy
 - text: Configure the Guide
   internal: true
   url: configure-the-guide
