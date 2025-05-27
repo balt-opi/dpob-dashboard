@@ -32,7 +32,7 @@ title: Business and Economy
       x: 0.5,
       xanchor: 'center'
     },
-    plot_bgcolor: "#0e1c2f",
+    plot_bgcolor: "#FFFFFF",
     paper_bgcolor: "#0e1c2f",
     font: { color: "white" },
     xaxis: { title: "Year (Quarterly)" },
