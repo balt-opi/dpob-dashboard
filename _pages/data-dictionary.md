@@ -5,22 +5,35 @@ permalink: /data-dictionary/
 ---
 
 <style>
+  .excel-table-wrapper {
+    max-height: 600px; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+
   .excel-table {
     border-collapse: collapse;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
   }
+
   .excel-table th, .excel-table td {
     border: 1px solid #000000;
     padding: 8px;
     text-align: left;
     vertical-align: top;
   }
+
   .excel-table thead {
     background-color: #00d084;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
+
   .excel-table tbody tr:nth-child(even) {
     background-color: #f9f9f9;
   }
@@ -28,11 +41,6 @@ permalink: /data-dictionary/
 
 <div class="excel-table-wrapper">
   <table class="excel-table">
-    <!-- ... your existing <thead> and <tbody> goes here ... -->
-  </table>
-</div>
-
-<table class="excel-table">
 <thead>
   <tr>
     <th>Variable</th>
