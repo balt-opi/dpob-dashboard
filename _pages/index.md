@@ -5,8 +5,6 @@ title: Downtown Partnership of Baltimore
 ---
 # WE ARE DPOB!
 
-<img src="/dpob-dashboard/images/dpob-staff-community-clean.jpg" alt="DPOB Staff" style="width: 100%; height: auto; margin-bottom: 20px;">
-
 In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.
 
 ## Our Mission!
