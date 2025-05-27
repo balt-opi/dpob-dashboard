@@ -21,5 +21,5 @@ When you think about Downtown Partnership, think about all the Downtown Partners
 
 Public Safety and Hospitality, Beautification, Economic Development and Advocacy, Membership and Networking, Events, and Marketing and Promotions.
 
-Click on the Downtown Partnership of Baltimore Dashboard banner at the top of the page to be taken to the PowerBI Dashboard.
+# Click on the Downtown Partnership of Baltimore Dashboard banner at the top of the page to be taken to the PowerBI Dashboard.
 
