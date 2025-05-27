@@ -43,6 +43,9 @@ navigation:
 - text: 311 Service Requests
   internal: true
   url: /311service-requests
+- text: SR Map
+  internal: true
+  url: /srmap
 - text: Data Dictionary
   internal: true
   url: /data-dictionary
