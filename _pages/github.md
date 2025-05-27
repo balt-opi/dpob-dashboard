@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "GitHub Setup"
+title:  "SR Map"
 ---
 
 Work your way through these steps to prepare your GitHub repository:
