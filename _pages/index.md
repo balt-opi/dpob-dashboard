@@ -9,7 +9,7 @@ title: Downtown Partnership of Baltimore
 
 In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.
 
-## Our Mission: 
+## Our Mission!
 
 Activating Downtown spaces is an important part of the work we do.
 
