@@ -13,7 +13,7 @@ collections:
 name: Downtown Partnership of Baltimore Dashboard
 url: https://app.powerbigov.us/view?r=eyJrIjoiMzIwNjExMDUtYTIwZC00ZmVjLWE1ZmMtYmRlYjRiMzEzMDI1IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9
 # Author/Organization info to be displayed in the templates
-author:
+author1:
   name: Mayor's Office of Performance and Innovation (OPI)
   url: https://opi.baltimorecity.gov
 
