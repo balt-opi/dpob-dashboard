@@ -43,18 +43,6 @@ navigation:
 - text: 311 Service Requests
   internal: true
   url: /311service-requests
-- text: SR Map
-  internal: true
-  url: github
-- text: Trash Cans/Dumpsters
-  internal: true
-  url: github
-  - text: Trees/Tree Wells/Planters
-  internal: true
-  url: github
-  - text: Crime Data
-  internal: true
-  url: github
 - text: Data Dictionary
   internal: true
   url: /data-dictionary
