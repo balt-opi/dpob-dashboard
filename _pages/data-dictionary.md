@@ -26,6 +26,12 @@ permalink: /data-dictionary/
   }
 </style>
 
+<div style="max-height: 600px; overflow-y: auto; border: 1px solid #ccc;">
+  <table class="excel-table">
+    <!-- your <thead> and <tbody> here -->
+  </table>
+</div>
+
 <table class="excel-table">
 <thead>
   <tr>
