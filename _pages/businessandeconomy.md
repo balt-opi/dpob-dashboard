@@ -39,15 +39,19 @@ title: Business and Economy
      xaxis: { 
        title: "Year (Quarterly)",
        linecolor: "black",  // darker vertical axis line
-       linewidth: 2
-     },
-     yaxis: { 
-       title: "Average", 
-       range: [0.75, 0.785],
-       linecolor: "black",  // darker horizontal axis line
-       linewidth: 2
-     }
-   };
+       linewidth: 2,
+       gridcolor: "#444444",   // darker grid lines (gray)
+       gridwidth: 1.5          // a bit thicker
+  },
+  yaxis: { 
+    title: "Average", 
+    range: [0.75, 0.785],
+    linecolor: "black",
+    linewidth: 2,
+    gridcolor: "#444444",
+    gridwidth: 1.5
+  }
+};
    
    Plotly.newPlot('occupancy', occupancyData, occupancyLayout);
    
@@ -79,15 +83,19 @@ title: Business and Economy
         tickformat: "%b %Y",
         tickangle: -45,
         linecolor: "black",
-        linewidth: 2
-      },
-      yaxis: {
-        title: "Percentage (%)",
-        range: [60.5, 62.0],
-        linecolor: "black",
-        linewidth: 2
-      }
-    };
+        linewidth: 2,
+        gridcolor: "#444444",   // darker grid lines (gray)
+        gridwidth: 1.5          // a bit thicker
+  },
+  yaxis: { 
+    title: "Average", 
+    range: [0.75, 0.785],
+    linecolor: "black",
+    linewidth: 2,
+    gridcolor: "#444444",
+    gridwidth: 1.5
+  }
+};
    
    Plotly.newPlot('employment', employmentData, employmentLayout);
  </script>
