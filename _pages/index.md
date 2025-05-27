@@ -22,6 +22,6 @@ When you think about Downtown Partnership, think about all the Downtown Partners
 Public Safety and Hospitality, Beautification, Economic Development and Advocacy, Membership and Networking, Events, and Marketing and Promotions.
 
 ## Data Information
-Data is updated accordingly. For more information please visit the <a href="/data-dictionary/">Data Dictionary page</a>.
+Data is updated accordingly. For more information please visit the <a href="/data-dictionary">Data Dictionary page</a>.
 
 
