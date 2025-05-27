@@ -3,7 +3,7 @@ layout: page
 title: Business and Economy
 ---
 
-Employment and Labor
+**Employment and Labor**
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +12,13 @@ Employment and Labor
   <title>Baltimore Dashboard</title>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
-<body style="background-color: #FFFFFF; color: white; font-family: Arial">
+<body style="background-color: #FFFFFF; color: black; font-family: Arial">
 
-  <h2 style="color:white">Baltimore CBD Office Occupancy (Quarterly)</h2>
+  <h2 style="color:black">Baltimore CBD Office Occupancy (Quarterly)</h2>
   <div id="occupancy" style="width:600px;height:400px;"></div>
+
+  <h2 style="color:black; margin-top: 50px;">Employment Rates Over Time</h2>
+  <div id="employment" style="width:600px;height:400px;"></div>
 
  <script>
     // Plot 1: Office Occupancy
@@ -24,7 +27,7 @@ Employment and Labor
       y: [0.777, 0.760, 0.769, 0.771, 0.773, 0.771, 0.768, 0.766, 0.766, 0.775, 0.770],
       type: 'scatter',
       mode: 'lines+markers',
-      line: { color: '#2c7be5' },
+      line: { color: '#00d084' },
       marker: { size: 8 }
     }];
 
@@ -53,7 +56,7 @@ Employment and Labor
       y: [61.5, 61.4, 61.3, 61.2, 61.1, 61.0, 61.3, 61.6, 61.7, 61.8, 61.9],
       type: 'scatter',
       mode: 'lines+markers',
-      line: { color: '#00b894' },
+      line: { color: '#00d084' },
       marker: { size: 6 }
     }];
 
