@@ -145,67 +145,107 @@ Total Crime in Downtown by Year
 <small>Total crimes by type</small>
 
 <div style="max-width: 650px; margin: 50px auto;">
+  <select id="timeScale">
+    <option value="daily">By Day</option>
+    <option value="monthly">By Month</option>
+    <option value="yearly">By Year</option>
+  </select>
   <canvas id="typeBarChart" width="650" height="400"></canvas>
 </div>
 
 <script>
+  const crimeData = {
+    daily: {
+      labels: ['2024-05-01', '2024-05-02', '2024-05-03'],
+      datasets: {
+        'Auto Theft': [12, 15, 9],
+        'Robbery': [7, 8, 6],
+        'Assault': [5, 10, 4],
+        'Burglary': [3, 5, 2],
+        'Larceny': [6, 4, 7]
+      }
+    },
+    monthly: {
+      labels: ['2024-01', '2024-02', '2024-03'],
+      datasets: {
+        'Auto Theft': [120, 130, 110],
+        'Robbery': [80, 75, 90],
+        'Assault': [65, 70, 60],
+        'Burglary': [40, 45, 38],
+        'Larceny': [55, 50, 48]
+      }
+    },
+    yearly: {
+      labels: ['2023', '2024', '2025'],
+      datasets: {
+        'Auto Theft': [1500, 1600, 800],
+        'Robbery': [900, 850, 400],
+        'Assault': [700, 750, 300],
+        'Burglary': [400, 450, 200],
+        'Larceny': [600, 650, 250]
+      }
+    }
+  };
+
+  const crimeColors = {
+    'Auto Theft': '#6a0dad',
+    'Robbery': '#ff6384',
+    'Assault': '#36a2eb',
+    'Burglary': '#4bc0c0',
+    'Larceny': '#ff9f40'
+  };
+
   const ctx3 = document.getElementById('typeBarChart').getContext('2d');
 
-  new Chart(ctx3, {
+  function buildDatasets(timeKey) {
+    return Object.entries(crimeData[timeKey].datasets).map(([crimeType, data]) => ({
+      label: crimeType,
+      data: data,
+      backgroundColor: crimeColors[crimeType],
+      borderRadius: 6,
+      barThickness: 24
+    }));
+  }
+
+  const chartConfig = {
     type: 'bar',
     data: {
-      labels: ['Auto Theft', 'Robbery', 'Assault', 'Burglary', 'Larceny'],
-      datasets: [{
-        label: 'Crime Count',
-        data: [890, 740, 682, 545, 322], // Replace with your real data
-        backgroundColor: [
-          '#6a0dad', // Auto Theft
-          '#ff6384', // Robbery
-          '#36a2eb', // Assault
-          '#4bc0c0', // Burglary
-          '#ff9f40'  // Larceny
-        ],
-        borderRadius: 6,
-        barThickness: 32
-      }]
+      labels: crimeData.daily.labels,
+      datasets: buildDatasets('daily')
     },
     options: {
-      indexAxis: 'y',
+      indexAxis: 'x',  // vertical bars (time on x-axis)
       scales: {
         x: {
           beginAtZero: true,
-          ticks: {
-            stepSize: 200,
-            font: {
-              size: 12
-            }
-          }
+          title: { display: true, text: 'Date / Month / Year' }
         },
         y: {
-          ticks: {
-            font: {
-              size: 14
-            }
-          }
+          beginAtZero: true,
+          title: { display: true, text: 'Crime Count' }
         }
       },
       plugins: {
-        legend: {
-          display: false
-        },
+        legend: { display: true },
         datalabels: {
           anchor: 'end',
-          align: 'right',
+          align: 'top',
           color: '#000',
-          font: {
-            weight: 'bold',
-            size: 14
-          },
+          font: { weight: 'bold', size: 12 },
           formatter: (value) => value
         }
       }
     },
     plugins: [ChartDataLabels]
+  };
+
+  const chart3 = new Chart(ctx3, chartConfig);
+
+  document.getElementById('timeScale').addEventListener('change', e => {
+    const scale = e.target.value;
+    chart3.data.labels = crimeData[scale].labels;
+    chart3.data.datasets = buildDatasets(scale);
+    chart3.update();
   });
 </script>
 
