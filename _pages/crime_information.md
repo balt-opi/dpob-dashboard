@@ -6,13 +6,13 @@ title: Crime Information
 # Crime Information
 <small>January 2024–Present</small>
 
-<div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
+<div style="max-width: 600px; margin: auto;">
   <canvas id="donutChart" width="500" height="500"></canvas>
 </div>
 
-<!-- Load Chart.js and Outlabels plugin -->
+<!-- Load Chart.js and Chart DataLabels plugin -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@nagix/chartjs-plugin-piechart-outlabels"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <script>
   const ctx = document.getElementById('donutChart').getContext('2d');
@@ -31,12 +31,12 @@ title: Crime Information
       datasets: [{
         data: [612, 415, 340, 253, 29, 1],
         backgroundColor: [
-          '#6a0dad', // purple
-          '#ff6384', // pink
-          '#36a2eb', // blue
-          '#4bc0c0', // teal
-          '#ff9f40', // orange
-          '#e74c3c'  // red
+          '#6a0dad',
+          '#ff6384',
+          '#36a2eb',
+          '#4bc0c0',
+          '#ff9f40',
+          '#e74c3c'
         ],
         borderColor: '#ffffff',
         borderWidth: 2
@@ -44,41 +44,35 @@ title: Crime Information
     },
     options: {
       layout: {
-        padding: {
-          top: 30,
-          bottom: 30
-        }
+        padding: 30
       },
       plugins: {
         legend: {
-          display: true,
           position: 'bottom',
           labels: {
-            boxWidth: 20,
-            padding: 20,
+            boxWidth: 18,
+            padding: 16,
             font: {
               size: 13
             }
           }
         },
-        outlabels: {
-          text: '%v', // only show number
-          color: '#000000',
-          stretch: 40,
+        datalabels: {
+          formatter: (value) => value,
+          color: '#000',
+          anchor: 'end',
+          align: 'end',
+          offset: 10,
           font: {
-            resizable: true,
-            minSize: 12,
-            maxSize: 16
-          },
-          lineColor: '#333',
-          lineWidth: 1,
-          padding: 12
+            weight: 'bold',
+            size: 14
+          }
         }
       },
       cutout: '55%'
-    }
+    },
+    plugins: [ChartDataLabels]
   });
 </script>
-
 
 
