@@ -10,9 +10,9 @@ title: Crime Information
   <canvas id="donutChart" width="300" height="300"></canvas>
 </div>
 
-<!-- Chart.js and outlabels plugin -->
+<!-- Chart.js & plugin for labels -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@nagix/chartjs-plugin-piechart-outlabels"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <script>
   const ctx = document.getElementById('donutChart').getContext('2d');
@@ -31,42 +31,43 @@ title: Crime Information
       datasets: [{
         data: [612, 415, 340, 253, 29, 1],
         backgroundColor: [
-          '#6a0dad', // purple
-          '#ff6384', // pink
-          '#36a2eb', // blue
-          '#4bc0c0', // teal
-          '#ff9f40', // orange
-          '#e74c3c'  // red
+          '#6a0dad',
+          '#ff6384',
+          '#36a2eb',
+          '#4bc0c0',
+          '#ff9f40',
+          '#e74c3c'
         ],
-        borderColor: '#fff',
-        borderWidth: 2
+        hoverOffset: 8
       }]
     },
     options: {
       plugins: {
         legend: {
-          display: false
+          position: 'right',
+          labels: {
+            boxWidth: 12,
+            font: { size: 12 }
+          }
         },
-        outlabels: {
-          text: '%l: %v',
-          color: '#00000',
-          stretch: 25,
+        datalabels: {
+          color: '#000',
           font: {
-            resizable: true,
-            minSize: 8,
-            maxSize: 12
+            weight: 'bold',
+            size: 12
           },
-          lineColor: '#0693e3',
-          lineWidth: 1,
-          padding: 4
+          formatter: (value) => value,
+          anchor: 'end',        // move label to outer edge of slice
+          align: 'end',         // place label outside the arc
+          offset: 10,           // distance from the arc
+          clamp: true           // ensures labels don't overlap badly
         }
       },
       cutout: '60%',
     },
-    plugins: [Chart.PieceLabel, Chart.Outlabels]
+    plugins: [ChartDataLabels]
   });
 </script>
-
 
 
 
