@@ -10,9 +10,9 @@ title: Crime Information
   <canvas id="donutChart" width="300" height="300"></canvas>
 </div>
 
-<!-- Chart.js & plugin for labels -->
+<!-- Chart.js and outlabels plugin -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@nagix/chartjs-plugin-piechart-outlabels"></script>
 
 <script>
   const ctx = document.getElementById('donutChart').getContext('2d');
@@ -31,41 +31,39 @@ title: Crime Information
       datasets: [{
         data: [612, 415, 340, 253, 29, 1],
         backgroundColor: [
-          '#6a0dad',
-          '#ff6384',
-          '#36a2eb',
-          '#4bc0c0',
-          '#ff9f40',
-          '#e74c3c'
+          '#6a0dad', // purple
+          '#ff6384', // pink
+          '#36a2eb', // blue
+          '#4bc0c0', // teal
+          '#ff9f40', // orange
+          '#e74c3c'  // red
         ],
-        hoverOffset: 8
+        borderColor: '#fff',
+        borderWidth: 2
       }]
     },
     options: {
       plugins: {
         legend: {
-          position: 'right',
-          labels: {
-            boxWidth: 12,
-            font: { size: 12 }
-          }
+          display: false
         },
-        datalabels: {
+        outlabels: {
+          text: '%l: %v',
           color: '#000',
+          stretch: 25,
           font: {
-            weight: 'bold',
-            size: 12
+            resizable: true,
+            minSize: 8,
+            maxSize: 12
           },
-          formatter: (value) => value,
-          anchor: 'end',        // move label to outer edge of slice
-          align: 'end',         // place label outside the arc
-          offset: 10,           // distance from the arc
-          clamp: true           // ensures labels don't overlap badly
+          lineColor: '#000',
+          lineWidth: 1,
+          padding: 4
         }
       },
       cutout: '60%',
     },
-    plugins: [ChartDataLabels]
+    plugins: [Chart.PieceLabel, Chart.Outlabels]
   });
 </script>
 
