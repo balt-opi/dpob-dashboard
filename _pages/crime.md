@@ -1,3 +1,10 @@
+---
+layout: page
+title:  "Crime Map"
+---
+
+# Crime Map
+Filter by the Crime Groups within the interactive map. Click on each of the points to learn about the cases.
 
 
 
