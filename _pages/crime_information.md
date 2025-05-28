@@ -6,11 +6,11 @@ title: Crime Information
 # Crime Information
 <small>January 2024–Present</small>
 
-<div style="max-width: 520px; margin: auto;">
+<div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
   <canvas id="donutChart" width="500" height="500"></canvas>
 </div>
 
-<!-- Chart.js and Outlabels plugin -->
+<!-- Chart.js & Outlabels Plugin -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@nagix/chartjs-plugin-piechart-outlabels"></script>
 
@@ -21,7 +21,7 @@ title: Crime Information
     type: 'doughnut',
     data: {
       labels: [
-        'Property Larceny/Theft Offenses',
+        'Property Larceny/Theft',
         'Robbery',
         'Aggravated Assault',
         'Auto Theft',
@@ -43,14 +43,28 @@ title: Crime Information
       }]
     },
     options: {
+      layout: {
+        padding: {
+          top: 30,
+          bottom: 30
+        }
+      },
       plugins: {
         legend: {
-          display: false
+          display: true,
+          position: 'bottom',
+          labels: {
+            boxWidth: 20,
+            padding: 20,
+            font: {
+              size: 12
+            }
+          }
         },
         outlabels: {
-          text: '%l (%v)',   // Label name + value
+          text: '%l (%v)',
           color: '#000',
-          stretch: 40,       // Pull labels farther from center
+          stretch: 50,
           font: {
             resizable: true,
             minSize: 12,
@@ -58,14 +72,13 @@ title: Crime Information
           },
           lineColor: '#000',
           lineWidth: 1,
-          padding: 12
+          padding: 14
         }
       },
-      cutout: '55%' // Adjust inner radius
+      cutout: '55%'
     }
   });
 </script>
-
 
 
 
