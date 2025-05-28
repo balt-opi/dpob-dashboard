@@ -4,7 +4,7 @@ title:  "Trees/Tree Wells/Planters Map"
 ---
 
 # Trees in the DMA Map
-Zoom into the Trees within the interactive map. Click on each of the points to learn about the types of trees.
+Zoom into the trees within the interactive map. Click on each of the points to learn about the types of trees.
 
 <iframe  
   src="https://baltimore.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=59cd10dcea9e4c9281b401e035349704"  
