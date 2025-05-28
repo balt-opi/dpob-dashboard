@@ -46,6 +46,9 @@ navigation:
 - text: SR Map
   internal: true
   url: /srmap
+- text: Crime Map
+  internal: true
+  url: /crime
 - text: Trees, Tree Wells, and Planters
   internal: true
   url: /trees-twells-planters
