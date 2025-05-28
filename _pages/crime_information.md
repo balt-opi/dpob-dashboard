@@ -42,38 +42,38 @@ title: Crime Information
       }]
     },
     options: {
-      layout: {
-        padding: {
-          top: 30,
-          bottom: 50
+  layout: {
+    padding: {
+      top: 30,
+      bottom: 80  // increased from 50 to 80 for more space below chart
+    }
+  },
+  plugins: {
+    legend: {
+      position: 'bottom',
+      align: 'center',
+      labels: {
+        boxWidth: 18,
+        padding: 30,  // increased padding between legend items and chart
+        font: {
+          size: 13
         }
-      },
-      plugins: {
-        legend: {
-          position: 'bottom',
-          align: 'center',
-          labels: {
-            boxWidth: 18,
-            padding: 20,
-            font: {
-              size: 13
-            }
-          }
-        },
-        datalabels: {
-          formatter: (value) => value,
-          color: '#000',
-          anchor: 'end',
-          align: 'end',
-          offset: 10,
-          font: {
-            weight: 'bold',
-            size: 14
-          }
-        }
-      },
-      cutout: '55%'
+      }
     },
+    datalabels: {
+      formatter: (value) => value,
+      color: '#000',
+      anchor: 'end',
+      align: 'end',
+      offset: 10,
+      font: {
+        weight: 'bold',
+        size: 14
+      }
+    }
+  },
+  cutout: '55%'
+},
     plugins: [ChartDataLabels]
   });
 </script>
