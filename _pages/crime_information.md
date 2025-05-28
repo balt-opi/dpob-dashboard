@@ -63,7 +63,6 @@ title: Crime Information
     },
     plugins: [ChartDataLabels]
   });
-</script><small>January 2024–Present</small>
 
 <div style="max-width: 300px; margin: auto;">
   <canvas id="donutChart" width="300" height="300"></canvas>
@@ -110,7 +109,7 @@ title: Crime Information
           }
         },
         datalabels: {
-          color: '#fff',
+          color: '#black',
           font: {
             weight: 'bold',
             size: 12
