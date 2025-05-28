@@ -86,13 +86,14 @@ Total crimes by type
 <div style="max-width: 650px; margin: 50px auto;">
   <select id="timeScale">
     <option value="daily">By Day</option>
-    <option value="monthly">By Month</option>
+    <option value="monthly" selected>By Month</option>
     <option value="yearly">By Year</option>
   </select>
-  
-  <!-- Scrollable container -->
+
+  <!-- Scrollable container with fixed max-width and overflow-x auto -->
   <div style="overflow-x: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px; max-width: 650px;">
-    <canvas id="typeBarChart" height="400"></canvas>
+    <!-- Canvas is explicitly wider than container to trigger scrollbar -->
+    <canvas id="typeBarChart" width="1200" height="400" style="display: block;"></canvas>
   </div>
 </div>
 
@@ -112,13 +113,13 @@ Total crimes by type
       }
     },
     monthly: {
-      labels: ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10'],
+      labels: ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12'],
       datasets: {
-        'Auto Theft': [120, 130, 110, 125, 140, 135, 150, 145, 160, 155],
-        'Robbery': [80, 75, 90, 85, 78, 88, 92, 85, 89, 90],
-        'Assault': [65, 70, 60, 75, 68, 72, 80, 75, 78, 79],
-        'Burglary': [40, 45, 38, 50, 43, 48, 52, 47, 55, 53],
-        'Larceny': [55, 50, 48, 60, 58, 54, 65, 63, 66, 68]
+        'Auto Theft': [120, 130, 110, 125, 140, 135, 150, 145, 160, 155, 165, 170],
+        'Robbery': [80, 75, 90, 85, 78, 88, 92, 85, 89, 90, 93, 95],
+        'Assault': [65, 70, 60, 75, 68, 72, 80, 75, 78, 79, 81, 83],
+        'Burglary': [40, 45, 38, 50, 43, 48, 52, 47, 55, 53, 56, 58],
+        'Larceny': [55, 50, 48, 60, 58, 54, 65, 63, 66, 68, 70, 72]
       }
     },
     yearly: {
@@ -155,29 +156,23 @@ Total crimes by type
   }
 
   function resizeCanvas(labelCount) {
-    const containerWidth = 650;
-    const pixelsPerLabel = 80;
-    const desiredWidth = Math.max(containerWidth, labelCount * pixelsPerLabel);
-
-    const dpr = window.devicePixelRatio || 1;
-
-    canvas.style.width = desiredWidth + 'px';
+    // Calculate width dynamically: 80px per label + some padding
+    const width = Math.max(650, labelCount * 80);
+    canvas.style.width = width + 'px';
     canvas.style.height = '400px';
-
-    canvas.width = desiredWidth * dpr;
-    canvas.height = 400 * dpr;
-
+    canvas.width = width * (window.devicePixelRatio || 1);
+    canvas.height = 400 * (window.devicePixelRatio || 1);
     ctx3.setTransform(1, 0, 0, 1, 0, 0);
-    ctx3.scale(dpr, dpr);
+    ctx3.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
   }
 
-  resizeCanvas(crimeData.daily.labels.length);
+  resizeCanvas(crimeData.monthly.labels.length);
 
   const chartConfig = {
     type: 'bar',
     data: {
-      labels: crimeData.daily.labels,
-      datasets: buildDatasets('daily')
+      labels: crimeData.monthly.labels,
+      datasets: buildDatasets('monthly')
     },
     options: {
       indexAxis: 'x',
