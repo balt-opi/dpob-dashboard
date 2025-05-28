@@ -54,7 +54,7 @@ title: Crime Information
       align: 'center',
       labels: {
         boxWidth: 18,
-        padding: 30,  // increased padding between legend items and chart
+        padding: 50,  // increased padding between legend items and chart
         font: {
           size: 13
         }
