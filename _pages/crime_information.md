@@ -83,17 +83,15 @@ Total crimes by type
 <small>January 2020–Present</small>
 
 
-<div style="max-width: 650px; margin: 50px auto;">
+<div style="max-width: 1000px; margin: 50px auto;">
   <select id="timeScale">
     <option value="daily">By Day</option>
     <option value="monthly" selected>By Month</option>
     <option value="yearly">By Year</option>
   </select>
 
-  <!-- Scrollable container with fixed max-width and overflow-x auto -->
-  <div style="overflow-x: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px; max-width: 650px;">
-    <!-- Canvas is explicitly wider than container to trigger scrollbar -->
-    <canvas id="typeBarChart" width="1200" height="400" style="display: block;"></canvas>
+  <div style="overflow-x: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px; max-width: 1000px;">
+    <canvas id="typeBarChart" width="1800" height="600" style="display: block;"></canvas>
   </div>
 </div>
 
@@ -150,18 +148,17 @@ Total crimes by type
       label: crimeType,
       data: data,
       backgroundColor: crimeColors[crimeType],
-      borderRadius: 6,
-      barThickness: 24
+      borderRadius: 8,
+      barThickness: 36
     }));
   }
 
   function resizeCanvas(labelCount) {
-    // Calculate width dynamically: 80px per label + some padding
-    const width = Math.max(650, labelCount * 80);
+    const width = Math.max(1000, labelCount * 100); // wider bars + padding
     canvas.style.width = width + 'px';
-    canvas.style.height = '400px';
+    canvas.style.height = '600px';
     canvas.width = width * (window.devicePixelRatio || 1);
-    canvas.height = 400 * (window.devicePixelRatio || 1);
+    canvas.height = 600 * (window.devicePixelRatio || 1);
     ctx3.setTransform(1, 0, 0, 1, 0, 0);
     ctx3.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
   }
@@ -183,24 +180,24 @@ Total crimes by type
           ticks: {
             maxRotation: 45,
             minRotation: 45,
-            font: { size: 12 }
+            font: { size: 16 }
           }
         },
         y: {
           beginAtZero: true,
           title: { display: true, text: 'Crime Count' },
           ticks: {
-            font: { size: 12 }
+            font: { size: 16 }
           }
         }
       },
       plugins: {
-        legend: { display: true, position: 'top' },
+        legend: { display: true, position: 'top', labels: { font: { size: 16 } } },
         datalabels: {
           anchor: 'end',
           align: 'top',
           color: '#000',
-          font: { weight: 'bold', size: 12 },
+          font: { weight: 'bold', size: 16 },
           formatter: (value) => value
         }
       },
@@ -215,9 +212,7 @@ Total crimes by type
     const scale = e.target.value;
     chart3.data.labels = crimeData[scale].labels;
     chart3.data.datasets = buildDatasets(scale);
-
     resizeCanvas(crimeData[scale].labels.length);
-
     chart3.update();
   });
 </script>
