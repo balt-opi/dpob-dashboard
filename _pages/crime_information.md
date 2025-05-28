@@ -80,6 +80,8 @@ title: Crime Information
 
 
 Total crimes by type
+<small>January 2020–Present</small>
+
 
 <div style="max-width: 650px; margin: 50px auto;">
   <select id="timeScale">
@@ -89,9 +91,8 @@ Total crimes by type
   </select>
   
   <!-- Scrollable container -->
-  <div style="overflow-x: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px;">
-    <!-- Canvas width larger than container to enable scroll -->
-    <canvas id="typeBarChart" height="400" style="min-width: 1000px;"></canvas>
+  <div style="overflow-x: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px; max-width: 650px;">
+    <canvas id="typeBarChart" height="400"></canvas>
   </div>
 </div>
 
@@ -121,13 +122,13 @@ Total crimes by type
       }
     },
     yearly: {
-      labels: ['2020', '2021', '2022', '2023', '2024'],
+      labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
       datasets: {
-        'Auto Theft': [1500, 1600, 1700, 1800, 1900],
-        'Robbery': [900, 850, 875, 920, 940],
-        'Assault': [700, 750, 780, 800, 820],
-        'Burglary': [400, 450, 420, 460, 480],
-        'Larceny': [600, 650, 675, 700, 720]
+        'Auto Theft': [1500, 1600, 1700, 1800, 1900, 2000],
+        'Robbery': [900, 850, 875, 920, 940, 960],
+        'Assault': [700, 750, 780, 800, 820, 840],
+        'Burglary': [400, 450, 420, 460, 480, 490],
+        'Larceny': [600, 650, 675, 700, 720, 740]
       }
     }
   };
@@ -141,7 +142,9 @@ Total crimes by type
   };
 
   const ctx3 = document.getElementById('typeBarChart').getContext('2d');
+  const canvas = document.getElementById('typeBarChart');
 
+  // Function to build datasets for the chart
   function buildDatasets(timeKey) {
     return Object.entries(crimeData[timeKey].datasets).map(([crimeType, data]) => ({
       label: crimeType,
@@ -152,6 +155,27 @@ Total crimes by type
     }));
   }
 
+  // Function to resize canvas based on number of labels and device pixel ratio for crispness
+  function resizeCanvas(labelCount) {
+    const containerWidth = 650; // max-width container
+    const pixelsPerLabel = 80;  // width per label
+    const desiredWidth = Math.max(containerWidth, labelCount * pixelsPerLabel);
+
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.style.width = desiredWidth + 'px';
+    canvas.style.height = '400px';
+
+    canvas.width = desiredWidth * dpr;
+    canvas.height = 400 * dpr;
+
+    ctx3.setTransform(1, 0, 0, 1, 0, 0); // reset any existing transform
+    ctx3.scale(dpr, dpr);
+  }
+
+  // Initial resize and chart config
+  resizeCanvas(crimeData.daily.labels.length);
+
   const chartConfig = {
     type: 'bar',
     data: {
@@ -159,23 +183,27 @@ Total crimes by type
       datasets: buildDatasets('daily')
     },
     options: {
-      indexAxis: 'x',  // vertical bars (time on x-axis)
+      indexAxis: 'x',  // time on x-axis
       scales: {
         x: {
           beginAtZero: true,
           title: { display: true, text: 'Date / Month / Year' },
           ticks: {
             maxRotation: 45,
-            minRotation: 45
+            minRotation: 45,
+            font: { size: 12 }
           }
         },
         y: {
           beginAtZero: true,
-          title: { display: true, text: 'Crime Count' }
+          title: { display: true, text: 'Crime Count' },
+          ticks: {
+            font: { size: 12 }
+          }
         }
       },
       plugins: {
-        legend: { display: true },
+        legend: { display: true, position: 'top' },
         datalabels: {
           anchor: 'end',
           align: 'top',
@@ -183,22 +211,21 @@ Total crimes by type
           font: { weight: 'bold', size: 12 },
           formatter: (value) => value
         }
-      }
+      },
+      maintainAspectRatio: false
     },
     plugins: [ChartDataLabels]
   };
 
   const chart3 = new Chart(ctx3, chartConfig);
 
+  // Update chart when time scale changes
   document.getElementById('timeScale').addEventListener('change', e => {
     const scale = e.target.value;
     chart3.data.labels = crimeData[scale].labels;
     chart3.data.datasets = buildDatasets(scale);
 
-    // Adjust canvas width dynamically based on number of labels (optional)
-    const canvas = document.getElementById('typeBarChart');
-    const minWidth = Math.max(1000, crimeData[scale].labels.length * 80); // 80px per label approx
-    canvas.style.minWidth = minWidth + 'px';
+    resizeCanvas(crimeData[scale].labels.length);
 
     chart3.update();
   });
