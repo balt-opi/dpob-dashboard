@@ -46,7 +46,7 @@ navigation:
 - text: SR Map
   internal: true
   url: /srmap
-  - text: Crime Information
+- text: Crime Information
   internal: true
   url: /crime_information
 - text: Crime Map
