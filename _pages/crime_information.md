@@ -144,7 +144,6 @@ Total crimes by type
   const ctx3 = document.getElementById('typeBarChart').getContext('2d');
   const canvas = document.getElementById('typeBarChart');
 
-  // Function to build datasets for the chart
   function buildDatasets(timeKey) {
     return Object.entries(crimeData[timeKey].datasets).map(([crimeType, data]) => ({
       label: crimeType,
@@ -155,10 +154,9 @@ Total crimes by type
     }));
   }
 
-  // Function to resize canvas based on number of labels and device pixel ratio for crispness
   function resizeCanvas(labelCount) {
-    const containerWidth = 650; // max-width container
-    const pixelsPerLabel = 80;  // width per label
+    const containerWidth = 650;
+    const pixelsPerLabel = 80;
     const desiredWidth = Math.max(containerWidth, labelCount * pixelsPerLabel);
 
     const dpr = window.devicePixelRatio || 1;
@@ -169,11 +167,10 @@ Total crimes by type
     canvas.width = desiredWidth * dpr;
     canvas.height = 400 * dpr;
 
-    ctx3.setTransform(1, 0, 0, 1, 0, 0); // reset any existing transform
+    ctx3.setTransform(1, 0, 0, 1, 0, 0);
     ctx3.scale(dpr, dpr);
   }
 
-  // Initial resize and chart config
   resizeCanvas(crimeData.daily.labels.length);
 
   const chartConfig = {
@@ -183,7 +180,7 @@ Total crimes by type
       datasets: buildDatasets('daily')
     },
     options: {
-      indexAxis: 'x',  // time on x-axis
+      indexAxis: 'x',
       scales: {
         x: {
           beginAtZero: true,
@@ -219,7 +216,6 @@ Total crimes by type
 
   const chart3 = new Chart(ctx3, chartConfig);
 
-  // Update chart when time scale changes
   document.getElementById('timeScale').addEventListener('change', e => {
     const scale = e.target.value;
     chart3.data.labels = crimeData[scale].labels;
