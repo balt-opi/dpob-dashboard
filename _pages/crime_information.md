@@ -79,70 +79,7 @@ title: Crime Information
 </script>
 
 
-Total Crime in Downtown by Year
-<small>January–April, 2020–2024</small>
-
-<div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
-  <canvas id="barChart" width="600" height="400"></canvas>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-
-<script>
-  const ctx2 = document.getElementById('barChart').getContext('2d');
-
-  new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['2020', '2021', '2022', '2023', '2024'],
-      datasets: [{
-        label: 'Crimes Reported',
-        data: [2200, 2400, 2100, 2500, 1980], // Replace with your actual values
-        backgroundColor: '#6a0dad',
-        borderRadius: 5,
-        barThickness: 30
-      }]
-    },
-    options: {
-      indexAxis: 'y', // Makes it horizontal
-      scales: {
-        x: {
-          beginAtZero: true,
-          ticks: {
-            precision: 0
-          }
-        },
-        y: {
-          ticks: {
-            font: {
-              size: 14
-            }
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          display: false
-        },
-        datalabels: {
-          anchor: 'end',
-          align: 'right',
-          color: '#000',
-          font: {
-            weight: 'bold',
-            size: 14
-          },
-          formatter: (value) => value
-        }
-      }
-    },
-    plugins: [ChartDataLabels]
-  });
-</script>
-
-
-<small>Total crimes by type</small>
+Total crimes by type
 
 <div style="max-width: 650px; margin: 50px auto;">
   <select id="timeScale">
@@ -150,8 +87,16 @@ Total Crime in Downtown by Year
     <option value="monthly">By Month</option>
     <option value="yearly">By Year</option>
   </select>
-  <canvas id="typeBarChart" width="650" height="400"></canvas>
+  
+  <!-- Scrollable container -->
+  <div style="overflow-x: auto; border: 1px solid #ccc; padding: 10px; margin-top: 10px;">
+    <!-- Canvas width larger than container to enable scroll -->
+    <canvas id="typeBarChart" height="400" style="min-width: 1000px;"></canvas>
+  </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <script>
   const crimeData = {
@@ -166,23 +111,23 @@ Total Crime in Downtown by Year
       }
     },
     monthly: {
-      labels: ['2024-01', '2024-02', '2024-03'],
+      labels: ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10'],
       datasets: {
-        'Auto Theft': [120, 130, 110],
-        'Robbery': [80, 75, 90],
-        'Assault': [65, 70, 60],
-        'Burglary': [40, 45, 38],
-        'Larceny': [55, 50, 48]
+        'Auto Theft': [120, 130, 110, 125, 140, 135, 150, 145, 160, 155],
+        'Robbery': [80, 75, 90, 85, 78, 88, 92, 85, 89, 90],
+        'Assault': [65, 70, 60, 75, 68, 72, 80, 75, 78, 79],
+        'Burglary': [40, 45, 38, 50, 43, 48, 52, 47, 55, 53],
+        'Larceny': [55, 50, 48, 60, 58, 54, 65, 63, 66, 68]
       }
     },
     yearly: {
-      labels: ['2023', '2024', '2025'],
+      labels: ['2020', '2021', '2022', '2023', '2024'],
       datasets: {
-        'Auto Theft': [1500, 1600, 800],
-        'Robbery': [900, 850, 400],
-        'Assault': [700, 750, 300],
-        'Burglary': [400, 450, 200],
-        'Larceny': [600, 650, 250]
+        'Auto Theft': [1500, 1600, 1700, 1800, 1900],
+        'Robbery': [900, 850, 875, 920, 940],
+        'Assault': [700, 750, 780, 800, 820],
+        'Burglary': [400, 450, 420, 460, 480],
+        'Larceny': [600, 650, 675, 700, 720]
       }
     }
   };
@@ -218,7 +163,11 @@ Total Crime in Downtown by Year
       scales: {
         x: {
           beginAtZero: true,
-          title: { display: true, text: 'Date / Month / Year' }
+          title: { display: true, text: 'Date / Month / Year' },
+          ticks: {
+            maxRotation: 45,
+            minRotation: 45
+          }
         },
         y: {
           beginAtZero: true,
@@ -245,6 +194,12 @@ Total Crime in Downtown by Year
     const scale = e.target.value;
     chart3.data.labels = crimeData[scale].labels;
     chart3.data.datasets = buildDatasets(scale);
+
+    // Adjust canvas width dynamically based on number of labels (optional)
+    const canvas = document.getElementById('typeBarChart');
+    const minWidth = Math.max(1000, crimeData[scale].labels.length * 80); // 80px per label approx
+    canvas.style.minWidth = minWidth + 'px';
+
     chart3.update();
   });
 </script>
