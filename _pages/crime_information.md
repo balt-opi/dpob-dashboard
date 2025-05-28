@@ -6,11 +6,10 @@ title: Crime Information
 # Crime Information
 <small>January 2024–Present</small>
 
-<div style="max-width: 600px; margin: auto;">
+<div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
   <canvas id="donutChart" width="500" height="500"></canvas>
 </div>
 
-<!-- Load Chart.js and Chart DataLabels plugin -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
@@ -49,9 +48,10 @@ title: Crime Information
       plugins: {
         legend: {
           position: 'bottom',
+          align: 'end', // pushes legend down
           labels: {
             boxWidth: 18,
-            padding: 16,
+            padding: 20,
             font: {
               size: 13
             }
