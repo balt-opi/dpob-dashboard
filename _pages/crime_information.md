@@ -38,7 +38,7 @@ title: Crime Information
           '#ff9f40',
           '#e74c3c'
         ],
-        hoverOffset: 8
+        hoverOffset: 5
       }]
     },
     options: {
@@ -52,7 +52,7 @@ title: Crime Information
           position: 'right',
           align: 'start',
           labels: {
-            boxWidth: 12,
+            boxWidth: 15,
             font: { size: 12 },
             padding: 20  // More space between items
           }
