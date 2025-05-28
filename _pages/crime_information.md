@@ -41,39 +41,38 @@ title: Crime Information
         borderWidth: 2
       }]
     },
-options: {
-  layout: {
-    padding: {
-      top: 30,
-      bottom: 50  // increased bottom padding for more space below chart
-    }
-  },
-  plugins: {
-    legend: {
-      position: 'bottom',
-      align: 'center',   // center legend horizontally
-      labels: {
-        boxWidth: 18,
-        padding: 20,
-        font: {
-          size: 13
+    options: {
+      layout: {
+        padding: {
+          top: 30,
+          bottom: 50
         }
-      }
-    },
-    datalabels: {
-      formatter: (value) => value,
-      color: '#000',
-      anchor: 'end',
-      align: 'end',
-      offset: 10,
-      font: {
-        weight: 'bold',
-        size: 14
-      }
-    }
-  },
-  cutout: '55%'
-},
+      },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          align: 'center',
+          labels: {
+            boxWidth: 18,
+            padding: 20,
+            font: {
+              size: 13
+            }
+          }
+        },
+        datalabels: {
+          formatter: (value) => value,
+          color: '#000',
+          anchor: 'end',
+          align: 'end',
+          offset: 10,
+          font: {
+            weight: 'bold',
+            size: 14
+          }
+        }
+      },
+      cutout: '55%'
     },
     plugins: [ChartDataLabels]
   });
