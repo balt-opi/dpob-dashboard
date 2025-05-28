@@ -10,7 +10,7 @@ title: Crime Information
   <canvas id="donutChart" width="500" height="500"></canvas>
 </div>
 
-<!-- Chart.js & Outlabels Plugin -->
+<!-- Load Chart.js and Outlabels plugin -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@nagix/chartjs-plugin-piechart-outlabels"></script>
 
@@ -57,22 +57,22 @@ title: Crime Information
             boxWidth: 20,
             padding: 20,
             font: {
-              size: 12
+              size: 13
             }
           }
         },
         outlabels: {
-          text: '%l (%v)',
-          color: '#000',
-          stretch: 50,
+          text: '%v', // only show number
+          color: '#000000',
+          stretch: 40,
           font: {
             resizable: true,
             minSize: 12,
             maxSize: 16
           },
-          lineColor: '#000',
+          lineColor: '#333',
           lineWidth: 1,
-          padding: 14
+          padding: 12
         }
       },
       cutout: '55%'
