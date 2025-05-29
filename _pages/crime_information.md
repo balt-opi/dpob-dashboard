@@ -3,7 +3,7 @@ layout: page
 title: Crime Information
 ---
 
-# Crime Information
+# Crime Statistics 
 
 <small>January 2024–Present</small>
 
@@ -80,7 +80,7 @@ title: Crime Information
 </script>
 
 
-Total crimes by type
+# Total crimes by type
 
 <small>January 2020–Present</small>
 
@@ -208,7 +208,7 @@ Total crimes by type
   });
 </script>
 
-
+# Crime Table
 
 
 
