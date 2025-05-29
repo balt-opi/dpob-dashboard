@@ -3,77 +3,135 @@ layout: page
 title:  "311 Service Requests"
 ---
 
-Work your way through these steps to update 
-the `_config.yml` file — this configures the DCgov style template for your specific guide:
+<style>
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: sans-serif;
+  color: #333;
+}
 
-- [Set the guide name.](#set-name)
-- [Set the `exclude:` entries.](#set-exclude-entries)
-- [Register new pages.](#register-new-pages)
-- [Update the repository list.](#update-repository-list)
-- [Optional: Update `google_analytics_ua:`.](#set-google-analytics)
+.bar-chart {
+  width: 100%;
+  max-width: 800px;
+}
 
-## <a name="set-name"></a>Set the guide name
+.chart-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-The `name:` property appears as the guide's overall title. For example:
+.chart-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
 
-~~~
-name: {{site.name}}
-~~~
-{: .language-yaml}
+.bar-group {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
 
-## <a name="set-exclude-entries"></a>Set the `exclude:` entries
+.bar-label {
+  width: 150px;
+  font-size: 14px;
+}
 
-Make sure the `exclude:` list contains at least the following files, and add
-any other files you might have added that shouldn't appear in the
-generated `_site` directory:
+.bar {
+  height: 20px;
+  position: relative;
+  margin-right: 10px;
+}
 
-~~~
-exclude: [".rvmrc", ".rbenv-version", "README.md", "changelog.md"]
-~~~
-{: .language-yaml}
+.bar-close {
+  background-color: #4e79a7;
+}
 
-## <a name="register-new-pages"></a>Register new pages
+.bar-sla {
+  background-color: #a0cbe8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
-The `navigation:` list is used to generate the table of contents. For example,
-the `navigation:` section of this guide contains:
+.bar-num {
+  font-size: 12px;
+  color: #444;
+  margin-left: 4px;
+}
 
-~~~
-navigation:
-{% for i in site.navigation %}- text: {{ i.text }}{% if i.url %}
-  internal: {{ i.internal }}
-  url: {{ i.url }}{% elsif i.glossary %}
-  glossary: {{ i.glossary }}{% endif %}
-{% endfor %}
-~~~
-{: .language-yaml}
+.legend {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+</style>
 
-For internal pages, the url should match the the name of the page's markdown file.
-If you would like to include a link to the glossary in the sidebar, add navigation item with a glossary attribute set to true.
+<div class="chart-container">
 
-## <a name="update-repository-list"></a>Update the repository list
+  <div class="bar-chart">
+    <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
+    <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
 
-You'll need to update the `repos:` list to reflect the GitHub
-repository that will contain your guide. The first of these repositories
-should be the repository for the guide itself; it will be used to generate
-the _Edit this page_ and _file an issue_ links in the footer.
+    {% assign groups = "Trees & Grass,Street & Curb Repairs,Water,Traffic Signals,Dirty Streets,Trash & Recycling,Graffiti" | split: "," %}
+    {% assign close_days = "41,21,19,14,9,8,11" | split: "," %}
+    {% assign sla_days = "19,21,3,7.6,6,4,3" | split: "," %}
 
-The `url:` should be `https://github.com/DCgov/MY-NEW-GUIDE`, where
-`MY-NEW-GUIDE` is the name you gave your clone of the DCgov/guides-template
-repository. For the `description:` property, it's OK to enter something
-generic like "main repository." However, if you aren't certain about either
-value, it's also OK to enter placeholder text for these properties and change
-them later.
+    {% for i in (0..6) %}
+    <div class="bar-group">
+      <div class="bar-label">{{ groups[i] }}</div>
+      <div class="bar" style="width: {{ sla_days[i] | times: 6 }}px;" class="bar-sla"></div>
+      <div class="bar bar-close" style="width: {{ close_days[i] | times: 6 }}px;"></div>
+      <span class="bar-num">{{ close_days[i] }} days</span>
+    </div>
+    {% endfor %}
 
-The `repos:` entry of this template contains:
+    <div class="legend">
+      <span style="background-color: #4e79a7;"></span> Average Days to Close
+      &nbsp;&nbsp;
+      <span style="background-color: #a0cbe8;"></span> SLA
+    </div>
+  </div>
 
-~~~
-{% for i in site.repos %}
-- name: {{ i.name }}
-  description: {{ i.description }}
-  url: {{ i.url }}
-{% endfor %}
-~~~
-{: .language-yaml}
+  <div class="bar-chart">
+    <div class="chart-title">Service Requests by Groups and Status</div>
+    <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
+
+    {% assign groups2 = "Traffic Signals,Dirty Streets,Street & Curb Repairs,Water,Graffiti,Trash & Recycling,Trees & Grass" | split: "," %}
+    {% assign closed = "1568,1201,878,755,801,477,224" | split: "," %}
+    {% assign new = "0,0,0,0,0,0,0" | split: "," %}
+    {% assign open = "165,0,298,0,0,0,0" | split: "," %}
+    {% assign pending = "0,0,0,0,0,0,0" | split: "," %}
+
+    {% for i in (0..6) %}
+    <div class="bar-group">
+      <div class="bar-label">{{ groups2[i] }}</div>
+      <div class="bar" style="width: {{ closed[i] | divided_by: 10 }}px; background-color: #4e79a7;"></div>
+      {% if open[i] != "0" %}
+      <div class="bar" style="width: {{ open[i] | divided_by: 10 }}px; background-color: #f28e2c;"></div>
+      {% endif %}
+      <span class="bar-num">{{ closed[i] | plus: open[i] | plus: new[i] | plus: pending[i] }} SRs</span>
+    </div>
+    {% endfor %}
+
+    <div class="legend">
+      <span style="background-color: #4e79a7;"></span> Closed
+      &nbsp;&nbsp;
+      <span style="background-color: #f28e2c;"></span> Open
+    </div>
+  </div>
+
+</div>
 
 ## <a name="set-google-analytics"></a>Optional: update `google_analytics_ua:`
 
