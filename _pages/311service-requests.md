@@ -20,7 +20,7 @@ title: "311 Service Requests"
 .chart-subtitle {
   text-align: center;
   font-size: 12px;
-  color: #555;
+  color: #black;
   margin-bottom: 20px;
 }
 
@@ -143,7 +143,7 @@ title: "311 Service Requests"
 .chart-subtitle {
   text-align: center;
   font-size: 12px;
-  color: #555;
+  color: #black;
   margin-bottom: 20px;
 }
 
@@ -173,12 +173,12 @@ title: "311 Service Requests"
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90px;
+  width: 100px; /* Increased from 90px */
   margin: 0 6px;
 }
 
 .bar-segment {
-  width: 20px;
+  width: 30px; /* Increased from 20px */
   color: black;
   font-size: 10px;
   text-align: center;
@@ -195,7 +195,7 @@ title: "311 Service Requests"
 .pending { background-color: #b07aa1; }
 
 .bar-name {
-  width: 90px;
+  width: 100px; /* Match bar-group width */
   font-size: 11px;
   text-align: center;
   margin-top: 5px;
