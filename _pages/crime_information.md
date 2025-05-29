@@ -9,7 +9,7 @@ title: Crime Information
 
 <small>Source: CitiStat Group A Crime BPD, 2025</small>
 
-*Please note that there was 1 Homicide in May 2024 however, this first chart does not reflect that statistic. Please refer to the Crime Table at the bottom of the page.*
+*Please note that there was one homicide in May 2024; however, this first chart does not reflect that statistic. Please refer to the Crime Table at the bottom of the page.*
 
 <div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
   <canvas id="donutChart" width="500" height="500"></canvas>
