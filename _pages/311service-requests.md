@@ -6,7 +6,7 @@ title: "311 Service Requests"
 <style>
 .bar-chart {
   font-family: Arial, sans-serif;
-  width: 650px;
+  width: 750px;
   margin: 20px auto;
 }
 
@@ -35,41 +35,32 @@ title: "311 Service Requests"
   height: 10px;
   margin-right: 5px;
   vertical-align: middle;
-  border-radius: 50%;
+  border-radius: 2px;
 }
 
 .bar-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px;
-  margin: 0 8px;
-}
-
-.bar-labels {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 8px;
-  font-size: 10px;
-  text-align: center;
+  width: 90px;
+  margin: 0 10px;
 }
 
 .bar-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 220px;
-  gap: 8px;
+  height: 240px;
+  gap: 12px;
 }
 
 .bar {
-  width: 20px;
+  width: 30px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   color: #000000;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
 }
 
@@ -81,7 +72,7 @@ title: "311 Service Requests"
 }
 
 .bar-name {
-  width: 80px;
+  width: 90px;
   font-size: 11px;
   text-align: center;
 }
@@ -133,6 +124,7 @@ title: "311 Service Requests"
   </div>
 </div>
 
+
 <style>
 .bar-chart {
   font-family: Arial, sans-serif;
@@ -168,20 +160,20 @@ title: "311 Service Requests"
   border-radius: 2px;
 }
 
-.bar-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90px;
-  margin: 0 6px;
-}
-
 .bar-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 240px;
   gap: 8px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  margin: 0 6px;
 }
 
 .bar-segment {
@@ -192,12 +184,13 @@ title: "311 Service Requests"
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  border-top: 1px solid #fff;
 }
 
 .closed { background-color: #4e79a7; }
 .new { background-color: #f28e2c; }
 .open { background-color: #e15759; }
-pending { background-color: #b07aa1; }
+.pending { background-color: #b07aa1; }
 
 .bar-name {
   width: 90px;
@@ -219,12 +212,12 @@ pending { background-color: #b07aa1; }
   <div class="bar-container">
     <div class="bar-group">
       <div class="bar-segment closed" style="height: 200px;">1568</div>
-      <div class="bar-segment new" style="height: 21px;"></div>
+      <div class="bar-segment new" style="height: 21px;">89</div>
       <div class="bar-name">Traffic Signals, Lights, Signs</div>
     </div>
     <div class="bar-group">
       <div class="bar-segment closed" style="height: 155px;">1201</div>
-      <div class="bar-segment new" style="height: 22px;"></div>
+      <div class="bar-segment new" style="height: 22px;">94</div>
       <div class="bar-name">Dirty Streets</div>
     </div>
     <div class="bar-group">
@@ -234,17 +227,17 @@ pending { background-color: #b07aa1; }
     </div>
     <div class="bar-group">
       <div class="bar-segment closed" style="height: 120px;">755</div>
-      <div class="bar-segment new" style="height: 15px;"></div>
+      <div class="bar-segment new" style="height: 15px;">63</div>
       <div class="bar-name">Water</div>
     </div>
     <div class="bar-group">
       <div class="bar-segment closed" style="height: 127px;">801</div>
-      <div class="bar-segment pending" style="height: 10px;"></div>
+      <div class="bar-segment pending" style="height: 10px;">52</div>
       <div class="bar-name">Graffiti</div>
     </div>
     <div class="bar-group">
       <div class="bar-segment closed" style="height: 77px;">477</div>
-      <div class="bar-segment new" style="height: 10px;"></div>
+      <div class="bar-segment new" style="height: 10px;">41</div>
       <div class="bar-name">Trash & Recycling</div>
     </div>
     <div class="bar-group">
