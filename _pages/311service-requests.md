@@ -68,16 +68,16 @@ title: "311 Service Requests"
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: #000;
+  color: #FFFFFF;
   font-size: 10px;
   font-weight: bold;
 }
 
 .close-bar {
-  background-color: #4e79a7;
+  background-color: #008080;
 }
 .sla-bar {
-  background-color: #2f4da2;
+  background-color: #00FFFF;
 }
 
 .bar-name {
