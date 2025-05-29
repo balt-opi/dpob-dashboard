@@ -1,72 +1,80 @@
 ---
 layout: page
-title:  "311 Service Requests"
+title: "311 Service Requests"
 ---
 
 <style>
-.chart-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.chart-block {
+  margin-bottom: 60px;
   font-family: sans-serif;
   color: #333;
-}
-
-.bar-chart {
-  width: 100%;
   max-width: 800px;
 }
 
 .chart-title {
-  font-weight: bold;
   font-size: 20px;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .chart-subtitle {
   font-size: 14px;
-  color: #666;
+  color: #555;
   margin-bottom: 20px;
 }
 
-.bar-group {
+.bar-row {
   display: flex;
   align-items: center;
-  margin: 6px 0;
+  margin-bottom: 12px;
 }
 
-.bar-label {
-  width: 150px;
+.label {
+  width: 180px;
   font-size: 14px;
+  flex-shrink: 0;
+}
+
+.bars {
+  flex-grow: 1;
+  height: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .bar {
-  height: 20px;
-  position: relative;
-  margin-right: 10px;
+  height: 100%;
+  margin-right: 5px;
 }
 
-.bar-close {
-  background-color: #4e79a7;
-}
-
-.bar-sla {
+.sla {
   background-color: #a0cbe8;
+  z-index: 1;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  height: 12px;
+  top: 6px;
 }
 
-.bar-num {
+.close {
+  background-color: #4e79a7;
+  z-index: 2;
+}
+
+.closed { background-color: #4e79a7; }
+.new { background-color: #59a14f; }
+.open { background-color: #f28e2c; }
+.pending { background-color: #b07aa1; }
+
+.value-label {
   font-size: 12px;
-  color: #444;
-  margin-left: 4px;
+  margin-left: 8px;
+  white-space: nowrap;
 }
 
 .legend {
-  margin-top: 10px;
   font-size: 12px;
+  margin-top: 10px;
 }
 .legend span {
   display: inline-block;
@@ -77,58 +85,146 @@ title:  "311 Service Requests"
 }
 </style>
 
-<div class="chart-container">
+<div class="chart-block">
+  <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
 
-  <div class="bar-chart">
-    <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
-    <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
-
-    {% assign groups = "Trees & Grass,Street & Curb Repairs,Water,Traffic Signals,Dirty Streets,Trash & Recycling,Graffiti" | split: "," %}
-    {% assign close_days = "41,21,19,14,9,8,11" | split: "," %}
-    {% assign sla_days = "19,21,3,7.6,6,4,3" | split: "," %}
-
-    {% for i in (0..6) %}
-    <div class="bar-group">
-      <div class="bar-label">{{ groups[i] }}</div>
-      <div class="bar" style="width: {{ sla_days[i] | times: 6 }}px;" class="bar-sla"></div>
-      <div class="bar bar-close" style="width: {{ close_days[i] | times: 6 }}px;"></div>
-      <span class="bar-num">{{ close_days[i] }} days</span>
+  <!-- Each bar-row is a group -->
+  <div class="bar-row">
+    <div class="label">Trees & Grass</div>
+    <div class="bars">
+      <div class="sla" style="width: 19%;"></div>
+      <div class="bar close" style="width: 41%;"></div>
     </div>
-    {% endfor %}
-
-    <div class="legend">
-      <span style="background-color: #4e79a7;"></span> Average Days to Close
-      &nbsp;&nbsp;
-      <span style="background-color: #a0cbe8;"></span> SLA
-    </div>
+    <div class="value-label">41 days</div>
   </div>
 
-  <div class="bar-chart">
-    <div class="chart-title">Service Requests by Groups and Status</div>
-    <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
-
-    {% assign groups2 = "Traffic Signals,Dirty Streets,Street & Curb Repairs,Water,Graffiti,Trash & Recycling,Trees & Grass" | split: "," %}
-    {% assign closed = "1568,1201,878,755,801,477,224" | split: "," %}
-    {% assign new = "0,0,0,0,0,0,0" | split: "," %}
-    {% assign open = "165,0,298,0,0,0,0" | split: "," %}
-    {% assign pending = "0,0,0,0,0,0,0" | split: "," %}
-
-    {% for i in (0..6) %}
-    <div class="bar-group">
-      <div class="bar-label">{{ groups2[i] }}</div>
-      <div class="bar" style="width: {{ closed[i] | divided_by: 10 }}px; background-color: #4e79a7;"></div>
-      {% if open[i] != "0" %}
-      <div class="bar" style="width: {{ open[i] | divided_by: 10 }}px; background-color: #f28e2c;"></div>
-      {% endif %}
-      <span class="bar-num">{{ closed[i] | plus: open[i] | plus: new[i] | plus: pending[i] }} SRs</span>
+  <div class="bar-row">
+    <div class="label">Street & Curb Repairs</div>
+    <div class="bars">
+      <div class="sla" style="width: 21%;"></div>
+      <div class="bar close" style="width: 21%;"></div>
     </div>
-    {% endfor %}
-
-    <div class="legend">
-      <span style="background-color: #4e79a7;"></span> Closed
-      &nbsp;&nbsp;
-      <span style="background-color: #f28e2c;"></span> Open
-    </div>
+    <div class="value-label">21 days</div>
   </div>
 
+  <div class="bar-row">
+    <div class="label">Water</div>
+    <div class="bars">
+      <div class="sla" style="width: 3%;"></div>
+      <div class="bar close" style="width: 19%;"></div>
+    </div>
+    <div class="value-label">19 days</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Traffic Signals, Lights, Signs</div>
+    <div class="bars">
+      <div class="sla" style="width: 7.6%;"></div>
+      <div class="bar close" style="width: 14%;"></div>
+    </div>
+    <div class="value-label">14 days</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Dirty Streets</div>
+    <div class="bars">
+      <div class="sla" style="width: 6%;"></div>
+      <div class="bar close" style="width: 9%;"></div>
+    </div>
+    <div class="value-label">9 days</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Trash & Recycling</div>
+    <div class="bars">
+      <div class="sla" style="width: 4%;"></div>
+      <div class="bar close" style="width: 8%;"></div>
+    </div>
+    <div class="value-label">8 days</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Graffiti</div>
+    <div class="bars">
+      <div class="sla" style="width: 3%;"></div>
+      <div class="bar close" style="width: 11%;"></div>
+    </div>
+    <div class="value-label">11 days</div>
+  </div>
+
+  <div class="legend">
+    <span style="background-color: #4e79a7;"></span> Average Days to Close
+    &nbsp;&nbsp;
+    <span style="background-color: #a0cbe8;"></span> SLA
+  </div>
+</div>
+
+<div class="chart-block">
+  <div class="chart-title">Service Requests by Groups and Status</div>
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
+
+  <div class="bar-row">
+    <div class="label">Traffic Signals, Lights, Signs</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 78%;"></div>
+      <div class="bar open" style="width: 8%;"></div>
+    </div>
+    <div class="value-label">1,733 SRs</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Dirty Streets</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 61%;"></div>
+    </div>
+    <div class="value-label">1,224 SRs</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Street & Curb Repairs</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 44%;"></div>
+      <div class="bar open" style="width: 15%;"></div>
+    </div>
+    <div class="value-label">1,179 SRs</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Water</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 37%;"></div>
+    </div>
+    <div class="value-label">873 SRs</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Graffiti</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 40%;"></div>
+    </div>
+    <div class="value-label">805 SRs</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Trash & Recycling</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 24%;"></div>
+    </div>
+    <div class="value-label">484 SRs</div>
+  </div>
+
+  <div class="bar-row">
+    <div class="label">Trees & Grass</div>
+    <div class="bars">
+      <div class="bar closed" style="width: 11%;"></div>
+    </div>
+    <div class="value-label">224 SRs</div>
+  </div>
+
+  <div class="legend">
+    <span style="background-color: #4e79a7;"></span> Closed
+    &nbsp;&nbsp;
+    <span style="background-color: #f28e2c;"></span> Open
+  </div>
 </div>
