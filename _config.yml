@@ -43,13 +43,13 @@ navigation:
 - text: 311 Service Requests
   internal: true
   url: /311service-requests
-- text: SR Map
+- text: Service Request Map
   internal: true
   url: /srmap
-- text: Crime Information
+- text: DMA Crime Information
   internal: true
   url: /crime_information
-- text: Crime Map
+- text: DMA Crime Map
   internal: true
   url: /crime
 - text: Trees, Tree Wells, and Planters
