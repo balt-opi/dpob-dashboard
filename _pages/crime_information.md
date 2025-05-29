@@ -9,6 +9,8 @@ title: Crime Information
 
 <small>Source: CitiStat Group A Crime BPD, 2025</small>
 
+*Please note that there was 1 Homicide in May 2024 however, this first chart does not reflect that statistic. Please refer to the Crime Table at the bottom of the page.*
+
 <div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
   <canvas id="donutChart" width="500" height="500"></canvas>
 </div>
@@ -27,18 +29,16 @@ title: Crime Information
         'Robbery',
         'Aggravated Assault',
         'Auto Theft',
-        'Rape',
-        'Homicide'
+        'Rape'
       ],
       datasets: [{
-        data: [612, 415, 340, 253, 29, 1],
+        data: [612, 415, 340, 253, 29],
         backgroundColor: [
           '#6a0dad',
           '#ff6384',
           '#36a2eb',
           '#4bc0c0',
-          '#ff9f40',
-          '#e74c3c'
+          '#ff9f40'
         ],
         borderColor: '#ffffff',
         borderWidth: 2
