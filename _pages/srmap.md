@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Service Requests in the DMA Map"
+title:  "Service Requests in the DMA"
 ---
 
 # 311 Service Request Map
