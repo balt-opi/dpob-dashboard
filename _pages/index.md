@@ -12,6 +12,7 @@ When you think about Downtown Partnership, think about all the Downtown Partners
 
 **Click on the Downtown Partnership of Baltimore Dashboard banner at the top of the page to be taken to the Power BI Dashboard.**
 
+*Data below is from current year unless specfied.*
 <!-- KPI Section -->
 <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 30px; font-family: Arial;">
 
