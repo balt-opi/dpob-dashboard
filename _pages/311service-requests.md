@@ -4,227 +4,132 @@ title: "311 Service Requests"
 ---
 
 <style>
-.chart-block {
-  margin-bottom: 60px;
-  font-family: sans-serif;
-  color: #333;
-  max-width: 800px;
+.bar-chart {
+  font-family: Arial, sans-serif;
+  width: 650px;
+  margin: 20px auto;
 }
 
 .chart-title {
-  font-size: 20px;
+  text-align: center;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .chart-subtitle {
-  font-size: 14px;
+  text-align: center;
+  font-size: 12px;
   color: #555;
   margin-bottom: 20px;
 }
 
-.bar-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
+.chart-legend {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.chart-legend span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border-radius: 50%;
 }
 
-.label {
-  width: 180px;
-  font-size: 14px;
-  flex-shrink: 0;
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  margin: 0 8px;
 }
 
-.bars {
-  flex-grow: 1;
-  height: 24px;
-  position: relative;
+.bar-labels {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 220px;
+  gap: 8px;
 }
 
 .bar {
-  height: 100%;
-  margin-right: 5px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
 }
 
-.sla {
-  background-color: #a0cbe8;
-  z-index: 1;
-  position: absolute;
-  height: 12px;
-  top: 6px;
-}
-
-.close {
+.close-bar {
   background-color: #4e79a7;
-  z-index: 2;
+}
+.sla-bar {
+  background-color: #2f4da2;
 }
 
-.closed { background-color: #4e79a7; }
-.new { background-color: #59a14f; }
-.open { background-color: #f28e2c; }
-.pending { background-color: #b07aa1; }
-
-.value-label {
-  font-size: 12px;
-  margin-left: 8px;
-  white-space: nowrap;
-}
-
-.legend {
-  font-size: 12px;
-  margin-top: 10px;
-}
-.legend span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 4px;
-  vertical-align: middle;
+.bar-name {
+  width: 80px;
+  font-size: 11px;
+  text-align: center;
 }
 </style>
 
-<div class="chart-block">
+<div class="bar-chart">
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
-
-  <!-- Each bar-row is a group -->
-  <div class="bar-row">
-    <div class="label">Trees & Grass</div>
-    <div class="bars">
-      <div class="sla" style="width: 19%;"></div>
-      <div class="bar close" style="width: 41%;"></div>
-    </div>
-    <div class="value-label">41 days</div>
+  <div class="chart-legend">
+    <span style="background-color: #4e79a7;"></span> Average of Days to Close &nbsp;&nbsp;
+    <span style="background-color: #2f4da2;"></span> Average of SLA
   </div>
-
-  <div class="bar-row">
-    <div class="label">Street & Curb Repairs</div>
-    <div class="bars">
-      <div class="sla" style="width: 21%;"></div>
-      <div class="bar close" style="width: 21%;"></div>
+  <div class="bar-container">
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 164px;">41</div>
+      <div class="bar sla-bar" style="height: 76px;">19</div>
+      <div class="bar-name">Trees & Grass</div>
     </div>
-    <div class="value-label">21 days</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Water</div>
-    <div class="bars">
-      <div class="sla" style="width: 3%;"></div>
-      <div class="bar close" style="width: 19%;"></div>
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 84px;">21</div>
+      <div class="bar sla-bar" style="height: 84px;">21</div>
+      <div class="bar-name">Street & Curb Repairs</div>
     </div>
-    <div class="value-label">19 days</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Traffic Signals, Lights, Signs</div>
-    <div class="bars">
-      <div class="sla" style="width: 7.6%;"></div>
-      <div class="bar close" style="width: 14%;"></div>
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 76px;">19</div>
+      <div class="bar sla-bar" style="height: 12px;">3</div>
+      <div class="bar-name">Water</div>
     </div>
-    <div class="value-label">14 days</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Dirty Streets</div>
-    <div class="bars">
-      <div class="sla" style="width: 6%;"></div>
-      <div class="bar close" style="width: 9%;"></div>
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 56px;">14</div>
+      <div class="bar sla-bar" style="height: 28px;">7.6</div>
+      <div class="bar-name">Traffic Signals, Lights, Signs</div>
     </div>
-    <div class="value-label">9 days</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Trash & Recycling</div>
-    <div class="bars">
-      <div class="sla" style="width: 4%;"></div>
-      <div class="bar close" style="width: 8%;"></div>
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 36px;">9</div>
+      <div class="bar sla-bar" style="height: 24px;">6</div>
+      <div class="bar-name">Dirty Streets</div>
     </div>
-    <div class="value-label">8 days</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Graffiti</div>
-    <div class="bars">
-      <div class="sla" style="width: 3%;"></div>
-      <div class="bar close" style="width: 11%;"></div>
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 32px;">8</div>
+      <div class="bar sla-bar" style="height: 12px;">3</div>
+      <div class="bar-name">Trash & Recycling</div>
     </div>
-    <div class="value-label">11 days</div>
-  </div>
-
-  <div class="legend">
-    <span style="background-color: #4e79a7;"></span> Average Days to Close
-    &nbsp;&nbsp;
-    <span style="background-color: #a0cbe8;"></span> SLA
+    <div class="bar-group">
+      <div class="bar close-bar" style="height: 44px;">11</div>
+      <div class="bar sla-bar" style="height: 12px;">3</div>
+      <div class="bar-name">Graffiti</div>
+    </div>
   </div>
 </div>
 
-<div class="chart-block">
-  <div class="chart-title">Service Requests by Groups and Status</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
-
-  <div class="bar-row">
-    <div class="label">Traffic Signals, Lights, Signs</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 78%;"></div>
-      <div class="bar open" style="width: 8%;"></div>
-    </div>
-    <div class="value-label">1,733 SRs</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Dirty Streets</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 61%;"></div>
-    </div>
-    <div class="value-label">1,224 SRs</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Street & Curb Repairs</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 44%;"></div>
-      <div class="bar open" style="width: 15%;"></div>
-    </div>
-    <div class="value-label">1,179 SRs</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Water</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 37%;"></div>
-    </div>
-    <div class="value-label">873 SRs</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Graffiti</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 40%;"></div>
-    </div>
-    <div class="value-label">805 SRs</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Trash & Recycling</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 24%;"></div>
-    </div>
-    <div class="value-label">484 SRs</div>
-  </div>
-
-  <div class="bar-row">
-    <div class="label">Trees & Grass</div>
-    <div class="bars">
-      <div class="bar closed" style="width: 11%;"></div>
-    </div>
-    <div class="value-label">224 SRs</div>
-  </div>
-
-  <div class="legend">
-    <span style="background-color: #4e79a7;"></span> Closed
-    &nbsp;&nbsp;
-    <span style="background-color: #f28e2c;"></span> Open
-  </div>
-</div>
