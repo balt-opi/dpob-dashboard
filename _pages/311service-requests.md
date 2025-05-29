@@ -68,7 +68,7 @@ title: "311 Service Requests"
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: #FFFFFF;
+  color: #black;
   font-size: 10px;
   font-weight: bold;
 }
@@ -91,8 +91,8 @@ title: "311 Service Requests"
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
-    <span style="background-color: #4e79a7;"></span> Average of Days to Close &nbsp;&nbsp;
-    <span style="background-color: #2f4da2;"></span> Average of SLA
+    <span style="background-color: #008080;"></span> Average of Days to Close &nbsp;&nbsp;
+    <span style="background-color: #00FFFF;"></span> Average of SLA
   </div>
   <div class="bar-container">
     <div class="bar-group">
