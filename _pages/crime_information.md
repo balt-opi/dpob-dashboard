@@ -214,7 +214,7 @@ title: Crime Information
 <div style="overflow-x: auto; max-width: 100%;">
   <table style="border-collapse: collapse; width: 100%; min-width: 1200px; font-family: Arial, sans-serif; font-size: 14px; text-align: center; border: 1px solid #999;">
     <thead>
-      <tr style="background-color: #f0f0f0;">
+      <tr style="background-color: #00d084;">
         <th style="border: 1px solid #999; padding: 8px;">Month</th>
         <th style="border: 1px solid #999; padding: 8px;">Auto Theft</th>
         <th style="border: 1px solid #999; padding: 8px;">Robbery</th>
