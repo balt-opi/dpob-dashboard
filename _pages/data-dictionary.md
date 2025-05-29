@@ -115,8 +115,20 @@ permalink: /data-dictionary/
     <td>Data is not given and must be created for the report by the user.</td>
   </tr>
   <tr>
+    <td>Downtown Management Authority</td>
+    <td> As an essential service provider to the benefits district of the Downtown Management Authority (DMA), we work to enhance the quality of life for the growing number of Downtown residents, business owners,
+      and employees and the tens of thousands of visitors who stay and recreate in the Downtown corridor. </td>
+    <td>N/A</td>
+    <td>Baltimore City</td>
+    <td>Downtown Partnership of Baltimore/Downtown RISE</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
     <td>Employee Rates</td>
-    <td>Employment data refers to statistics that describe the status, trends, and characteristics of the workforce—who is working, where, how much they earn, and in what industries. In the U.S., the Bureau of Labor Statistics (BLS) is the primary source for this information.</td>
+    <td>Employment data refers to statistics that describe the status, trends, and characteristics of the workforce—who is working, where, how much they earn, and in what industries. In the U.S., the Bureau of Labor 
+    Statistics (BLS) is the primary source for this information.</td>
     <td>Measures the number of jobs added in the economy each month. Reported by industry (e.g., construction, healthcare, retail).</td>
     <td>Baltimore City</td>
     <td>Bureau of Labor Statistics</td>
