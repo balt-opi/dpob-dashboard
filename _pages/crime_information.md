@@ -6,6 +6,7 @@ title: Crime Information
 # Crime Statistics 
 
 <small>January 2024–Present</small>
+<small>Source: CitiStat Group A Crime BPD, 2025</small>
 
 <div style="max-width: 600px; margin: auto; padding-bottom: 40px;">
   <canvas id="donutChart" width="500" height="500"></canvas>
@@ -83,6 +84,7 @@ title: Crime Information
 # Total crimes by type
 
 <small>January 2020–Present</small>
+<small>Source: CitiStat Group A Crime BPD, 2025</small>
 
 <!-- Scrollable container with wide chart -->
 <div style="max-width: 1200px; overflow-x: auto; margin: 50px auto;">
@@ -211,6 +213,8 @@ title: Crime Information
 # Crime Table
 
 <small>Monthly crime totals by type (2024–2025)</small>
+<small>Source: CitiStat Group A Crime BPD, 2025</small>
+
 <div style="overflow-x: auto; max-width: 100%;">
   <table style="border-collapse: collapse; width: 100%; min-width: 1200px; font-family: Arial, sans-serif; font-size: 14px; text-align: center; border: 1px solid #999;">
     <thead>
