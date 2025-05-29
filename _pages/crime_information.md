@@ -212,7 +212,7 @@ title: Crime Information
 
 <small>Monthly crime totals by type (2024–2025)</small>
 <div style="overflow-x: auto; max-width: 100%;">
-  <table style="border-collapse: collapse; width: 100%; min-width: 1200px; font-family: Arial, sans-serif; font-size: 14px; text-align: center;">
+  <table style="border-collapse: collapse; width: 100%; min-width: 1200px; font-family: Arial, sans-serif; font-size: 14px; text-align: center; border: 1px solid #999;">
     <thead>
       <tr style="background-color: #f0f0f0;">
         <th style="border: 1px solid #999; padding: 8px;">Month</th>
@@ -225,25 +225,26 @@ title: Crime Information
       </tr>
     </thead>
     <tbody>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-01</td><td>120</td><td>80</td><td>65</td><td>40</td><td>55</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-02</td><td>130</td><td>75</td><td>70</td><td>45</td><td>50</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-03</td><td>110</td><td>90</td><td>60</td><td>38</td><td>48</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-04</td><td>125</td><td>85</td><td>68</td><td>42</td><td>52</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-05</td><td>135</td><td>82</td><td>64</td><td>44</td><td>49</td><td>1</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-06</td><td>140</td><td>84</td><td>66</td><td>46</td><td>54</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-07</td><td>138</td><td>86</td><td>67</td><td>41</td><td>56</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-08</td><td>142</td><td>81</td><td>63</td><td>43</td><td>57</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-09</td><td>144</td><td>83</td><td>69</td><td>47</td><td>53</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-10</td><td>139</td><td>87</td><td>71</td><td>49</td><td>58</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-11</td><td>137</td><td>85</td><td>70</td><td>45</td><td>59</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-12</td><td>145</td><td>88</td><td>72</td><td>48</td><td>60</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-01</td><td>148</td><td>90</td><td>74</td><td>50</td><td>62</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-02</td><td>150</td><td>92</td><td>73</td><td>51</td><td>63</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-03</td><td>149</td><td>91</td><td>76</td><td>52</td><td>61</td><td>0</td></tr>
-      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-04</td><td>147</td><td>89</td><td>75</td><td>53</td><td>64</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-01</td><td style="border: 1px solid #999;">120</td><td style="border: 1px solid #999;">80</td><td style="border: 1px solid #999;">65</td><td style="border: 1px solid #999;">40</td><td style="border: 1px solid #999;">55</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-02</td><td style="border: 1px solid #999;">130</td><td style="border: 1px solid #999;">75</td><td style="border: 1px solid #999;">70</td><td style="border: 1px solid #999;">45</td><td style="border: 1px solid #999;">50</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-03</td><td style="border: 1px solid #999;">110</td><td style="border: 1px solid #999;">90</td><td style="border: 1px solid #999;">60</td><td style="border: 1px solid #999;">38</td><td style="border: 1px solid #999;">48</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-04</td><td style="border: 1px solid #999;">125</td><td style="border: 1px solid #999;">85</td><td style="border: 1px solid #999;">68</td><td style="border: 1px solid #999;">42</td><td style="border: 1px solid #999;">52</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-05</td><td style="border: 1px solid #999;">135</td><td style="border: 1px solid #999;">82</td><td style="border: 1px solid #999;">64</td><td style="border: 1px solid #999;">44</td><td style="border: 1px solid #999;">49</td><td style="border: 1px solid #999;">1</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-06</td><td style="border: 1px solid #999;">140</td><td style="border: 1px solid #999;">84</td><td style="border: 1px solid #999;">66</td><td style="border: 1px solid #999;">46</td><td style="border: 1px solid #999;">54</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-07</td><td style="border: 1px solid #999;">138</td><td style="border: 1px solid #999;">86</td><td style="border: 1px solid #999;">67</td><td style="border: 1px solid #999;">41</td><td style="border: 1px solid #999;">56</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-08</td><td style="border: 1px solid #999;">142</td><td style="border: 1px solid #999;">81</td><td style="border: 1px solid #999;">63</td><td style="border: 1px solid #999;">43</td><td style="border: 1px solid #999;">57</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-09</td><td style="border: 1px solid #999;">144</td><td style="border: 1px solid #999;">83</td><td style="border: 1px solid #999;">69</td><td style="border: 1px solid #999;">47</td><td style="border: 1px solid #999;">53</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-10</td><td style="border: 1px solid #999;">139</td><td style="border: 1px solid #999;">87</td><td style="border: 1px solid #999;">71</td><td style="border: 1px solid #999;">49</td><td style="border: 1px solid #999;">58</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-11</td><td style="border: 1px solid #999;">137</td><td style="border: 1px solid #999;">85</td><td style="border: 1px solid #999;">70</td><td style="border: 1px solid #999;">45</td><td style="border: 1px solid #999;">59</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2024-12</td><td style="border: 1px solid #999;">145</td><td style="border: 1px solid #999;">88</td><td style="border: 1px solid #999;">72</td><td style="border: 1px solid #999;">48</td><td style="border: 1px solid #999;">60</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2025-01</td><td style="border: 1px solid #999;">148</td><td style="border: 1px solid #999;">90</td><td style="border: 1px solid #999;">74</td><td style="border: 1px solid #999;">50</td><td style="border: 1px solid #999;">62</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2025-02</td><td style="border: 1px solid #999;">150</td><td style="border: 1px solid #999;">92</td><td style="border: 1px solid #999;">73</td><td style="border: 1px solid #999;">51</td><td style="border: 1px solid #999;">63</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2025-03</td><td style="border: 1px solid #999;">149</td><td style="border: 1px solid #999;">91</td><td style="border: 1px solid #999;">76</td><td style="border: 1px solid #999;">52</td><td style="border: 1px solid #999;">61</td><td style="border: 1px solid #999;">0</td></tr>
+      <tr><td style="border: 1px solid #999; padding: 6px;">2025-04</td><td style="border: 1px solid #999;">147</td><td style="border: 1px solid #999;">89</td><td style="border: 1px solid #999;">75</td><td style="border: 1px solid #999;">53</td><td style="border: 1px solid #999;">64</td><td style="border: 1px solid #999;">0</td></tr>
     </tbody>
   </table>
 </div>
+
 
 
 
