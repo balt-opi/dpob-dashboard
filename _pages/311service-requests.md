@@ -132,8 +132,3 @@ title:  "311 Service Requests"
   </div>
 
 </div>
-
-## <a name="set-google-analytics"></a>Optional: update `google_analytics_ua:`
-
-The `google_analytics_ua:` property can be optionally set to the Google Analytics
-account identifier, if there is one.
