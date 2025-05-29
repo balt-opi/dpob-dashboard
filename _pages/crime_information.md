@@ -212,7 +212,7 @@ title: Crime Information
 
 <small>Monthly crime totals by type (2024–2025)</small>
 <div style="overflow-x: auto; max-width: 100%;">
-  <table style="border-collapse: collapse; width: 100%; min-width: 900px; margin-top: 20px; font-family: sans-serif; font-size: 14px;">
+  <table style="border-collapse: collapse; width: 100%; min-width: 950px; margin-top: 20px; font-family: sans-serif; font-size: 14px;">
     <thead>
       <tr style="background-color: #f2f2f2;">
         <th style="padding: 8px; border: 1px solid #ccc;">Month</th>
@@ -225,60 +225,15 @@ title: Crime Information
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ccc;">2024-01</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">120</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">80</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">65</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">40</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">55</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">0</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ccc;">2024-02</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">130</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">75</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">70</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">45</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">50</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">0</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ccc;">2024-03</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">110</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">90</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">60</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">38</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">48</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">0</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ccc;">2024-04</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">100</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">88</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">55</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">42</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">51</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">0</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ccc;">2024-05</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">95</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">92</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">68</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">44</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">49</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">1</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ccc;">2025-01</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">85</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">70</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">61</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">39</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">53</td>
-        <td style="padding: 8px; border: 1px solid #ccc;">0</td>
-      </tr>
+      <tr><td>2024-01</td><td>120</td><td>80</td><td>65</td><td>40</td><td>55</td><td>0</td></tr>
+      <tr><td>2024-02</td><td>130</td><td>75</td><td>70</td><td>45</td><td>50</td><td>0</td></tr>
+      <tr><td>2024-03</td><td>110</td><td>90</td><td>60</td><td>38</td><td>48</td><td>0</td></tr>
+      <tr><td>2024-04</td><td>100</td><td>88</td><td>55</td><td>42</td><td>51</td><td>0</td></tr>
+      <tr><td>2024-05</td><td>95</td><td>92</td><td>68</td><td>44</td><td>49</td><td>1</td></tr>
+      <tr><td>2025-01</td><td>85</td><td>70</td><td>61</td><td>39</td><td>53</td><td>0</td></tr>
+      <tr><td>2025-02</td><td>78</td><td>68</td><td>59</td><td>37</td><td>50</td><td>0</td></tr>
+      <tr><td>2025-03</td><td>90</td><td>74</td><td>63</td><td>41</td><td>52</td><td>0</td></tr>
+      <tr><td>2025-04</td><td>88</td><td>76</td><td>66</td><td>43</td><td>54</td><td>0</td></tr>
     </tbody>
   </table>
 </div>
