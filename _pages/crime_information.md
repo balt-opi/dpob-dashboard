@@ -81,6 +81,7 @@ title: Crime Information
 
 
 Total crimes by type
+
 <small>January 2020–Present</small>
 
 <!-- Scrollable container with wide chart -->
