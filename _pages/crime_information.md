@@ -212,28 +212,28 @@ title: Crime Information
 
 <small>Monthly crime totals by type (2024–2025)</small>
 <div style="overflow-x: auto; max-width: 100%;">
-  <table style="border-collapse: collapse; width: 100%; min-width: 950px; margin-top: 20px; font-family: sans-serif; font-size: 14px;">
+  <table style="border-collapse: collapse; width: 100%; min-width: 1000px; font-family: Arial, sans-serif; font-size: 14px; text-align: center;">
     <thead>
-      <tr style="background-color: #f2f2f2;">
-        <th style="padding: 8px; border: 1px solid #ccc;">Month</th>
-        <th style="padding: 8px; border: 1px solid #ccc;">Auto Theft</th>
-        <th style="padding: 8px; border: 1px solid #ccc;">Robbery</th>
-        <th style="padding: 8px; border: 1px solid #ccc;">Assault</th>
-        <th style="padding: 8px; border: 1px solid #ccc;">Burglary</th>
-        <th style="padding: 8px; border: 1px solid #ccc;">Larceny</th>
-        <th style="padding: 8px; border: 1px solid #ccc;">Homicide</th>
+      <tr style="background-color: #f0f0f0;">
+        <th style="border: 1px solid #999; padding: 8px;">Month</th>
+        <th style="border: 1px solid #999; padding: 8px;">Auto Theft</th>
+        <th style="border: 1px solid #999; padding: 8px;">Robbery</th>
+        <th style="border: 1px solid #999; padding: 8px;">Assault</th>
+        <th style="border: 1px solid #999; padding: 8px;">Burglary</th>
+        <th style="border: 1px solid #999; padding: 8px;">Larceny</th>
+        <th style="border: 1px solid #999; padding: 8px;">Homicide</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>2024-01</td><td>120</td><td>80</td><td>65</td><td>40</td><td>55</td><td>0</td></tr>
-      <tr><td>2024-02</td><td>130</td><td>75</td><td>70</td><td>45</td><td>50</td><td>0</td></tr>
-      <tr><td>2024-03</td><td>110</td><td>90</td><td>60</td><td>38</td><td>48</td><td>0</td></tr>
-      <tr><td>2024-04</td><td>100</td><td>88</td><td>55</td><td>42</td><td>51</td><td>0</td></tr>
-      <tr><td>2024-05</td><td>95</td><td>92</td><td>68</td><td>44</td><td>49</td><td>1</td></tr>
-      <tr><td>2025-01</td><td>85</td><td>70</td><td>61</td><td>39</td><td>53</td><td>0</td></tr>
-      <tr><td>2025-02</td><td>78</td><td>68</td><td>59</td><td>37</td><td>50</td><td>0</td></tr>
-      <tr><td>2025-03</td><td>90</td><td>74</td><td>63</td><td>41</td><td>52</td><td>0</td></tr>
-      <tr><td>2025-04</td><td>88</td><td>76</td><td>66</td><td>43</td><td>54</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-01</td><td>120</td><td>80</td><td>65</td><td>40</td><td>55</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-02</td><td>130</td><td>75</td><td>70</td><td>45</td><td>50</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-03</td><td>110</td><td>90</td><td>60</td><td>38</td><td>48</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-04</td><td>100</td><td>88</td><td>55</td><td>42</td><td>51</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2024-05</td><td>95</td><td>92</td><td>68</td><td>44</td><td>49</td><td>1</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-01</td><td>85</td><td>70</td><td>61</td><td>39</td><td>53</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-02</td><td>78</td><td>68</td><td>59</td><td>37</td><td>50</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-03</td><td>90</td><td>74</td><td>63</td><td>41</td><td>52</td><td>0</td></tr>
+      <tr><td style="border: 1px solid #ccc; padding: 6px;">2025-04</td><td>88</td><td>76</td><td>66</td><td>43</td><td>54</td><td>0</td></tr>
     </tbody>
   </table>
 </div>
