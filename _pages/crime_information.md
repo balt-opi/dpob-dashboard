@@ -83,16 +83,17 @@ title: Crime Information
 Total crimes by type
 <small>January 2020–Present</small>
 
-<!-- Wider scrollable container -->
-<div style="max-width: 1000px; overflow-x: auto; margin: 50px auto;">
+<!-- Scrollable container with wide chart -->
+<div style="max-width: 1200px; overflow-x: auto; margin: 50px auto;">
   <select id="timeScale" style="margin-bottom: 10px;">
     <option value="daily">By Day</option>
-    <option value="monthly">By Month</option>
+    <option value="monthly" selected>By Month</option>
     <option value="yearly">By Year</option>
   </select>
-  <canvas id="typeBarChart" width="1400" height="600"></canvas>
+  <canvas id="typeBarChart" width="1800" height="600"></canvas>
 </div>
 
+<!-- Chart.js + Data Labels Plugin -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
@@ -109,23 +110,27 @@ Total crimes by type
       }
     },
     monthly: {
-      labels: ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2025-01', '2025-02'],
+      labels: [
+        '2024-01', '2024-02', '2024-03', '2024-04', '2024-05', 
+        '2024-06', '2024-07', '2024-08', '2024-09', '2024-10',
+        '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04'
+      ],
       datasets: {
-        'Auto Theft': [120, 130, 110, 125, 135, 140, 128],
-        'Robbery': [80, 75, 90, 85, 82, 78, 83],
-        'Assault': [65, 70, 60, 68, 64, 70, 66],
-        'Burglary': [40, 45, 38, 42, 44, 43, 39],
-        'Larceny': [55, 50, 48, 52, 49, 54, 51]
+        'Auto Theft': [120, 130, 110, 125, 135, 140, 138, 142, 144, 139, 137, 145, 148, 150, 149, 147],
+        'Robbery': [80, 75, 90, 85, 82, 84, 86, 81, 83, 87, 85, 88, 90, 92, 91, 89],
+        'Assault': [65, 70, 60, 68, 64, 66, 67, 63, 69, 71, 70, 72, 74, 73, 76, 75],
+        'Burglary': [40, 45, 38, 42, 44, 46, 41, 43, 47, 49, 45, 48, 50, 51, 52, 53],
+        'Larceny': [55, 50, 48, 52, 49, 54, 56, 57, 53, 58, 59, 60, 62, 63, 61, 64]
       }
     },
     yearly: {
-      labels: ['2023', '2024', '2025'],
+      labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
       datasets: {
-        'Auto Theft': [1500, 1600, 800],
-        'Robbery': [900, 850, 400],
-        'Assault': [700, 750, 300],
-        'Burglary': [400, 450, 200],
-        'Larceny': [600, 650, 250]
+        'Auto Theft': [1300, 1400, 1500, 1600, 1700, 900],
+        'Robbery': [700, 750, 800, 850, 900, 500],
+        'Assault': [600, 650, 700, 750, 800, 400],
+        'Burglary': [300, 350, 400, 450, 500, 300],
+        'Larceny': [500, 550, 600, 650, 700, 350]
       }
     }
   };
@@ -141,29 +146,31 @@ Total crimes by type
   const ctx3 = document.getElementById('typeBarChart').getContext('2d');
 
   function buildDatasets(timeKey) {
-    return Object.entries(crimeData[timeKey].datasets).map(([crimeType, data]) => ({
-      label: crimeType,
-      data: data,
-      backgroundColor: crimeColors[crimeType],
-      borderRadius: 8,
-      barThickness: 20  // ⬅️ Smaller/thinner bars
+    return Object.entries(crimeData[timeKey].datasets).map(([type, values]) => ({
+      label: type,
+      data: values,
+      backgroundColor: crimeColors[type],
+      borderRadius: 6,
+      barThickness: 20 // Smaller bars for wider spacing
     }));
   }
 
-  const chartConfig = {
+  const chart3 = new Chart(ctx3, {
     type: 'bar',
     data: {
-      labels: crimeData.daily.labels,
-      datasets: buildDatasets('daily')
+      labels: crimeData.monthly.labels,
+      datasets: buildDatasets('monthly')
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: false,
       indexAxis: 'x',
       scales: {
         x: {
           beginAtZero: true,
-          title: { display: true, text: 'Date / Month / Year' },
+          title: {
+            display: true,
+            text: 'Date / Month / Year'
+          },
           ticks: {
             maxRotation: 45,
             minRotation: 45
@@ -171,7 +178,10 @@ Total crimes by type
         },
         y: {
           beginAtZero: true,
-          title: { display: true, text: 'Crime Count' }
+          title: {
+            display: true,
+            text: 'Crime Count'
+          }
         }
       },
       plugins: {
@@ -181,16 +191,15 @@ Total crimes by type
           align: 'top',
           color: '#000',
           font: { weight: 'bold', size: 12 },
-          formatter: (value) => value
+          formatter: value => value
         }
       }
     },
     plugins: [ChartDataLabels]
-  };
+  });
 
-  const chart3 = new Chart(ctx3, chartConfig);
-
-  document.getElementById('timeScale').addEventListener('change', e => {
+  // Dropdown to switch views
+  document.getElementById('timeScale').addEventListener('change', (e) => {
     const scale = e.target.value;
     chart3.data.labels = crimeData[scale].labels;
     chart3.data.datasets = buildDatasets(scale);
