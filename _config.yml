@@ -52,7 +52,7 @@ navigation:
 - text: DMA Crime Map
   internal: true
   url: /crime
-- text: Trees, Tree Wells, and Planters
+- text: Trees, Tree Wells, and Planters Map
   internal: true
   url: /trees-twells-planters
 - text: Data Dictionary
