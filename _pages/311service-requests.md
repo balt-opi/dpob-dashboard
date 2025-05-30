@@ -3,9 +3,10 @@ layout: page
 title: "311 Service Requests"
 ---
 
-# Average Days to Close Service Requests
-12.24
-
+  <div style="background-color: #00d084; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="color: #000000; font-weight: bold; font-size: 16px;">Average Days to Close Service Requests</div>
+    <div style="color: #000000; font-weight: bold; font-size: 28px;">12.24</div>
+  </div> 
 
 
 
