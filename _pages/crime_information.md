@@ -220,7 +220,7 @@ title: Crime Information
 <div style="overflow-x: auto; max-width: 100%;">
   <table style="border-collapse: collapse; width: 100%; min-width: 1200px; font-family: Arial, sans-serif; font-size: 14px; text-align: center; border: 1px solid #121f3f;">
     <thead>
-      <tr style="background-color: #121f3f;">
+      <tr style="background-color: #f1c232;">
         <th style="border: 1px solid black; padding: 8px;">Month</th>
         <th style="border: 1px solid black; padding: 8px;">Auto Theft</th>
         <th style="border: 1px solid black; padding: 8px;">Robbery</th>
