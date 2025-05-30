@@ -16,7 +16,7 @@ title: Business and Economy
     y: [0.777, 0.760, 0.769, 0.771, 0.773, 0.771, 0.768, 0.766, 0.766, 0.775, 0.770],
     type: 'scatter',
     mode: 'lines+markers',
-    line: { color: '#00d084' },
+    line: { color: '#f1c232' },
     marker: { size: 8 }
   }];
 
@@ -45,7 +45,7 @@ title: Business and Economy
     y: [61.5, 61.4, 61.3, 61.2, 61.1, 61.0, 61.3, 61.6, 61.7, 61.8, 61.9],
     type: 'scatter',
     mode: 'lines+markers',
-    line: { color: '#00d084' },
+    line: { color: '#f1c232' },
     marker: { size: 6 }
   }];
 
