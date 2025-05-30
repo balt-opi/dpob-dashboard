@@ -41,7 +41,7 @@ permalink: /data-dictionary/
   }
 
   .excel-table tbody tr:nth-child(even) {
-    background-color: #f1c232;
+    background-color: ##eeeeee;
   }
 </style>
 
