@@ -9,7 +9,6 @@ title: "311 Service Requests"
   </div> 
 
 
-
 <style>
 .bar-chart {
   font-family: Arial, sans-serif;
