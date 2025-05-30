@@ -5,9 +5,9 @@ title: "311 Service Requests"
 
 # Service Request Statistics
 
-<b>
+<b></b>
+<b></b>
 
-</b>
 
 <div style="display: flex; gap: 16px; justify-content: center; align-items: stretch;">
 
