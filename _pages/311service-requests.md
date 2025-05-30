@@ -4,7 +4,7 @@ title: "311 Service Requests"
 ---
 
 
-  <div style="background-color: #00d084; padding: 15px; border-radius: 18px; flex: 1; min-width: 80px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <div style="background-color: #00d084; padding: 10px; border-radius: 12px; flex: 1; min-width: 50px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     <div style="color: #000000; font-weight: bold; font-size: 16px;">Average Days to Close Service Requests</div>
     <div style="color: #000000; font-weight: bold; font-size: 28px;">12.24</div>
   </div> 
