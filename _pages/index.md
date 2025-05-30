@@ -7,7 +7,7 @@ title: Downtown Partnership of Baltimore
 # We Are Downtown!
 
 In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.
-When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all DPOB, and we’ve been making Baltimore great for over 35 years.
+When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all downtown, and we’ve been making Baltimore great for over 35 years.
 
 
 **Click on the Downtown Partnership of Baltimore Dashboard banner at the top of the page to be taken to the Power BI Dashboard.**
