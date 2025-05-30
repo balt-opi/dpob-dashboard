@@ -1,16 +1,15 @@
 ---
 layout: page
 permalink: /dpob_introduction_page
-title: Downtown Partnership of Baltimore
+title: Downtown Economic Intelligence Dashboard
 ---
 
 # We Are Downtown!
 
-In Downtown Baltimore, you'll find a diverse, thriving community of residents and businesses working to make this city a great place to be.
-When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all downtown, and we’ve been making Baltimore great for over 35 years.
+Downtown is on the RISE. With more than $6.9 billion of investment in development downtown between 2018 and 2028, the recent announcement of Baltimore as one of the 31 inaugural Tech Hubs, which will allow Baltimore City to unlock up to $75M in federal investment, and the throngs of visitors coming to downtown to cheer on the Orioles and the Ravens sports teams, attend concerts, and shop small businesses – the renaissance of downtown Baltimore is happening now!
 
 
-**Click on the Downtown Partnership of Baltimore Dashboard banner at the top of the page to be taken to the Power BI Dashboard.**
+**Click on the Downtown Economic Intelligence Dashboard banner at the top of the page to be taken to the Power BI Dashboard.**
 
 *Data below is from current year unless specfied.*
 <!-- KPI Section -->
