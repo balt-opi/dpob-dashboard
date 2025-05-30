@@ -24,7 +24,7 @@ Downtown is on the RISE. With more than $6.9 billion of investment in developmen
   <!-- Box 2 -->
   <div style="background-color: #121f3f; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     <div style="color: #f1c232; font-weight: bold; font-size: 16px;">Number of Hotels</div>
-    <div style="color: #f1c2320; font-weight: bold; font-size: 28px;">13</div>
+    <div style="color: #f1c232; font-weight: bold; font-size: 28px;">13</div>
   </div>
 
   <!-- Box 3 -->
