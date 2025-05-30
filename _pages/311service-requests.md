@@ -13,14 +13,14 @@ title: "311 Service Requests"
 
   <!-- Box 1 -->
   <div style="background-color: #00d084; padding: 10px; border-radius: 8px; width: 250px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #000000; font-weight: bold; font-size: 16px;">Average Days to Close Service Requests</div>
-    <div style="color: #000000; font-weight: bold; font-size: 28px;">12.24</div>
+    <div style="color: #f1c232; font-weight: bold; font-size: 16px;">Average Days to Close Service Requests</div>
+    <div style="color: #f1c232; font-weight: bold; font-size: 28px;">12.24</div>
   </div> 
 
   <!-- Box 2 -->
   <div style="background-color: #00d084; padding: 10px; border-radius: 8px; width: 250px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <div style="color: #000000; font-weight: bold; font-size: 16px;">Number of Overdue Service Requests</div>
-    <div style="color: #000000; font-weight: bold; font-size: 28px;">1254</div>
+    <div style="color: #f1c232; font-weight: bold; font-size: 16px;">Number of Overdue Service Requests</div>
+    <div style="color: #f1c232; font-weight: bold; font-size: 28px;">1254</div>
   </div>
 
 </div>
