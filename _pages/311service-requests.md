@@ -3,6 +3,12 @@ layout: page
 title: "311 Service Requests"
 ---
 
+# Average Days to Close Service Requests
+12.24
+
+
+
+
 <style>
 .bar-chart {
   font-family: Arial, sans-serif;
