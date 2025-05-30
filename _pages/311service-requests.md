@@ -198,9 +198,10 @@ title: "311 Service Requests"
 }
 
 .bar-segment {
-  width: 30px; /* Increased from 20px */
+  width: 30px;
   color: black;
   font-size: 10px;
+  font-weight: bold; 
   text-align: center;
   display: flex;
   align-items: flex-end;
