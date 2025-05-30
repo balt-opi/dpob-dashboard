@@ -36,8 +36,12 @@ permalink: /data-dictionary/
     z-index: 1;
   }
 
+  .excel-table thead th {
+    color: #f1c232; /* Add this line to set header font color */
+  }
+
   .excel-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f1c232;
   }
 </style>
 
