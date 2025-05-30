@@ -16,7 +16,7 @@
 }
 h1.hero-title {
   background-color: #121f3f;
-  color: white;
+  color: #f1c232;
   padding: 20px;
   text-align: center;
   font-size: 2em;
@@ -24,7 +24,7 @@ h1.hero-title {
 }
 .footer {
   background-color: #121f3f;
-  color: white;
+  color: #f1c232;
   padding: 15px;
   text-align: center;
   font-size: 0.9em;
