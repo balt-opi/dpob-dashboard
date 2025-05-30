@@ -33,13 +33,13 @@ h1.hero-title {
 
 <div class="hero">
   <div class="overlay">
-    <h1 class="hero-title">Downtown Partnership of Baltimore</h1>
+    <h1 class="hero-title">Downtown Economic Intelligence Dashboard</h1>
 
-    <h3>WE ARE DPOB!</h3>
+    <h3>Downtown Baltimore!</h3>
 
     <p><strong>Mission:</strong> Activating Downtown spaces is an important part of the work we do.</p>
 
-    <p><strong>Who we are:</strong> When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all DPOB, and we’ve been making Baltimore great for over 35 years.</p>
+    <p><strong>Who we are:</strong> When you think about Downtown Partnership, think about all the Downtown Partners, Organizers, and Businesses building a better Baltimore. We are all downtown, and we’ve been making Baltimore great for over 35 years.</p>
 
     <p><strong>What we do:</strong> Public Safety and Hospitality, Beautification, Economic Development and Advocacy, Membership and Networking, Events, and Marketing and Promotions.</p>
 
