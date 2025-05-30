@@ -81,7 +81,6 @@ title: Crime Information
   });
 </script>
 
-
 # Total crimes by type
 
 <small>January 2020–Present</small>
