@@ -10,7 +10,7 @@ collections:
     permalink: /:path/
 
 # Title
-name: Downtown Partnership of Baltimore Dashboard
+name: Downtown Economic Intelligence Dashboard
 url: https://app.powerbigov.us/view?r=eyJrIjoiMWE3YmY1MjEtZDIzMy00NGEwLWIwM2QtM2Q2YzNiY2QxNjMyIiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9
 # Author/Organization info to be displayed in the templates
 author1:
@@ -18,8 +18,8 @@ author1:
   url: https://opi.baltimorecity.gov
 
 author:
-  name: Downtown Partnership of Baltimore
-  url: https://godowntownbaltimore.com
+  name: Downtown Economic Intelligence Dashboard
+  url: https://www.downtownbaltimorerise.com/
 
 # When using this template with a project (repository) page set the baseurl to '/project-name'
 # For user/organization pages set this to an empty string
