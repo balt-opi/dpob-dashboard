@@ -22,14 +22,14 @@ permalink: /data-dictionary/
   }
 
   .excel-table th, .excel-table td {
-    border: 1px solid #000000;
+    border: 1px solid #f1c232;
     padding: 8px;
     text-align: left;
     vertical-align: top;
   }
 
   .excel-table thead {
-    background-color: #00d084;
+    background-color: #121f3f;
     font-weight: bold;
     position: sticky;
     top: 0;
