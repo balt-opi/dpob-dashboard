@@ -15,7 +15,7 @@
   border-radius: 6px;
 }
 h1.hero-title {
-  background-color: #00ab66;
+  background-color: #121f3f;
   color: white;
   padding: 20px;
   text-align: center;
@@ -23,7 +23,7 @@ h1.hero-title {
   margin-bottom: 30px;
 }
 .footer {
-  background-color: #00ab66;
+  background-color: #121f3f;
   color: white;
   padding: 15px;
   text-align: center;
