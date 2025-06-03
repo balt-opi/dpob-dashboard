@@ -88,11 +88,14 @@ title: "311 Service Requests"
   margin-top: 4px;
   font-size: 11px;
   text-align: center;
-  max-width: 80px;
-  word-wrap: break-word;
+  max-width: 60px;
+  height: 28px;            /* FIXED HEIGHT */
+  overflow: hidden;        /* Prevent overflow */
+  line-height: 14px;
+  word-break: break-word;
 }
 
-/* Colors */
+/* Bar Colors */
 .close-bar { background-color: #abb8c3; }
 .sla-bar { background-color: #8ed1fc; }
 .closed { background-color: #9FE2BF; }
