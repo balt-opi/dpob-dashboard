@@ -59,9 +59,11 @@ title: "311 Service Requests"
 
 /* Bar Area */
 .bar-container {
-  padding-bottom: 40px; /* give extra bottom space for labels */
-  overflow-x: visible; /* avoid clipping */
-  white-space: nowrap; /* keep labels in one line, or remove this if wrapping is preferred */
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 30px;
 }
 .bar-group {
   display: flex;
@@ -84,12 +86,14 @@ title: "311 Service Requests"
   line-height: 1;
 }
 .bar-name {
-  white-space: normal;  /* allow label text to wrap to multiple lines */
-  max-width: 80px;      /* constrain label width to avoid overlap */
-  word-wrap: break-word;
-  margin: 0 auto;       /* center label under bar */
-  font-size: 12px;      /* smaller font for longer labels */
-  padding-top: 6px;
+  margin-top: 4px;
+  font-size: 11px;
+  text-align: center;
+  max-width: 60px;
+  height: 28px;            /* FIXED HEIGHT */
+  overflow: hidden;        /* Prevent overflow */
+  line-height: 14px;
+  word-break: break-word;
 }
 
 /* Bar Colors */
