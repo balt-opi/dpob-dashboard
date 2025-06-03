@@ -105,16 +105,6 @@ title: "311 Service Requests"
 .pending { background-color: #b07aa1; }
 </style>
 
- <style>
-  /* Bar Colors */
-  .close-bar { background-color: #abb8c3; }
-  .sla-bar { background-color: #8ed1fc; }
-  .closed { background-color: #9FE2BF; }
-  .new { background-color: #f28e2c; }
-  .open { background-color: #e15759; }
-  .pending { background-color: #b07aa1; }
-</style>
-
 <div style="max-width: 900px; margin: 0 auto;"> <!-- Removed text-align: center -->
   <div style="display: flex; align-items: flex-end;">
 
