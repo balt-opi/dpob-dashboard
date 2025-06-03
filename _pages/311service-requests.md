@@ -24,9 +24,10 @@ title: "311 Service Requests"
 /* General Layout */
 .bar-chart {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; /* centers the chart horizontally */
   padding: 20px;
   font-family: sans-serif;
+  text-align: center;
 }
 .chart-title {
   text-align: center;
@@ -104,7 +105,12 @@ title: "311 Service Requests"
 .pending { background-color: #b07aa1; }
 </style>
 
-
+<div style="max-width: 900px; margin: 0 auto; text-align: center;">
+  <!-- Y-Axis Label -->
+  <div style="display: flex;">
+    <div style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; padding-right: 10px; font-weight: bold;">
+      Average Days to Close
+    </div>
 
 <!-- Chart 1: Average vs SLA -->
 <div class="bar-chart">
@@ -153,6 +159,11 @@ title: "311 Service Requests"
   </div>
 </div>
 
+<!-- X-Axis Label -->
+   <div style="margin-top: 12px; font-weight: bold;">SR Group</div>
+  </div>
+ </div>
+</div>
 <!-- Chart 2: Service Requests by Group and Status -->
 <div class="bar-chart">
   <div class="chart-title">Service Requests by Groups and Status</div>
