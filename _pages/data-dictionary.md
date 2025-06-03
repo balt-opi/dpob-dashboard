@@ -22,13 +22,14 @@ Use the vertical and horizontal sliders on the table to view information on the 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
   }
-
+  
   .excel-table th, .excel-table td {
-    border: 1px solid #f1c232;
-    padding: 8px;
-    text-align: left;
-    vertical-align: top;
-  }
+  border: 1px solid #f1c232;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  min-width: 150px;
+}
 
   .excel-table thead {
     background-color: #121f3f;
