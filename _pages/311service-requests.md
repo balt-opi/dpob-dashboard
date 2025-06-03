@@ -146,27 +146,15 @@ title: "311 Service Requests"
 </div>
 
 <!-- Chart 2: Service Requests by Group and Status -->
-<div class="chart-legend" style="display: flex; align-items: center; gap: 16px; font-family: sans-serif; font-size: 14px; margin-top: 10px; flex-wrap: wrap;">
-  <span style="font-weight: bold; white-space: nowrap;">SR Status</span>
-
-  <span style="display: inline-flex; align-items: center; gap: 6px;">
-    <span style="width: 12px; height: 12px; background-color: #4e79a7; display: inline-block; border-radius: 2px;"></span>
-    Closed
-  </span>
-
-  <span style="display: inline-flex; align-items: center; gap: 6px;">
-    <span style="width: 12px; height: 12px; background-color: #f28e2c; display: inline-block; border-radius: 2px;"></span>
-    New
-  </span>
-
-  <span style="display: inline-flex; align-items: center; gap: 6px;">
-    <span style="width: 12px; height: 12px; background-color: #e15759; display: inline-block; border-radius: 2px;"></span>
-    Open
-  </span>
-
-  <span style="display: inline-flex; align-items: center; gap: 6px;">
-    <span style="width: 12px; height: 12px; background-color: #b07aa1; display: inline-block; border-radius: 2px;"></span>
-    Pending
+<div class="bar-chart">
+  <div class="chart-title">Service Requests by Groups and Status</div>
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
+  <div class="chart-legend">
+    <span style="font-weight: bold; white-space: nowrap;">SR Status:</span>
+    <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
+    <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
+    <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
+    <span style="background-color: #b07aa1;"></span> Pending
   </span>
 </div>
   <div class="bar-container">
