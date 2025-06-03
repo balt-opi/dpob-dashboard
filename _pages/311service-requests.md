@@ -20,53 +20,54 @@ title: "311 Service Requests"
   </div>
 </div>
 
-<!-- Shared Styling -->
 <style>
 .bar-chart {
   font-family: Arial, sans-serif;
-  width: 1000px;
+  max-width: 1000px;
   margin: 40px auto;
+  padding: 0 20px;
 }
 .chart-title {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 4px;
 }
 .chart-subtitle {
   text-align: center;
-  font-size: 12px;
-  color: #000;
+  font-size: 14px;
+  color: #666;
   margin-bottom: 20px;
 }
 .chart-legend {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
   margin-bottom: 20px;
+  gap: 10px;
 }
 .chart-legend span {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: 5px;
-  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   border-radius: 2px;
+  margin-right: 4px;
 }
 .bar-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 240px;
   gap: 8px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  padding-bottom: 30px;
 }
 .bar-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
-  width: 100px;
-  margin: 0 6px;
+  gap: 0;
 }
 .bar {
   width: 30px;
@@ -75,13 +76,16 @@ title: "311 Service Requests"
   align-items: center;
   font-size: 11px;
   font-weight: bold;
-  color: #000;
+  color: #000; /* Ensures black text */
+  line-height: 1;
+  padding: 2px 0;
 }
 .bar-name {
   width: 100px;
   font-size: 11px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 6px;
+  word-wrap: break-word;
 }
 .close-bar { background-color: #abb8c3; }
 .sla-bar { background-color: #8ed1fc; }
@@ -91,10 +95,11 @@ title: "311 Service Requests"
 .pending { background-color: #b07aa1; }
 </style>
 
+
 <!-- Chart 1: Average vs SLA -->
 <div class="bar-chart">
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
     <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
     <span style="background-color: #8ed1fc;"></span> Average of SLA
@@ -141,7 +146,7 @@ title: "311 Service Requests"
 <!-- Chart 2: Service Requests by Group and Status -->
 <div class="bar-chart">
   <div class="chart-title">Service Requests by Groups and Status</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
     <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
     <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
@@ -262,7 +267,7 @@ title: "311 Service Requests"
 
 <div class="bar-chart">
   <div class="chart-title">Service Requests Created Over Time</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
     <span style="background-color: #f28e2c;"></span> Open
     <span style="background-color: #8ed1fc;"></span> Closed
