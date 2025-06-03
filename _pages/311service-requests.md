@@ -106,6 +106,7 @@ title: "311 Service Requests"
     <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
     <span style="background-color: #8ed1fc;"></span> Average of SLA
   </div>
+  </div>
   <div class="bar-container">
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 76px;">19</div>
