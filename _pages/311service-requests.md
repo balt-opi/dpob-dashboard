@@ -96,6 +96,7 @@ title: "311 Service Requests"
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
+    <span style="font-weight: bold; margin-right: 10px;">SR Status</span>
     <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
     <span style="background-color: #8ed1fc;"></span> Average of SLA
   </div>
@@ -143,6 +144,7 @@ title: "311 Service Requests"
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
+    <span style="font-weight: bold; margin-right: 10px;">SR Status</span>
     <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
     <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
     <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
@@ -191,8 +193,9 @@ title: "311 Service Requests"
   <div class="chart-title">Service Requests Created Over Time</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
-    <span style="background-color: #f28e2c;"></span> 2025 &nbsp;&nbsp;
-    <span style="background-color: #8ed1fc;"></span> 2024
+    <span style="font-weight: bold; margin-right: 10px;">SR Status</span>
+    <span style="background-color: #f28e2c;"></span> Open &nbsp;&nbsp;
+    <span style="background-color: #8ed1fc;"></span> Closed &nbsp;&nbsp;
   </div>
   <div class="bar-container">
     <div class="bar-group">
