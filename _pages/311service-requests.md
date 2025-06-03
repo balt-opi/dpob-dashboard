@@ -21,11 +21,12 @@ title: "311 Service Requests"
 </div>
 
 <style>
-.bar-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+/* General Layout */
+.bar-chart {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
 }
 .chart-title {
   text-align: center;
@@ -54,38 +55,44 @@ title: "311 Service Requests"
   border-radius: 2px;
   margin-right: 4px;
 }
+
+/* Bar Area */
 .bar-container {
   display: flex;
   align-items: flex-end;
-  gap: 8px;
+  gap: 20px;
   overflow-x: auto;
   padding-bottom: 30px;
 }
 .bar-group {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 4px;
 }
+
+/* Bar and Labels */
 .bar {
   width: 30px;
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  align-items: center;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: bold;
-  color: #000000; /* black text */
-  line-height: .5;
-  padding: 2px;
-  margin: 0; /* no space between stacked bars */
+  color: #000;
   border-radius: 4px 4px 0 0;
+  padding: 2px;
+  line-height: 1;
 }
 .bar-name {
-  width: 100px;
-  text-align: center;
+  margin-top: 4px;
   font-size: 11px;
+  text-align: center;
+  max-width: 80px;
   word-wrap: break-word;
 }
+
+/* Colors */
 .close-bar { background-color: #abb8c3; }
 .sla-bar { background-color: #8ed1fc; }
 .closed { background-color: #9FE2BF; }
@@ -93,6 +100,7 @@ title: "311 Service Requests"
 .open { background-color: #e15759; }
 .pending { background-color: #b07aa1; }
 </style>
+
 
 
 <!-- Chart 1: Average vs SLA -->
