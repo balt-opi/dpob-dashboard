@@ -96,7 +96,6 @@ title: "311 Service Requests"
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
-    <span style="font-weight: bold; margin-right: 10px;">SR Status</span>
     <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
     <span style="background-color: #8ed1fc;"></span> Average of SLA
   </div>
@@ -144,7 +143,6 @@ title: "311 Service Requests"
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
-    <span style="font-weight: bold; margin-right: 10px;">SR Status</span>
     <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
     <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
     <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
@@ -189,13 +187,85 @@ title: "311 Service Requests"
 </div>
 
 <!-- Chart 3: Service Requests Created Over Time -->
+<style>
+  .bar-chart {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+
+  .chart-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .chart-subtitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #666;
+  }
+
+  .chart-legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .chart-legend span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    border-radius: 2px;
+  }
+
+  .bar-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 30px;
+  }
+
+  .bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar {
+    width: 30px;
+    margin: 2px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .bar-name {
+    margin-top: 6px;
+    font-size: 11px;
+    text-align: center;
+    max-width: 60px;
+    word-wrap: break-word;
+  }
+</style>
+
 <div class="bar-chart">
   <div class="chart-title">Service Requests Created Over Time</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2025</div>
   <div class="chart-legend">
-    <span style="font-weight: bold; margin-right: 10px;">SR Status</span>
-    <span style="background-color: #f28e2c;"></span> Open &nbsp;&nbsp;
-    <span style="background-color: #8ed1fc;"></span> Closed &nbsp;&nbsp;
+    <span style="background-color: #f28e2c;"></span> Open
+    <span style="background-color: #8ed1fc;"></span> Closed
   </div>
   <div class="bar-container">
     <div class="bar-group">
