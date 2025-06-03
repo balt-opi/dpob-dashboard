@@ -76,9 +76,11 @@ title: "311 Service Requests"
   align-items: center;
   font-size: 11px;
   font-weight: bold;
-  color: #000; /* Ensures black text */
+  color: #000; /* black text */
   line-height: 1;
-  padding: 2px 0;
+  padding: 2px;
+  margin: 0; /* remove space between stacked bars */
+  border-radius: 4px 4px 0 0; /* Optional: for better stacking visuals */
 }
 .bar-name {
   width: 100px;
