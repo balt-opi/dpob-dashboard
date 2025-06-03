@@ -77,7 +77,7 @@ title: "311 Service Requests"
   font-size: 9px;
   font-weight: bold;
   color: #000000; /* black text */
-  line-height: 1;
+  line-height: .5;
   padding: 2px;
   margin: 0; /* no space between stacked bars */
   border-radius: 4px 4px 0 0;
@@ -253,7 +253,7 @@ title: "311 Service Requests"
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    color: white;
+    color: black;
     border-radius: 4px;
     font-size: 12px;
   }
