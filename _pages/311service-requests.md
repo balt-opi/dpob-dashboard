@@ -92,9 +92,11 @@ title: "311 Service Requests"
   text-align: center;
   max-width: 70px;
   height: auto;
-  line-height: 1.2;
+  line-height: 13px;
   word-break: break-word;
+  white-space: normal;
 }
+
 
 /* Bar Colors */
 .close-bar { background-color: #abb8c3; }
