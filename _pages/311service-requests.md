@@ -24,10 +24,9 @@ title: "311 Service Requests"
 /* General Layout */
 .bar-chart {
   max-width: 900px;
-  margin: 0 auto; /* centers the chart horizontally */
+  margin: 0 auto;
   padding: 20px;
   font-family: sans-serif;
-  text-align: center;
 }
 .chart-title {
   text-align: center;
