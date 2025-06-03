@@ -103,7 +103,6 @@ title: "311 Service Requests"
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
-    <span style="font-weight: bold; white-space: nowrap;">SR Status:</span>
     <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
     <span style="background-color: #8ed1fc;"></span> Average of SLA
   </div>
@@ -150,12 +149,31 @@ title: "311 Service Requests"
 <div class="bar-chart">
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
-  <div class="chart-legend">
-    <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
-    <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
-    <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
-    <span style="background-color: #b07aa1;"></span> Pending
+
+  <div class="chart-legend" style="display: flex; align-items: center; gap: 16px; margin-top: 10px; flex-wrap: wrap;">
+    <span style="font-weight: bold; white-space: nowrap;">SR Status:</span>
+    
+    <span style="display: inline-flex; align-items: center; gap: 6px;">
+      <span style="width: 12px; height: 12px; background-color: #9FE2BF; display: inline-block;"></span>
+      Closed
+    </span>
+    
+    <span style="display: inline-flex; align-items: center; gap: 6px;">
+      <span style="width: 12px; height: 12px; background-color: #f28e2c; display: inline-block;"></span>
+      New
+    </span>
+    
+    <span style="display: inline-flex; align-items: center; gap: 6px;">
+      <span style="width: 12px; height: 12px; background-color: #e15759; display: inline-block;"></span>
+      Open
+    </span>
+    
+    <span style="display: inline-flex; align-items: center; gap: 6px;">
+      <span style="width: 12px; height: 12px; background-color: #b07aa1; display: inline-block;"></span>
+      Pending
+    </span>
   </div>
+</div>
   <div class="bar-container">
     <div class="bar-group">
       <div class="bar closed" style="height: 200px;">1568</div>
