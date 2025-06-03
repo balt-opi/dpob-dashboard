@@ -5,6 +5,8 @@ permalink: /data-dictionary/
 ---
 
 <b></b>
+Use the sliders on the table to view information on the datasets. The datasets include how often the data is updated, where the data lives, data health, and its descriptors.
+<b></b>
 
 <style>
   .excel-table-wrapper {
