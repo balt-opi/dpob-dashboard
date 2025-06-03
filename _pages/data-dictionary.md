@@ -28,7 +28,7 @@ Use the vertical and horizontal sliders on the table to view information on the 
   padding: 8px;
   text-align: left;
   vertical-align: top;
-  min-width: 150px;
+  min-width: 200px;
 }
 
   .excel-table thead {
