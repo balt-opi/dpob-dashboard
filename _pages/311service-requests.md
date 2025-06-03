@@ -90,10 +90,9 @@ title: "311 Service Requests"
   margin-top: 4px;
   font-size: 11px;
   text-align: center;
-  max-width: 60px;
-  height: 28px;
-  overflow: hidden;
-  line-height: 14px;
+  max-width: 70px;
+  height: auto;
+  line-height: 1.2;
   word-break: break-word;
 }
 
@@ -107,7 +106,7 @@ title: "311 Service Requests"
 </style>
 
 <!-- Chart 1: Average vs SLA -->
-<div class="bar-chart">
+<div class="bar-chart" style="margin-left: auto; margin-right: auto;">
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
@@ -154,7 +153,7 @@ title: "311 Service Requests"
 </div>
 
 <!-- Chart 2: Service Requests by Group and Status -->
-<div class="bar-chart">
+<div class="bar-chart" style="margin-left: auto; margin-right: auto;">
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
