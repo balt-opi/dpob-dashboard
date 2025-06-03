@@ -150,7 +150,6 @@ title: "311 Service Requests"
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
-    <span style="font-weight: bold; white-space: nowrap;">SR Status:</span>
     <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
     <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
     <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
