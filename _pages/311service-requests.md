@@ -91,11 +91,11 @@ title: "311 Service Requests"
   font-size: 11px;
   text-align: center;
   max-width: 70px;
-  height: auto;
-  line-height: 13px;
-  word-break: break-word;
   white-space: normal;
+  word-break: keep-all; /* prevents awkward breaks */
+  line-height: 13px;
 }
+
 
 
 
@@ -216,42 +216,42 @@ title: "311 Service Requests"
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 160px;">450</div>
       <div class="bar" style="background-color: #8ed1fc; height: 120px;">436</div>
-      <div class="bar-name">January 2024</div>
+      <div class="bar-name">January<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">308</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">288</div>
-      <div class="bar-name">February 2024</div>
+      <div class="bar-name">February<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 140px;">319</div>
       <div class="bar" style="background-color: #8ed1fc; height: 110px;">299</div>
-      <div class="bar-name">March 2024</div>
+      <div class="bar-name">March<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 150px;">391</div>
       <div class="bar" style="background-color: #8ed1fc; height: 130px;">371</div>
-      <div class="bar-name">April 2024</div>
+      <div class="bar-name">April<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 170px;">386</div>
       <div class="bar" style="background-color: #8ed1fc; height: 120px;">356</div>
-      <div class="bar-name">May 2024</div>
+      <div class="bar-name">May<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 160px;">324</div>
       <div class="bar" style="background-color: #8ed1fc; height: 110px;">295</div>
-      <div class="bar-name">June 2024</div>
+      <div class="bar-name">June<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 140px;">394</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">368</div>
-      <div class="bar-name">July 2024</div>
+      <div class="bar-name">July<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 150px;">579</div>
       <div class="bar" style="background-color: #8ed1fc; height: 130px;">508</div>
-      <div class="bar-name">August 2024</div>
+      <div class="bar-name">August<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">483</div>
@@ -261,42 +261,42 @@ title: "311 Service Requests"
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 170px;">400</div>
       <div class="bar" style="background-color: #8ed1fc; height: 110px;">364</div>
-      <div class="bar-name">October 2024</div>
+      <div class="bar-name">October<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 150px;">310</div>
       <div class="bar" style="background-color: #8ed1fc; height: 90px;">294</div>
-      <div class="bar-name">November 2024</div>
+      <div class="bar-name">November<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 140px;">322</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">284</div>
-      <div class="bar-name">December 2024</div>
+      <div class="bar-name">December<br>2024</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">407</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">316</div>
-      <div class="bar-name">January 2025</div>
+      <div class="bar-name">January<br>2025</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">386</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">354</div>
-      <div class="bar-name">February 2025</div>
+      <div class="bar-name">February<br>2025</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">377</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">337</div>
-      <div class="bar-name">March 2025</div>
+      <div class="bar-name">March<br>2025</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">355</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">302</div>
-      <div class="bar-name">April 2025</div>
+      <div class="bar-name">April<br>2025</div>
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">331</div>
       <div class="bar" style="background-color: #8ed1fc; height: 100px;">231</div>
-      <div class="bar-name">May 2025</div>
+      <div class="bar-name">May<br>2025</div>
     </div>
   </div>
 </div>
