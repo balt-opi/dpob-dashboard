@@ -5,8 +5,6 @@ permalink: /data-dictionary/
 ---
 
 <b></b>
-Use the sliders on the table to view information on the datasets. The datasets include how often the data is updated, where the data lives, data health, and its descriptors.
-<b></b>
 
 <style>
   .excel-table-wrapper {
@@ -43,7 +41,7 @@ Use the sliders on the table to view information on the datasets. The datasets i
   }
 
   .excel-table tbody tr:nth-child(even) {
-    background-color: ##eeeeee;
+    background-color: #eeeeee;
   }
 </style>
 
@@ -296,7 +294,25 @@ Use the sliders on the table to view information on the datasets. The datasets i
   </tr>
 </tbody>
 </table>
+  
+<div class="table-footer">
+  Use the vertical and horizontal sliders on the table to view information on the datasets. The datasets include how often the data is updated, where the data lives, its descriptors, and the health of the data.
+</div>
 
+<style>
+  .table-footer {
+    background-color: #121f3f;
+    color: #f1c232;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 15px;
+    margin-top: -15px;
+    border-top: 2px solid #f1c232;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+</style>
 
 
 
