@@ -27,6 +27,8 @@ title: "311 Service Requests"
   margin: 40px auto;
   padding: 20px;
   font-family: sans-serif;
+  display: block;
+  text-align: center;
 }
 .chart-title {
   text-align: center;
