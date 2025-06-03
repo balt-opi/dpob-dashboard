@@ -169,8 +169,6 @@ title: "311 Service Requests"
     Pending
   </span>
 </div>
-
-</div>
   <div class="bar-container">
     <div class="bar-group">
       <div class="bar closed" style="height: 200px;">1568</div>
