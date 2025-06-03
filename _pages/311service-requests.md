@@ -21,11 +21,11 @@ title: "311 Service Requests"
 </div>
 
 <style>
-.bar-chart {
-  font-family: Arial, sans-serif;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 .chart-title {
   text-align: center;
@@ -56,10 +56,8 @@ title: "311 Service Requests"
 }
 .bar-container {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   gap: 8px;
-  flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 30px;
 }
@@ -84,9 +82,8 @@ title: "311 Service Requests"
 }
 .bar-name {
   width: 100px;
-  font-size: 11px;
   text-align: center;
-  margin-top: 6px;
+  font-size: 11px;
   word-wrap: break-word;
 }
 .close-bar { background-color: #abb8c3; }
