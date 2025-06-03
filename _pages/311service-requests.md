@@ -273,3 +273,130 @@ title: "311 Service Requests"
     </div>
   </div>
 </div>
+
+<style>
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 300px;
+  margin: 40px 0;
+}
+
+.bar {
+  position: relative;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.closed {
+  background-color: #1f77ff;
+}
+
+.new {
+  background-color: #ff7f0e;
+}
+
+.bar-segment {
+  width: 100%;
+}
+
+.label {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+  width: 70px;
+}
+
+.total-label {
+  position: absolute;
+  top: -20px;
+  font-weight: bold;
+  font-size: 12px;
+}
+</style>
+
+## Service Requests Created Over Time
+
+<div class="chart">
+  <div class="bar"><div class="total-label">450</div><div class="bar-segment closed" style="height: 261px;"></div><div class="bar-segment new" style="height: 6px;"></div><div class="label">2024 Jan</div></div>
+  <div class="bar"><div class="total-label">308</div><div class="bar-segment closed" style="height: 172px;"></div><div class="bar-segment new" style="height: 4px;"></div><div class="label">2024 Feb</div></div>
+  <div class="bar"><div class="total-label">319</div><div class="bar-segment closed" style="height: 179px;"></div><div class="bar-segment new" style="height: 4px;"></div><div class="label">2024 Mar</div></div>
+  <div class="bar"><div class="total-label">391</div><div class="bar-segment closed" style="height: 209px;"></div><div class="bar-segment new" style="height: 6px;"></div><div class="label">2024 Apr</div></div>
+  <div class="bar"><div class="total-label">386</div><div class="bar-segment closed" style="height: 204px;"></div><div class="bar-segment new" style="height: 6px;"></div><div class="label">2024 May</div></div>
+  <div class="bar"><div class="total-label">324</div><div class="bar-segment closed" style="height: 172px;"></div><div class="bar-segment new" style="height: 5px;"></div><div class="label">2024 Jun</div></div>
+  <div class="bar"><div class="total-label">394</div><div class="bar-segment closed" style="height: 196px;"></div><div class="bar-segment new" style="height: 5px;"></div><div class="label">2024 Jul</div></div>
+  <div class="bar"><div class="total-label">579</div><div class="bar-segment closed" style="height: 270px;"></div><div class="bar-segment new" style="height: 12px;"></div><div class="label">2024 Aug</div></div>
+  <div class="bar"><div class="total-label">483</div><div class="bar-segment closed" style="height: 237px;"></div><div class="bar-segment new" style="height: 8px;"></div><div class="label">2024 Sep</div></div>
+  <div class="bar"><div class="total-label">400</div><div class="bar-segment closed" style="height: 193px;"></div><div class="bar-segment new" style="height: 7px;"></div><div class="label">2024 Oct</div></div>
+  <div class="bar"><div class="total-label">310</div><div class="bar-segment closed" style="height: 155px;"></div><div class="bar-segment new" style="height: 5px;"></div><div class="label">2024 Nov</div></div>
+  <div class="bar"><div class="total-label">322</div><div class="bar-segment closed" style="height: 150px;"></div><div class="bar-segment new" style="height: 6px;"></div><div class="label">2024 Dec</div></div>
+  <div class="bar"><div class="total-label">407</div><div class="bar-segment closed" style="height: 195px;"></div><div class="bar-segment new" style="height: 6px;"></div><div class="label">2025 Jan</div></div>
+  <div class="bar"><div class="total-label">386</div><div class="bar-segment closed" style="height: 188px;"></div><div class="bar-segment new" style="height: 5px;"></div><div class="label">2025 Feb</div></div>
+  <div class="bar"><div class="total-label">377</div><div class="bar-segment closed" style="height: 184px;"></div><div class="bar-segment new" style="height: 5px;"></div><div class="label">2025 Mar</div></div>
+  <div class="bar"><div class="total-label">355</div><div class="bar-segment closed" style="height: 174px;"></div><div class="bar-segment new" style="height: 5px;"></div><div class="label">2025 Apr</div></div>
+  <div class="bar"><div class="total-label">331</div><div class="bar-segment closed" style="height: 148px;"></div><div class="bar-segment new" style="height: 6px;"></div><div class="label">2025 May</div></div>
+</div>
+
+_Source: CitiStat 311 Service Requests, 2025_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
