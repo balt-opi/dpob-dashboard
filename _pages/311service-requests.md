@@ -1,4 +1,6 @@
 # Service Request Statistics
+<b></b>
+<b></b>
 
 <div style="display: flex; gap: 16px; justify-content: center; align-items: stretch; margin-bottom: 40px;">
   <!-- Box 1 -->
