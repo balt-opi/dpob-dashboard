@@ -154,6 +154,8 @@ title: "311 Service Requests"
   </div>
 </div>
 
+<b></b>
+
 <!-- Chart 2: Service Requests by Group and Status -->
 <div style="display: flex; justify-content: center;">
   <div class="bar-chart">
