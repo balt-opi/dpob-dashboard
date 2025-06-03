@@ -106,108 +106,126 @@ title: "311 Service Requests"
 </style>
 
 <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-  <!-- Y-Axis Label -->
-  <div style="display: flex;">
-    <div style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; padding-right: 10px; font-weight: bold;">
+  <!-- Container with flex to align Y-axis label and chart side by side -->
+  <div style="display: flex; align-items: flex-end;">
+
+ <style>
+  /* Bar Colors */
+  .close-bar { background-color: #abb8c3; }
+  .sla-bar { background-color: #8ed1fc; }
+  .closed { background-color: #9FE2BF; }
+  .new { background-color: #f28e2c; }
+  .open { background-color: #e15759; }
+  .pending { background-color: #b07aa1; }
+</style>
+
+<div style="max-width: 900px; margin: 0 auto; text-align: center;">
+  <!-- Container with flex to align Y-axis label and chart side by side -->
+  <div style="display: flex; align-items: flex-end;">
+
+    <!-- Y-Axis Label -->
+  <div style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; padding-right: 10px; font-weight: bold; white-space: nowrap;">
       Average Days to Close
-    </div>
+   </div>
 
-<!-- Chart 1: Average vs SLA -->
-<div class="bar-chart">
-  <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
-  <div class="chart-legend">
-    <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
-    <span style="background-color: #8ed1fc;"></span> Average of SLA
-  </div>
-  <div class="bar-container">
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 76px;">19</div>
-      <div class="bar close-bar" style="height: 164px;">41</div>
-      <div class="bar-name">Trees & Grass</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 84px;">21</div>
-      <div class="bar close-bar" style="height: 84px;">21</div>
-      <div class="bar-name">Street & Curb Repairs</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 12px;">3</div>
-      <div class="bar close-bar" style="height: 76px;">19</div>
-      <div class="bar-name">Water</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 28px;">7.6</div>
-      <div class="bar close-bar" style="height: 56px;">14</div>
-      <div class="bar-name">Traffic Signals, Lights, Signs</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 24px;">6</div>
-      <div class="bar close-bar" style="height: 36px;">9</div>
-      <div class="bar-name">Dirty Streets</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 12px;">3</div>
-      <div class="bar close-bar" style="height: 32px;">8</div>
-      <div class="bar-name">Trash & Recycling</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 12px;">3</div>
-      <div class="bar close-bar" style="height: 44px;">11</div>
-      <div class="bar-name">Graffiti</div>
+    <!-- Chart 1: Average vs SLA -->
+  <div class="bar-chart" style="flex-grow: 1;">
+      <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
+      <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
+      <div class="chart-legend">
+        <span style="background-color: #abb8c3;"></span> Average of Days to Close &nbsp;&nbsp;
+        <span style="background-color: #8ed1fc;"></span> Average of SLA
+      </div>
+      <div class="bar-container">
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 76px;">19</div>
+          <div class="bar close-bar" style="height: 164px;">41</div>
+          <div class="bar-name">Trees & Grass</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 84px;">21</div>
+          <div class="bar close-bar" style="height: 84px;">21</div>
+          <div class="bar-name">Street & Curb Repairs</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 12px;">3</div>
+          <div class="bar close-bar" style="height: 76px;">19</div>
+          <div class="bar-name">Water</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 28px;">7.6</div>
+          <div class="bar close-bar" style="height: 56px;">14</div>
+          <div class="bar-name">Traffic Signals, Lights, Signs</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 24px;">6</div>
+          <div class="bar close-bar" style="height: 36px;">9</div>
+          <div class="bar-name">Dirty Streets</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 12px;">3</div>
+          <div class="bar close-bar" style="height: 32px;">8</div>
+          <div class="bar-name">Trash & Recycling</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar sla-bar" style="height: 12px;">3</div>
+          <div class="bar close-bar" style="height: 44px;">11</div>
+          <div class="bar-name">Graffiti</div>
+        </div>
+      </div>
+
+      <!-- X-Axis Label -->
+      <div style="margin-top: 12px; font-weight: bold;">SR Group</div>
     </div>
   </div>
 </div>
 
-<!-- X-Axis Label -->
-   <div style="margin-top: 12px; font-weight: bold;">SR Group</div>
-  </div>
- </div>
-</div>
 <!-- Chart 2: Service Requests by Group and Status -->
-<div class="bar-chart">
-  <div class="chart-title">Service Requests by Groups and Status</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
-  <div class="chart-legend">
-    <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
-    <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
-    <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
-    <span style="background-color: #b07aa1;"></span> Pending
-</div>
-  <div class="bar-container">
-    <div class="bar-group">
-      <div class="bar closed" style="height: 200px;">1568</div>
-      <div class="bar new" style="height: 21px;">89</div>
-      <div class="bar-name">Traffic Signals, Lights, Signs</div>
+<div style="display: flex; justify-content: center;">
+  <div class="bar-chart">
+    <div class="chart-title">Service Requests by Groups and Status</div>
+    <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
+    <div class="chart-legend">
+      <span style="background-color: #9FE2BF;"></span> Closed &nbsp;&nbsp;
+      <span style="background-color: #f28e2c;"></span> New &nbsp;&nbsp;
+      <span style="background-color: #e15759;"></span> Open &nbsp;&nbsp;
+      <span style="background-color: #b07aa1;"></span> Pending
     </div>
-    <div class="bar-group">
-      <div class="bar closed" style="height: 155px;">1201</div>
-      <div class="bar new" style="height: 22px;">94</div>
-      <div class="bar-name">Dirty Streets</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar closed" style="height: 145px;">878</div>
-      <div class="bar open" style="height: 49px;">298</div>
-      <div class="bar-name">Street & Curb Repairs</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar closed" style="height: 120px;">755</div>
-      <div class="bar new" style="height: 15px;">63</div>
-      <div class="bar-name">Water</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar closed" style="height: 127px;">801</div>
-      <div class="bar pending" style="height: 10px;">52</div>
-      <div class="bar-name">Graffiti</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar closed" style="height: 77px;">477</div>
-      <div class="bar new" style="height: 10px;">41</div>
-      <div class="bar-name">Trash & Recycling</div>
-    </div>
-    <div class="bar-group">
-      <div class="bar closed" style="height: 36px;">224</div>
-      <div class="bar-name">Trees & Grass</div>
+    <div class="bar-container">
+      <div class="bar-group">
+        <div class="bar closed" style="height: 200px;">1568</div>
+        <div class="bar new" style="height: 21px;">89</div>
+        <div class="bar-name">Traffic Signals, Lights, Signs</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar closed" style="height: 155px;">1201</div>
+        <div class="bar new" style="height: 22px;">94</div>
+        <div class="bar-name">Dirty Streets</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar closed" style="height: 145px;">878</div>
+        <div class="bar open" style="height: 49px;">298</div>
+        <div class="bar-name">Street & Curb Repairs</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar closed" style="height: 120px;">755</div>
+        <div class="bar new" style="height: 15px;">63</div>
+        <div class="bar-name">Water</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar closed" style="height: 127px;">801</div>
+        <div class="bar pending" style="height: 10px;">52</div>
+        <div class="bar-name">Graffiti</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar closed" style="height: 77px;">477</div>
+        <div class="bar new" style="height: 10px;">41</div>
+        <div class="bar-name">Trash & Recycling</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar closed" style="height: 36px;">224</div>
+        <div class="bar-name">Trees & Grass</div>
+      </div>
     </div>
   </div>
 </div>
