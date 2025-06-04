@@ -215,6 +215,11 @@ title: "311 Service Requests"
     <span style="background-color: #e15759;"></span> Open
     <span style="background-color: #b07aa1;"></span> Pending
   </div>
+    <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: auto;">
+    <!-- Y-axis label -->
+    <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
+      Number of SRs
+    </div>
   <div class="bar-container" style="justify-content: center; min-width: 400px;">
     <div class="bar-group">
       <div class="bar closed" style="height: 200px;">1568</div>
@@ -268,6 +273,11 @@ title: "311 Service Requests"
     <span style="background-color: #8ed1fc;"></span> Closed
   </div>
   <div class="bar-container" style="justify-content: center; min-width: 600px;">
+   <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: auto;">
+    <!-- Y-axis label -->
+    <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
+      Number of SRs
+    </div>
     <!-- Each month group -->
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 160px;">450</div>
