@@ -92,9 +92,13 @@ title: "311 Service Requests"
   text-align: center;
   max-width: 70px;
   line-height: 13px;
-  height: 28px; /* Fixed height for alignment */
-  white-space: normal;
+  height: 39px; /* Enough for 3 lines */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  white-space: normal;
 }
 .bar-label {
   margin-top: 6px;
@@ -145,9 +149,11 @@ title: "311 Service Requests"
       <div class="bar-name">Water</div>
     </div>
     <div class="bar-group">
-      <div class="bar sla-bar" style="height: 28px;">7.6</div>
-      <div class="bar close-bar" style="height: 56px;">14</div>
-      <div class="bar-name">Traffic<br>Signals,<br>Lights,<br>Signs</div>
+     <div class="bar closed" style="height: 200px;">1568</div>
+     <div class="bar new" style="height: 21px;">89</div>
+     <div class="bar-name">
+    Traffic Signals,<br>Lights, &<br>Signs
+     </div>
     </div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 24px;">6</div>
