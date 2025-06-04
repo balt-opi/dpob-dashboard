@@ -97,7 +97,7 @@ title: "311 Service Requests"
   height: 39px;
   justify-content: center;
   align-items: center;
-  margin-top: 6px;
+  margin-top: 9px;
 }
 .bar-label {
   margin-top: 6px;
