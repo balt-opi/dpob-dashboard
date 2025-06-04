@@ -153,7 +153,7 @@ title: "311 Service Requests"
       Average Days to Close
     </div>
 
-    <div class="bar-container" style="min-width: 400px;">
+   <div class="bar-container" style="min-width: 400px;">
       <div class="bar-group">
         <div class="bar sla-bar" style="height: 76px;">19</div>
         <div class="bar close-bar" style="height: 164px;">41</div>
