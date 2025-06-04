@@ -120,12 +120,12 @@ title: "311 Service Requests"
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 76px;">19</div>
       <div class="bar close-bar" style="height: 164px;">41</div>
-      <div class="bar-name">Trees & Grass</div>
+      <div class="bar-name">Trees<b>&<b>Grass</div>
     </div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 84px;">21</div>
       <div class="bar close-bar" style="height: 84px;">21</div>
-      <div class="bar-name">Street & Curb Repairs</div>
+      <div class="bar-name">Street<b>&<b>Curb<b>Repairs</div>
     </div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 12px;">3</div>
