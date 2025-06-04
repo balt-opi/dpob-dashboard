@@ -87,20 +87,17 @@ title: "311 Service Requests"
   line-height: 1;
 }
 .bar-name {
-  margin-top: 4px;
   font-size: 11px;
   text-align: center;
   max-width: 70px;
-  line-height: 13px;
-  height: 39px; /* Fits exactly 3 lines */
-  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  white-space: normal;
+  line-height: 1.2;
+  gap: 2px;
+  height: 39px;
+  justify-content: center;
+  align-items: center;
 }
-
 .bar-label {
   margin-top: 6px;
   font-size: 11px;
@@ -126,7 +123,6 @@ title: "311 Service Requests"
 </style>
 
 <!-- Chart 1: Average vs SLA -->
-<!-- Chart 1: Average vs SLA -->
 <div class="bar-chart" style="margin-left: auto; margin-right: auto;">
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
@@ -150,11 +146,15 @@ title: "311 Service Requests"
       <div class="bar close-bar" style="height: 76px;">19</div>
       <div class="bar-name">Water</div>
     </div>
-    <div class="bar-group">
-      <div class="bar sla-bar" style="height: 28px;">7.6</div>
-      <div class="bar close-bar" style="height: 56px;">14</div>
-      <div class="bar-name">Traffic Signals,<br>Lights, &<br>Signs</div>
-    </div>
+<div class="bar-group">
+  <div class="bar sla-bar" style="height: 28px;">7.6</div>
+  <div class="bar close-bar" style="height: 56px;">14</div>
+  <div class="bar-name">
+    <span>Traffic Signals,</span>
+    <span>Lights, &</span>
+    <span>Signs</span>
+  </div>
+</div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 24px;">6</div>
       <div class="bar close-bar" style="height: 36px;">9</div>
