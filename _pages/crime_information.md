@@ -7,7 +7,7 @@ title: Crime Information
 
 <small>January 2024–Present</small>
 
-<small>Source: CitiStat Group A Crime BPD, 2024 - 2025</small>
+<small>Source: CitiStat Group A Crime BPD, Jan. 2024 - Apr. 2025</small>
 
 *Please note that there was one homicide in May 2024; however, this first chart does not reflect that statistic. Please refer to the Crime Table at the bottom of the page.*
 
@@ -85,7 +85,7 @@ title: Crime Information
 
 <small>January 2024–Present</small>
 
-<small>Source: CitiStat Group A Crime BPD, 2020 - 2025</small>
+<small>Source: CitiStat Group A Crime BPD, Jan. 2020 - Apr. 2025</small>
 
 <!-- Scrollable container with wide chart -->
 <div style="max-width: 1200px; overflow-x: auto; margin: 50px auto;">
@@ -213,7 +213,7 @@ title: Crime Information
 
 # Crime Table
 
-<small>Monthly crime totals by type (2024–2025)</small>
+<small>Monthly crime totals by type (Jan. 2024– Apr. 2025)</small>
 
 <small>Source: CitiStat Group A Crime BPD, 2025</small>
 
