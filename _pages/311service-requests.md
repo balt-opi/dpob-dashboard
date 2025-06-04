@@ -203,12 +203,13 @@ title: "311 Service Requests"
 <div class="bar-chart" style="margin-left: auto; margin-right: auto;">
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
-  <div class="chart-legend">
-    <span style="background-color: #9FE2BF;"></span> Closed
-    <span style="background-color: #f28e2c;"></span> New
-    <span style="background-color: #e15759;"></span> Open
-    <span style="background-color: #b07aa1;"></span> Pending
-  </div>
+<div class="chart-legend">
+  <div style="font-weight: bold; margin-right: 10px;">SR Status:</div>
+  <span style="background-color: #9FE2BF;"></span> Closed
+  <span style="background-color: #f28e2c;"></span> New
+  <span style="background-color: #e15759;"></span> Open
+  <span style="background-color: #b07aa1;"></span> Pending
+</div>
   <div class="bar-container">
     <div class="bar-group">
       <div class="bar closed" style="height: 200px;">1568</div>
