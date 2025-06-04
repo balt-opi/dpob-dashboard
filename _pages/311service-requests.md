@@ -131,6 +131,12 @@ title: "311 Service Requests"
     <span style="background-color: #abb8c3;"></span> Average of Days to Close
     <span style="background-color: #8ed1fc;"></span> Average of SLA
   </div>
+    <!-- Wrapper with Y-axis label and bars -->
+  <div style="display: flex; align-items: flex-end;">
+    <!-- ✅ Y-axis Label -->
+    <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center;">
+      Average Days to Close
+    </div>
   <div class="bar-container">
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 76px;">19</div>
