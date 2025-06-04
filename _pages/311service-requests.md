@@ -101,7 +101,6 @@ title: "311 Service Requests"
   overflow: hidden;           /* critical: stops the text from spilling out */
 }
 
-
 /* Bar labels below bars */
 .bar-name {
   font-size: 13px;
