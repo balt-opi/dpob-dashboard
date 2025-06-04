@@ -1,3 +1,8 @@
+---
+layout: page
+title: "311 Service Requests"
+---
+
 # Service Request Statistics
 
 <!-- Stat Boxes -->
