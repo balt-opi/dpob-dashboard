@@ -85,7 +85,6 @@ title: "311 Service Requests"
   min-width: 70px;
 }
 
-/* Bar and Labels */
 .bar {
   width: 30px;
   display: flex;
@@ -101,6 +100,7 @@ title: "311 Service Requests"
   white-space: normal;
   overflow: hidden;           /* critical: stops the text from spilling out */
 }
+
 
 /* Bar labels below bars */
 .bar-name {
