@@ -356,4 +356,13 @@ title: "311 Service Requests"
     </div>
     <div class="bar-group">
       <div class="bar" style="background-color: #f28e2c; height: 180px;">355</div>
-      <div class="
+      <div class="bar" style="background-color: #8ed1fc; height: 100px;">302</div>
+      <div class="bar-name">April<br>2025</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar" style="background-color: #f28e2c; height: 180px;">331</div>
+      <div class="bar" style="background-color: #8ed1fc; height: 100px;">231</div>
+      <div class="bar-name">May<br>2025</div>
+    </div>
+  </div>
+</div>
