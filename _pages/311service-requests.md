@@ -58,13 +58,14 @@ title: "311 Service Requests"
   margin-right: 4px;
 }
 
-/* Bar Area */
 .bar-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: flex-end;
-  gap: 20px;
-  overflow-x: auto;
+  gap: 14px;
   padding-bottom: 30px;
+  overflow-x: hidden;
 }
 .bar-group {
   display: flex;
@@ -399,7 +400,7 @@ title: "311 Service Requests"
     <span style="background-color: #8ed1fc; display: inline-block; width: 15px; height: 15px; margin-left: 15px; margin-right: 5px; vertical-align: middle;"></span> Closed
   </div>
 
-  <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: visible;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center; width: 100%;">
     <!-- Y-axis label -->
     <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
       Number of SRs
