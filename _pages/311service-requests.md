@@ -211,13 +211,14 @@ title: "311 Service Requests"
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, Jan. 2024 - May. 2025</div>
 
   <!-- Chart Legend -->
-  <div class="chart-legend" style="margin-bottom: 10px; font-weight: bold;">
-    <div>SR Status:</div>
-    <span style="display: inline-block; width: 12px; height: 12px; background-color: #9FE2BF; margin-right: 5px;"></span> Closed
-    <span style="display: inline-block; width: 12px; height: 12px; background-color: #f28e2c; margin-left: 15px; margin-right: 5px;"></span> New
-    <span style="display: inline-block; width: 12px; height: 12px; background-color: #e15759; margin-left: 15px; margin-right: 5px;"></span> Open
-    <span style="display: inline-block; width: 12px; height: 12px; background-color: #b07aa1; margin-left: 15px; margin-right: 5px;"></span> Pending
-  </div>
+<div class="chart-legend">
+  <div>SR Status:</div>
+  <span style="background-color: #9FE2BF;"></span> <strong>Closed</strong>
+  <span style="background-color: #f28e2c;"></span> New
+  <span style="background-color: #e15759;"></span> <strong>Open</strong>
+  <span style="background-color: #b07aa1;"></span> Pending
+</div>
+
 
   <!-- Chart Area -->
   <div style="display: flex; align-items: flex-start; overflow-x: auto; max-width: 100%;">
