@@ -222,12 +222,10 @@ title: "311 Service Requests"
 
   <!-- Chart Area -->
   <div style="display: flex; align-items: flex-start; overflow-x: auto; max-width: 100%;">
-
     <!-- Y-axis label -->
   <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
       Number of SRs
     </div>
-
     <!-- Bars and X-axis label container -->
    <div style="display: flex; flex-direction: column; align-items: center;">
       <div class="bar-container" style="display: flex; gap: 20px; min-width: 400px;">
