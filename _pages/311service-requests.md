@@ -88,7 +88,7 @@ title: "311 Service Requests"
 /* Bar and Labels */
 .bar {
   width: 30px;
-  min-height: 20px;
+  min-height: 20px;              /* ensure bars always show text */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -100,6 +100,7 @@ title: "311 Service Requests"
   line-height: 1;
   word-break: break-word;
   white-space: normal;
+  /* overflow: hidden; <- removed to let text show above small bars */
 }
 
 /* Bar labels below bars */
@@ -114,7 +115,7 @@ title: "311 Service Requests"
   height: 39px;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 18px; /* <-- increased from 8px to 18px */
 }
 
 .bar-label {
@@ -123,7 +124,7 @@ title: "311 Service Requests"
   text-align: center;
   max-width: 70px;
   line-height: 1.2;
-  height: 28px;
+  height: 28px; /* Fix height to prevent pushing bars */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,10 +139,6 @@ title: "311 Service Requests"
 .new { background-color: #f28e2c; }
 .open { background-color: #e15759; }
 .pending { background-color: #b07aa1; }
-
-.legend-bold {
-  font-weight: bold;
-}
 </style>
 
 
