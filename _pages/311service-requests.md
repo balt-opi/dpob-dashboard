@@ -140,12 +140,12 @@ title: "311 Service Requests"
 
   <div style="display: flex; align-items: flex-end; overflow-x: auto; padding-bottom: 30px;">
 
-  <!-- Y-axis label -->
+    <!-- Y-axis label -->
   <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 16px; white-space: nowrap; min-width: 20px; text-align: center;">
       Average Days to Close
     </div>
 
-  <div class="bar-container" style="display: flex; gap: 24px; min-width: 600px;">
+   <div class="bar-container" style="display: flex; gap: 24px; min-width: 600px;">
 
   <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 90px;">
         <div class="bar sla-bar" style="height: 140px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
@@ -160,7 +160,7 @@ title: "311 Service Requests"
       </div>
 
   <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 110px;">
-        <div class="bar sla-bar" style="height: 154px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+      <div class="bar sla-bar" style="height: 154px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
           21
         </div>
         <div class="bar close-bar" style="height: 154px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
@@ -195,7 +195,7 @@ title: "311 Service Requests"
         </div>
       </div>
 
-  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 70px;">
+   <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 70px;">
         <div class="bar sla-bar" style="height: 45px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
           6
         </div>
@@ -207,7 +207,7 @@ title: "311 Service Requests"
         </div>
       </div>
 
-  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 90px;">
+   <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 90px;">
         <div class="bar sla-bar" style="height: 22px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
           3
         </div>
@@ -231,7 +231,7 @@ title: "311 Service Requests"
         </div>
       </div>
 
-   </div> <!-- end bar-container -->
+  </div> <!-- end bar-container -->
 
   </div> <!-- end flex container -->
 
@@ -241,6 +241,7 @@ title: "311 Service Requests"
   </div>
 
 </div>
+
 
 
 <!-- Chart 2: Service Requests by Group and Status -->
