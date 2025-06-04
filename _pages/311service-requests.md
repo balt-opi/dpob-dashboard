@@ -255,7 +255,7 @@ title: "311 Service Requests"
   <div class="chart-title">Service Requests Created Over Time</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
-    
+    <div style="font-weight: bold; margin-right: 10px;">SR Status:</div>
     <span style="background-color: #f28e2c;"></span> Open
     <span style="background-color: #8ed1fc;"></span> Closed
   </div>
