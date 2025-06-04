@@ -71,12 +71,12 @@ title: "311 Service Requests"
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 /* Bar and Labels */
 .bar {
-  width: 30px;
+  width: 24px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
