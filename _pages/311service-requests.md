@@ -89,18 +89,21 @@ title: "311 Service Requests"
 .bar {
   width: 30px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-size: 9px;            /* smaller font to avoid overflow */
+  flex-direction: column-reverse; /* Ensures text stays inside at the bottom */
+  align-items: center;
+  justify-content: flex-start;    /* Text stays at bottom of the bar */
+  font-size: 10px;                /* Still small but a bit more readable */
   font-weight: bold;
   color: #000;
   border-radius: 4px 4px 0 0;
-  padding: 2px 0 4px 0;
-  line-height: 1;
+  padding: 4px 2px;               /* Slight padding all around */
+  line-height: 1.2;
   word-break: break-word;
-  white-space: normal;
-  overflow: hidden;           /* critical: stops the text from spilling out */
+  overflow: hidden;
+  text-align: center;             /* Ensures centered multiline text */
+  min-height: 20px;               /* Ensures short bars still have space */
 }
+
 
 /* Bar labels below bars */
 .bar-name {
@@ -257,6 +260,8 @@ title: "311 Service Requests"
       <div class="bar-name">Trees &amp;<br>Grass</div>
     </div>
   </div>
+</div>
+
 
 <!-- Chart 3: Service Requests Created Over Time -->
 <div class="bar-chart" aria-label="Service Requests Created Over Time">
