@@ -96,6 +96,20 @@ title: "311 Service Requests"
   white-space: normal;
   overflow: hidden;
 }
+.bar-label {
+  margin-top: 6px;
+  font-size: 11px;
+  text-align: center;
+  max-width: 70px;
+  line-height: 1.2;
+  height: 28px; /* Fix height to prevent pushing bars */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  white-space: normal;
+}
+
 
 /* Bar Colors */
 .close-bar { background-color: #abb8c3; }
@@ -187,11 +201,12 @@ title: "311 Service Requests"
     <span style="background-color: #b07aa1;"></span> Pending
   </div>
   <div class="bar-container">
-    <div class="bar-group">
-      <div class="bar closed" style="height: 200px;">1568</div>
-      <div class="bar new" style="height: 21px;">89</div>
-      <div class="bar-name">Traffic<br>Signals,<br>Lights,<br>Signs</div>
-    </div>
+<div class="bar-group">
+  <div class="bar sla-bar" style="height: 28px;">7.6</div>
+  <div class="bar close-bar" style="height: 56px;">14</div>
+  <div class="bar-label">
+    Traffic Signals,<br>Lights, Signs
+  </div>
     <div class="bar-group">
       <div class="bar closed" style="height: 155px;">1201</div>
       <div class="bar new" style="height: 22px;">94</div>
@@ -230,6 +245,7 @@ title: "311 Service Requests"
   <div class="chart-title">Service Requests Created Over Time</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
   <div class="chart-legend">
+    
     <span style="background-color: #f28e2c;"></span> Open
     <span style="background-color: #8ed1fc;"></span> Closed
   </div>
