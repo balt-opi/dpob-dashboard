@@ -91,7 +91,7 @@ title: "311 Service Requests"
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  font-size: 10px;            /* smaller font to avoid overflow */
+  font-size: 9px;            /* smaller font to avoid overflow */
   font-weight: bold;
   color: #000;
   border-radius: 4px 4px 0 0;
