@@ -88,10 +88,11 @@ title: "311 Service Requests"
 /* Bar and Labels */
 .bar {
   width: 30px;
+  min-height: 20px;              /* ensure bars always show text */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  font-size: 10px;            /* smaller font to avoid overflow */
+  font-size: 10px;
   font-weight: bold;
   color: #000;
   border-radius: 4px 4px 0 0;
@@ -99,7 +100,7 @@ title: "311 Service Requests"
   line-height: 1;
   word-break: break-word;
   white-space: normal;
-  overflow: hidden;           /* critical: stops the text from spilling out */
+  /* overflow: hidden; <- removed to let text show above small bars */
 }
 
 /* Bar labels below bars */
@@ -221,7 +222,7 @@ title: "311 Service Requests"
   <!-- Chart Area -->
   <div style="display: flex; align-items: flex-start; overflow-x: auto; max-width: 100%;">
 
-    <!-- Y-axis Label -->
+    <!-- Y-axis label -->
   <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
       Number of SRs
     </div>
