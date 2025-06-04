@@ -173,7 +173,11 @@ title: "311 Service Requests"
     </div>
   </div>
 </div>
-
+  <!-- ✅ X-axis Label -->
+  <div style="margin-top: 10px; font-weight: bold; font-size: 13px; text-align: center;">
+    SR Group
+  </div>
+</div>
 
 <!-- Chart 2: Service Requests by Group and Status -->
 
