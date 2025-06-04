@@ -88,11 +88,10 @@ title: "311 Service Requests"
 /* Bar and Labels */
 .bar {
   width: 30px;
-  min-height: 20px;              /* ensure bars always show text */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  font-size: 10px;
+  font-size: 10px;            /* smaller font to avoid overflow */
   font-weight: bold;
   color: #000;
   border-radius: 4px 4px 0 0;
@@ -100,7 +99,7 @@ title: "311 Service Requests"
   line-height: 1;
   word-break: break-word;
   white-space: normal;
-  /* overflow: hidden; <- removed to let text show above small bars */
+  overflow: hidden;           /* critical: stops the text from spilling out */
 }
 
 /* Bar labels below bars */
