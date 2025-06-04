@@ -153,7 +153,7 @@ title: "311 Service Requests"
   <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: auto;">
     <!-- Y-axis label -->
     <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
-      Average Days to Close
+      Number of SRs
     </div>
 
    <div class="bar-container" style="min-width: 400px;">
@@ -208,74 +208,59 @@ title: "311 Service Requests"
 <!-- Chart 2: Service Requests by Group and Status -->
 <div class="bar-chart" aria-label="Service Requests by Groups and Status">
   <div class="chart-title">Service Requests by Groups and Status</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, Jan. 2024 - May. 2025</div>
-
-  <!-- Chart Legend -->
-<div class="chart-legend">
-  <div>SR Status:</div>
-  <span style="background-color: #9FE2BF;"></span>  <span class="legend-bold">Closed</span>
-  <span style="background-color: #f28e2c;"></span>  <span class="legend-bold">New</span>
-  <span style="background-color: #e15759;"></span> <span class="legend-bold">Open</span>
-  <span style="background-color: #b07aa1;"></span>  <span class="legend-bold">Pending</span>
-</div>
-
-
-  <!-- Chart Area -->
-  <div style="display: flex; align-items: flex-start; overflow-x: auto; max-width: 100%;">
+  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
+  <div class="chart-legend">
+    <div>SR Status:</div>
+    <span style="background-color: #9FE2BF;"></span> Closed
+    <span style="background-color: #f28e2c;"></span> New
+    <span style="background-color: #e15759;"></span> Open
+    <span style="background-color: #b07aa1;"></span> Pending
+  </div>
+    <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: auto;">
     <!-- Y-axis label -->
-  <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
+    <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
       Number of SRs
     </div>
-    <!-- Bars and X-axis label container -->
-   <div style="display: flex; flex-direction: column; align-items: center;">
-      <div class="bar-container" style="display: flex; gap: 20px; min-width: 400px;">
-        <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 200px; background-color: #9FE2BF;">1568</div>
-          <div class="bar new" style="height: 21px; background-color: #f28e2c;">89</div>
-          <div class="bar-name">Traffic Signals,<br>Lights, &amp;<br>Signs</div>
-        </div>
-
-   <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 155px; background-color: #9FE2BF;">1201</div>
-          <div class="bar new" style="height: 22px; background-color: #f28e2c;">94</div>
-          <div class="bar-name">Dirty<br>Streets</div>
-        </div>
-
-  <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 145px; background-color: #9FE2BF;">878</div>
-          <div class="bar open" style="height: 49px; background-color: #e15759;">298</div>
-          <div class="bar-name">Street &amp;<br>Curb<br>Repairs</div>
-        </div>
-
-   <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 120px; background-color: #9FE2BF;">755</div>
-          <div class="bar new" style="height: 15px; background-color: #f28e2c;">63</div>
-          <div class="bar-name">Water</div>
-        </div>
-
-  <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 127px; background-color: #9FE2BF;">801</div>
-          <div class="bar pending" style="height: 10px; background-color: #b07aa1;">52</div>
-          <div class="bar-name">Graffiti</div>
-        </div>
-
-   <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 77px; background-color: #9FE2BF;">477</div>
-          <div class="bar new" style="height: 10px; background-color: #f28e2c;">41</div>
-          <div class="bar-name">Trash &amp;<br>Recycling</div>
-        </div>
-
-  <div class="bar-group" style="text-align: center;">
-          <div class="bar closed" style="height: 36px; background-color: #9FE2BF;">224</div>
-          <div class="bar-name">Trees &amp;<br>Grass</div>
-        </div>
-      </div>
-
-      <!-- X-axis Label -->
-  <div style="margin-top: 10px; font-weight: bold; font-size: 13px; text-align: center;">
-      SR Group
-      </div>
+  <div class="bar-container" style="justify-content: center; min-width: 400px;">
+    <div class="bar-group">
+      <div class="bar closed" style="height: 200px;">1568</div>
+      <div class="bar new" style="height: 21px;">89</div>
+      <div class="bar-name">Traffic Signals,<br>Lights, &amp;<br>Signs</div>
     </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 155px;">1201</div>
+      <div class="bar new" style="height: 22px;">94</div>
+      <div class="bar-name">Dirty<br>Streets</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 145px;">878</div>
+      <div class="bar open" style="height: 49px;">298</div>
+      <div class="bar-name">Street &amp;<br>Curb<br>Repairs</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 120px;">755</div>
+      <div class="bar new" style="height: 15px;">63</div>
+      <div class="bar-name">Water</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 127px;">801</div>
+      <div class="bar pending" style="height: 10px;">52</div>
+      <div class="bar-name">Graffiti</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 77px;">477</div>
+      <div class="bar new" style="height: 10px;">41</div>
+      <div class="bar-name">Trash &amp;<br>Recycling</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 36px;">224</div>
+      <div class="bar-name">Trees &amp;<br>Grass</div>
+    </div>
+  </div>
+
+  <!-- X-axis label -->
+  <div style="margin-top: 10px; font-weight: bold; font-size: 13px; text-align: center; white-space: nowrap;">
+    SR Group
   </div>
 </div>
 
