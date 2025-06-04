@@ -22,7 +22,7 @@ title: Business and Economy
 
   const occupancyLayout = {
     title: {
-      text: 'Baltimore CBD Office Occupancy (Quarterly)<br><sup>Source: Baltimore Development Corp, 2022 - 2024</sup>',
+      text: 'Baltimore CBD Office Occupancy (Quarterly)<br><sup>Source: Baltimore Development Corp, Jan. 2022 - Apr. 2024</sup>',
       font: { color: 'black', size: 20 },
       x: 0.5,
       xanchor: 'center'
@@ -51,7 +51,7 @@ title: Business and Economy
 
   const employmentLayout = {
     title: {
-      text: 'Employment Rates Over Time<br><sup>Source: BLS, 2020 - 2025</sup>',
+      text: 'Employment Rates Over Time<br><sup>Source: BLS, Jan. 2020 - Nov. 2025</sup>',
       font: { color: 'black', size: 20 },
       x: 0.5,
       xanchor: 'center'
