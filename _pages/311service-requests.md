@@ -88,7 +88,7 @@ title: "311 Service Requests"
 /* Bar and Labels */
 .bar {
   width: 30px;
-  min-height: 20px;              /* ensure bars always show text */
+  min-height: 20px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -100,7 +100,6 @@ title: "311 Service Requests"
   line-height: 1;
   word-break: break-word;
   white-space: normal;
-  /* overflow: hidden; <- removed to let text show above small bars */
 }
 
 /* Bar labels below bars */
@@ -115,7 +114,7 @@ title: "311 Service Requests"
   height: 39px;
   justify-content: center;
   align-items: center;
-  margin-top: 18px; /* <-- increased from 8px to 18px */
+  margin-top: 18px;
 }
 
 .bar-label {
@@ -124,7 +123,7 @@ title: "311 Service Requests"
   text-align: center;
   max-width: 70px;
   line-height: 1.2;
-  height: 28px; /* Fix height to prevent pushing bars */
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +138,12 @@ title: "311 Service Requests"
 .new { background-color: #f28e2c; }
 .open { background-color: #e15759; }
 .pending { background-color: #b07aa1; }
+
+.legend-bold {
+  font-weight: bold;
+}
 </style>
+
 
 <!-- Chart 1: Average vs SLA -->
 <div class="bar-chart" aria-label="Average Days to Close Service Requests vs. SLA by Group">
@@ -213,10 +217,10 @@ title: "311 Service Requests"
   <!-- Chart Legend -->
 <div class="chart-legend">
   <div>SR Status:</div>
-  <span style="background-color: #9FE2BF;"></span> <strong>Closed</strong>
-  <span style="background-color: #f28e2c;"></span> New
-  <span style="background-color: #e15759;"></span> <strong>Open</strong>
-  <span style="background-color: #b07aa1;"></span> Pending
+  <span style="background-color: #9FE2BF;"></span>  <span class="legend-bold">Closed</span>
+  <span style="background-color: #f28e2c;"></span>  <span class="legend-bold">New</span>
+  <span style="background-color: #e15759;"></span> <span class="legend-bold">Open</span>
+  <span style="background-color: #b07aa1;"></span>  <span class="legend-bold">Pending</span>
 </div>
 
 
