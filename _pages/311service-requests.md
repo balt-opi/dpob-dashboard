@@ -58,25 +58,24 @@ title: "311 Service Requests"
   margin-right: 4px;
 }
 
+/* Bar Area */
 .bar-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: flex-end;
-  gap: 14px;
+  gap: 20px;
+  overflow-x: auto;
   padding-bottom: 30px;
-  overflow-x: hidden;
 }
 .bar-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 /* Bar and Labels */
 .bar {
-  width: 24px;
+  width: 30px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
