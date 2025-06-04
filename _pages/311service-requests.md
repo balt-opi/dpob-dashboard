@@ -104,16 +104,17 @@ title: "311 Service Requests"
 
 /* Bar labels below bars */
 .bar-name {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
   max-width: 70px;
-  line-height: 1.2;
-  white-space: normal;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 39px;
+  line-height: 1.2;
   gap: 2px;
+  height: 39px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px; /* <-- increased from 8px to 18px */
 }
 
 .bar-label {
