@@ -109,6 +109,16 @@ title: "311 Service Requests"
 </style>
 
 <!-- Chart 1: Average vs SLA -->
+
+.bar-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
 <div class="bar-chart" style="margin-left: auto; margin-right: auto;">
   <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
@@ -120,12 +130,12 @@ title: "311 Service Requests"
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 76px;">19</div>
       <div class="bar close-bar" style="height: 164px;">41</div>
-      <div class="bar-name">Trees<b>&<b>Grass</div>
+      <div class="bar-name">Trees & Grass</div>
     </div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 84px;">21</div>
       <div class="bar close-bar" style="height: 84px;">21</div>
-      <div class="bar-name">Street<b>&<b>Curb<b>Repairs</div>
+      <div class="bar-name">Street & Curb Repairs</div>
     </div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 12px;">3</div>
@@ -156,6 +166,29 @@ title: "311 Service Requests"
 </div>
 
 <!-- Chart 2: Service Requests by Group and Status -->
+
+<style>
+.bar-chart {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+</style>
 <div class="bar-chart" style="margin-left: auto; margin-right: auto;">
   <div class="chart-title">Service Requests by Groups and Status</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
