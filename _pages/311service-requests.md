@@ -136,7 +136,7 @@ title: "311 Service Requests"
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 28px;">7.6</div>
       <div class="bar close-bar" style="height: 56px;">14</div>
-      <div class="bar-name">Traffic Signals, Lights, Signs</div>
+      <div class="bar-name">Traffic Signals,<br>Lights, Signs</div>
     </div>
     <div class="bar-group">
       <div class="bar sla-bar" style="height: 24px;">6</div>
@@ -193,7 +193,7 @@ title: "311 Service Requests"
     <div class="bar-group">
       <div class="bar closed" style="height: 200px;">1568</div>
       <div class="bar new" style="height: 21px;">89</div>
-      <div class="bar-name">Traffic Signals, Lights, Signs</div>
+      <div class="bar-name">Traffic Signals,<br>Lights, Signs</div>
     </div>
     <div class="bar-group">
       <div class="bar closed" style="height: 155px;">1201</div>
