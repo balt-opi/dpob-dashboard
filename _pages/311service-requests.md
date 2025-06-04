@@ -124,68 +124,124 @@ title: "311 Service Requests"
 </style>
 
 <!-- Chart 1: Average vs SLA -->
-<div class="bar-chart" aria-label="Average Days to Close Service Requests vs. SLA by Group">
-  <div class="chart-title">Average Days to Close Service Requests vs. SLA by Group</div>
-  <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
-  <div class="chart-legend">
-    <span style="background-color: #abb8c3;"></span> Average of Days to Close
-    <span style="background-color: #8ed1fc;"></span> Average of SLA
+<div class="bar-chart" aria-label="Average Days to Close Service Requests vs. SLA by Group" style="max-width: 900px; margin: 0 auto; font-family: Arial, sans-serif;">
+
+  <div class="chart-title" style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 4px;">
+    Average Days to Close Service Requests vs. SLA by Group
+  </div>
+  <div class="chart-subtitle" style="text-align: center; font-size: 12px; color: #666; margin-bottom: 12px;">
+    Source: CitiStat 311 Service Requests, 2024 - 2025
   </div>
 
-  <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: auto;">
-    <!-- Y-axis label -->
-    <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
+  <div class="chart-legend" style="display: flex; justify-content: center; align-items: center; gap: 16px; font-size: 13px; margin-bottom: 20px;">
+    <div><span style="display: inline-block; width: 15px; height: 15px; background-color: #abb8c3; margin-right: 6px; vertical-align: middle;"></span>Average of Days to Close</div>
+    <div><span style="display: inline-block; width: 15px; height: 15px; background-color: #8ed1fc; margin-right: 6px; vertical-align: middle;"></span>Average of SLA</div>
+  </div>
+
+  <div style="display: flex; align-items: flex-end; overflow-x: auto; padding-bottom: 30px;">
+
+  <!-- Y-axis label -->
+  <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 16px; white-space: nowrap; min-width: 20px; text-align: center;">
       Average Days to Close
     </div>
 
-  <div class="bar-container" style="min-width: 400px;">
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 76px;">19</div>
-        <div class="bar close-bar" style="height: 164px;">41</div>
-        <div class="bar-name">Trees &amp;<br>Grass</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 84px;">21</div>
-        <div class="bar close-bar" style="height: 84px;">21</div>
-        <div class="bar-name">Street &amp;<br>Curb Repairs</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 12px;">3</div>
-        <div class="bar close-bar" style="height: 76px;">19</div>
-        <div class="bar-name">Water</div>
-      </div>
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 28px;">7.6</div>
-        <div class="bar close-bar" style="height: 56px;">14</div>
-        <div class="bar-name">
-          <span>Traffic Signals,</span>
-          <span>Lights, &amp;</span>
-          <span>Signs</span>
+  <div class="bar-container" style="display: flex; gap: 24px; min-width: 600px;">
+
+  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 90px;">
+        <div class="bar sla-bar" style="height: 140px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          19
+        </div>
+        <div class="bar close-bar" style="height: 300px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          41
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center; line-height: 1.2;">
+          Trees &amp;<br>Grass
         </div>
       </div>
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 24px;">6</div>
-        <div class="bar close-bar" style="height: 36px;">9</div>
-        <div class="bar-name">Dirty<br>Streets</div>
+
+  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 110px;">
+        <div class="bar sla-bar" style="height: 154px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          21
+        </div>
+        <div class="bar close-bar" style="height: 154px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          21
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center; line-height: 1.2;">
+          Street &amp;<br>Curb Repairs
+        </div>
       </div>
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 12px;">3</div>
-        <div class="bar close-bar" style="height: 32px;">8</div>
-        <div class="bar-name">Trash &amp;<br>Recycling</div>
+
+  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 60px;">
+        <div class="bar sla-bar" style="height: 22px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          3
+        </div>
+        <div class="bar close-bar" style="height: 140px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          19
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center;">
+          Water
+        </div>
       </div>
-      <div class="bar-group">
-        <div class="bar sla-bar" style="height: 12px;">3</div>
-        <div class="bar close-bar" style="height: 44px;">11</div>
-        <div class="bar-name">Graffiti</div>
+
+   <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 100px;">
+        <div class="bar sla-bar" style="height: 52px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          7.6
+        </div>
+        <div class="bar close-bar" style="height: 104px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          14
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center; line-height: 1.2;">
+          Traffic Signals,<br>Lights, &amp;<br>Signs
+        </div>
       </div>
-    </div>
-  </div>
+
+  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 70px;">
+        <div class="bar sla-bar" style="height: 45px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          6
+        </div>
+        <div class="bar close-bar" style="height: 67px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          9
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center; line-height: 1.2;">
+          Dirty<br>Streets
+        </div>
+      </div>
+
+  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 90px;">
+        <div class="bar sla-bar" style="height: 22px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          3
+        </div>
+        <div class="bar close-bar" style="height: 60px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          8
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center; line-height: 1.2;">
+          Trash &amp;<br>Recycling
+        </div>
+      </div>
+
+  <div class="bar-group" style="display: flex; flex-direction: column; align-items: center; min-width: 70px;">
+        <div class="bar sla-bar" style="height: 22px; background-color: #8ed1fc; width: 32px; border-radius: 4px; margin-bottom: 4px; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          3
+        </div>
+        <div class="bar close-bar" style="height: 82px; background-color: #abb8c3; width: 32px; border-radius: 4px 4px 0 0; display: flex; justify-content: center; align-items: flex-end; color: black; font-weight: bold;">
+          11
+        </div>
+        <div class="bar-name" style="margin-top: 8px; font-size: 13px; text-align: center; line-height: 1.2;">
+          Graffiti
+        </div>
+      </div>
+
+   </div> <!-- end bar-container -->
+
+  </div> <!-- end flex container -->
 
   <!-- X-axis label -->
-  <div style="margin-top: 10px; font-weight: bold; font-size: 13px; text-align: center; white-space: nowrap;">
+  <div style="text-align: center; font-weight: bold; font-size: 13px; margin-top: 16px; white-space: nowrap;">
     SR Group
   </div>
+
 </div>
+
 
 <!-- Chart 2: Service Requests by Group and Status -->
 
@@ -211,6 +267,7 @@ title: "311 Service Requests"
   padding-bottom: 30px;
 }
 </style>
+
 <!-- Chart 2: Service Requests by Group and Status -->
 <div class="bar-chart" style="max-width: 900px; margin: 0 auto; font-family: Arial, sans-serif;">
 
