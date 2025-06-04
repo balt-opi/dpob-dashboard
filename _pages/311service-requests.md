@@ -261,7 +261,11 @@ title: "311 Service Requests"
     </div>
   </div>
 </div>
-
+  <!-- X-axis label -->
+  <div style="margin-top: 10px; font-weight: bold; font-size: 13px; text-align: center; white-space: nowrap;">
+    SR Group
+  </div>
+</div>
 
 <!-- Chart 3: Service Requests Created Over Time -->
 <div class="bar-chart" aria-label="Service Requests Created Over Time">
