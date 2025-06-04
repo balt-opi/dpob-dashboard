@@ -201,12 +201,11 @@ title: "311 Service Requests"
     <span style="background-color: #b07aa1;"></span> Pending
   </div>
   <div class="bar-container">
-<div class="bar-group">
-  <div class="bar sla-bar" style="height: 28px;">7.6</div>
-  <div class="bar close-bar" style="height: 56px;">14</div>
-  <div class="bar-label">
-    Traffic Signals,<br>Lights, Signs
-  </div>
+    <div class="bar-group">
+      <div class="bar closed" style="height: 200px;">1568</div>
+      <div class="bar new" style="height: 21px;">89</div>
+      <div class="bar-name">Traffic Signals, Lights, Signs</div>
+    </div>
     <div class="bar-group">
       <div class="bar closed" style="height: 155px;">1201</div>
       <div class="bar new" style="height: 22px;">94</div>
