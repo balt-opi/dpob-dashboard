@@ -399,7 +399,7 @@ title: "311 Service Requests"
     <span style="background-color: #8ed1fc;"></span> Closed
   </div>
 
-   <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: auto;">
+   <div style="display: flex; align-items: flex-end; max-width: 100%;">
     <!-- Y-axis label -->
     <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
       Number of SRs
