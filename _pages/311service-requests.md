@@ -92,12 +92,12 @@ title: "311 Service Requests"
   text-align: center;
   max-width: 70px;
   line-height: 13px;
-  height: 26px;            /* NEW: Reserve space for two lines */
-  overflow: hidden;        /* Prevent extra text from spilling */
-  display: flex;           /* NEW: Center the text vertically */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  height: 28px; /* Slightly more room than 2 lines */
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 /* Bar Colors */
