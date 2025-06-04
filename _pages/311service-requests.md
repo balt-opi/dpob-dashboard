@@ -393,13 +393,13 @@ title: "311 Service Requests"
 <div class="bar-chart">
   <div class="chart-title">Service Requests Created Over Time</div>
   <div class="chart-subtitle">Source: CitiStat 311 Service Requests, 2024 - 2025</div>
-  <div class="chart-legend">
-    <div style="font-weight: bold; margin-right: 10px;">SR Status:</div>
-    <span style="background-color: #f28e2c;"></span> Open
-    <span style="background-color: #8ed1fc;"></span> Closed
+  <div class="chart-legend" style="margin-bottom: 12px;">
+    <div style="font-weight: bold; margin-right: 10px; display: inline-block;">SR Status:</div>
+    <span style="background-color: #f28e2c; display: inline-block; width: 15px; height: 15px; margin-right: 5px; vertical-align: middle;"></span> Open
+    <span style="background-color: #8ed1fc; display: inline-block; width: 15px; height: 15px; margin-left: 15px; margin-right: 5px; vertical-align: middle;"></span> Closed
   </div>
 
-   <div style="display: flex; align-items: flex-end; max-width: 100%;">
+  <div style="display: flex; align-items: flex-end; max-width: 100%; overflow-x: visible;">
     <!-- Y-axis label -->
     <div style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; font-size: 13px; margin-right: 12px; text-align: center; white-space: nowrap;">
       Number of SRs
