@@ -4,7 +4,7 @@ title:  "Crime Map"
 ---
 
 # Crime Map
-Filter by the Crime Groups within the interactive map. Click on each of the points to learn about the cases.\
+Filter by the Crime Groups within the interactive map. Click on each of the points to learn about the cases.
 
 <small>Source: CitiStat Group A Crime BPD, Jan. 2024 - Apr. 2025</small>
 
