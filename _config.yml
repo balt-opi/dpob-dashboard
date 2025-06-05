@@ -43,9 +43,12 @@ navigation:
 - text: 311 Service Requests
   internal: true
   url: /311service-requests
-- text: Service Request Map
+- text: 311 Service Request Map
   internal: true
   url: /srmap
+- text: 311 Service Request Heat Map
+  internal: true
+  url: /sr_heatmap
 - text: DMA Crime Information
   internal: true
   url: /crime_information
