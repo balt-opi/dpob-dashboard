@@ -12,6 +12,7 @@ collections:
 # Title
 name: Downtown Economic Intelligence Dashboard
 url: https://app.powerbigov.us/view?r=eyJrIjoiNGE2MjNkNDEtZmMyOS00Y2Y4LWE0NDgtZWUzYjBkZWNmMDc3IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9&pageName=f8437cd04c5277282e9a
+
 # Author/Organization info to be displayed in the templates
 author1:
   name: Mayor's Office of Performance and Innovation (OPI)
@@ -21,57 +22,51 @@ author:
   name: DowntownRISE
   url: https://www.downtownbaltimorerise.com/
 
-# When using this template with a project (repository) page set the baseurl to '/project-name'
-# For user/organization pages set this to an empty string
-# When working locally use jekyll serve --baseurl '' so that you can view everything at localhost:4000
-# See http://jekyllrb.com/docs/github-pages/ for more info
-baseurl: '/dpob-dashboard'
+# Base URL for GitHub Pages deployment
+baseurl: '/dpob-dashboard'  # correct for project/repo pages
 
-# Point the logo URL at a file in your repo or hosted elsewhere by your organization
+# Logos and Alt Text
 logourl: '/images/DowntownRiseColor.jpg'
 logoalt: The DowntownRISE Logo
 
 logourl1: '/images/MBS Seal Logo.png'
 logoalt1: The Mayor Logo
 
-
-# Navigation
-# List links that should appear in the site sidebar here
+# Navigation (used for sidebar or menus)
 navigation:
-- text: Introduction
-  internal: true
-  url: /dpob_introduction_page
-- text: Business and Economy
-  internal: true
-  url: /businessandeconomy
-- text: 311 Service Requests
-  internal: true
-  url: /311service-requests
-- text: 311 Service Request Map
-  internal: true
-  url: /srmap
-- text: 311 Service Request Heat Map
-  internal: true
-  url: /sr_heatmap
-- text: DMA Crime Information
-  internal: true
-  url: /crime_information
-- text: DMA Crime Heat Map
-  internal: true
-  url: /crime
-- text: Trees, Tree Wells, and Planters Map
-  internal: true
-  url: /trees-twells-planters
-- text: Data Dictionary
-  internal: true
-  url: /data-dictionary
+  - text: Introduction
+    internal: true
+    url: /dpob_introduction_page
+  - text: Business and Economy
+    internal: true
+    url: /businessandeconomy
+  - text: 311 Service Requests
+    internal: true
+    url: /311service-requests
+  - text: 311 Service Request Map
+    internal: true
+    url: /srmap
+  - text: 311 Service Request Heat Map
+    internal: true
+    url: /sr_heatmap
+  - text: DMA Crime Information
+    internal: true
+    url: /crime_information
+  - text: DMA Crime Heat Map
+    internal: true
+    url: /crime
+  - text: Trees, Tree Wells, and Planters Map
+    internal: true
+    url: /trees-twells-planters
+  - text: Data Dictionary
+    internal: true
+    url: /data-dictionary
 
-# Repo list
-# List repos that you would like to appear on the homepage here
+# Repo list for homepage
 repos:
-- name: dpob-github
-  description: 
-  url: https://github.com/balt-opi/dpob-dashboard
+  - name: dpob-github
+    description: 
+    url: https://github.com/balt-opi/dpob-dashboard
 
 # Style Variables
 brand_color: "#121f3f"
