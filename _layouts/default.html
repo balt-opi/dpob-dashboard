@@ -8,10 +8,13 @@
 
       <header role="banner" style="background-color: {{ site.brand_color }}; padding: 20px;">
         <div class="wrap" style="display: flex; align-items: center;">
-          {% if site.logourl != null %}
-            <img class="logo" src="{{ site.baseurl }}{{ site.logourl }}" alt="{{ site.logoalt }}" width="150px" style="margin-right: 20px;">
-            <img class="logo" src="{{ site.baseurl }}{{ site.logourl1 }}" alt="{{ site.logoalt1 }}" width="150px" style="margin-right: 20px;">
+          {% if site.logourl %}
+          <img class="logo" src="{{ site.baseurl }}{{ site.logourl }}" alt="{{ site.logoalt }}" width="150px" style="margin-right: 20px;">
           {% endif %}
+          {% if site.logourl1 %}
+          <img class="logo" src="{{ site.baseurl }}{{ site.logourl1 }}" alt="{{ site.logoalt1 }}" width="150px" style="margin-right: 20px; background-color: white; padding: 4px; border-radius: 4px;">
+          {% endif %}
+
           <h1 class="site-title" style="margin: 0;">
             <a class="title-link" href="https://app.powerbigov.us/view?r=eyJrIjoiZDc5NDY5NjctNmQ2My00MzdmLWE1NTMtMTUwOTk3MWJlZWExIiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9&pageName=f8437cd04c5277282e9a" target="_blank" rel="noopener noreferrer" style="color: #f1c232; text-decoration: none;">
               {{ site.name }}
