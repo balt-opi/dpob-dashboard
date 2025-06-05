@@ -31,6 +31,10 @@ baseurl: '/dpob-dashboard'
 logourl: '/images/DowntownRiseColor.jpg'
 logoalt: The DowntownRISE Logo
 
+logourl1: '/images/MBS Seal Logo.jpg'
+logoalt1: The Mayor Logo
+
+
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
