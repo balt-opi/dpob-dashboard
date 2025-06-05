@@ -29,7 +29,7 @@ baseurl: '/dpob-dashboard'  # correct for project/repo pages
 logourl: '/images/DowntownRiseColor.jpg'
 logoalt: The DowntownRISE Logo
 
-logourl1: '/images/bmsmayor.png'
+logourl1: '/images/MBS Seal Logo.png'
 logoalt1: The Mayor Logo
 
 # Navigation (used for sidebar or menus)
