@@ -3,7 +3,7 @@ layout: page
 title:  "Trees/Tree Wells/Planters Map"
 ---
 
-# Trees in the DMA Map
+# Trees Map
 Zoom into the trees within the interactive map. Click on each of the points to learn about the types of trees.
 
 <small>Source: Baltimore City Parks and Recreation, Forestry, 2018  </small>
