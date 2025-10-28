@@ -35,7 +35,7 @@ logoalt1: The Mayor Logo
 navigation:
   - text: Introduction
     internal: true
-    url: /index
+    url: /
     
   - text: Data Dictionary
     internal: true
