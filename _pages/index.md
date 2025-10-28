@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: dpob_introduction_page
+permalink: /dpob_introduction_page
 title: Downtown Economic Intelligence Dashboard
 ---
 
