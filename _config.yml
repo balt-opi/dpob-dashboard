@@ -33,10 +33,6 @@ logoalt1: The Mayor Logo
 
 # Navigation (used for sidebar or menus)
 navigation:
-   - text: Data Dictionary
-    internal: true
-    url: /index.md
-    
   - text: Data Dictionary
     internal: true
     url: /data-dictionary
