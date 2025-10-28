@@ -35,7 +35,7 @@ logoalt1: The Mayor Logo
 navigation:
    - text: Data Dictionary
     internal: true
-    url: /data-dictionary
+    url: /index.md
     
   - text: Data Dictionary
     internal: true
