@@ -33,6 +33,10 @@ logoalt1: The Mayor Logo
 
 # Navigation (used for sidebar or menus)
 navigation:
+  - text: Introduction
+    internal: true
+    url: /dpob_introduction_page.md
+    
   - text: Data Dictionary
     internal: true
     url: /data-dictionary
