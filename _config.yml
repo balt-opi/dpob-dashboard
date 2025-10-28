@@ -35,7 +35,7 @@ logoalt1: The Mayor Logo
 navigation:
   - text: Introduction
     internal: true
-    url: /dpob_introduction_page.md
+    url: /index.md
     
   - text: Data Dictionary
     internal: true
