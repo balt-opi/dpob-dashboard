@@ -10,4 +10,4 @@ Downtown is on the RISE. With more than $6.9 billion of investment in developmen
 
 *Dashboard Data is updated the first of each month.* 
 
-<iframe title="DowntownRISE DB" width="800" height="400" src="https://app.powerbigov.us/view?r=eyJrIjoiYmY4ZjBhNjAtZWY1Ny00NTA5LWFjMWMtMTkyODc2MTU3ODA4IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9" frameborder="0" allowFullScreen="true"></iframe>
+<iframe title="DowntownRISE DB" width="600" height="373.5" src="https://app.powerbigov.us/view?r=eyJrIjoiYmY4ZjBhNjAtZWY1Ny00NTA5LWFjMWMtMTkyODc2MTU3ODA4IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9" frameborder="0" allowFullScreen="true"></iframe>
