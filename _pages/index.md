@@ -8,6 +8,6 @@ title: Downtown Economic Intelligence Dashboard
 
 Downtown is on the RISE. With more than $6.9 billion of investment in development downtown between 2018 and 2028, the recent announcement of Baltimore as one of the 31 inaugural Tech Hubs, which will allow Baltimore City to unlock up to $75M in federal investment, and the throngs of visitors coming to downtown to cheer on the Orioles and the Ravens sports teams, attend concerts, and shop small businesses – the renaissance of downtown Baltimore is happening now!
 
-*Dashboard Data is updated the first of each month.* 
+*Dashboard Data is updated the first Monday of each month.* 
 
 <iframe title="DowntownRISE DB" width="800" height="486" src="https://app.powerbigov.us/view?r=eyJrIjoiMThhMjEyMWQtZGU1My00NWI2LTljNzktMjA2ZmVhMTZlMjE0IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9" frameborder="0" allowFullScreen="true"></iframe>
