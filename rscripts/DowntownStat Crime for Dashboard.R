@@ -1,5 +1,6 @@
 
 
+
 # Load libraries
 library(tidyverse)
 library(sf)
@@ -16,11 +17,17 @@ library(here)
 dntw <- read_sf(here("Canvassing", "shapefiles","downtown_boundary.shp"))
 
 # Connect to CitiStat SQL Server
-balt_ctistat <- dbConnect(odbc(), 
-                          Driver = "SQL Server", 
-                          Server = "balt-sql-fc", 
-                          Database = "CitiStat", 
-                          trusted_connection = "Yes")
+balt_ctistat <- dbConnect(
+  odbc(),
+  Driver = "ODBC Driver 18 for SQL Server",
+  Server = "BCIT-SQL19-AG.baltimore.city",
+  Trusted_Connection = "Yes",
+  Encrypt = "Yes",
+  TrustServerCertificate = "Yes",
+  ApplicationIntent = "ReadWrite",
+  MultiSubnetFailover = "Yes",
+  Timeout = 30
+)
 
 # Query crime data
 crime_df <- dbGetQuery(balt_ctistat, 
@@ -91,4 +98,5 @@ dntw_crime_wkt <- st_as_sf(dntw_crime_wkt, coords = c("longitude", "latitude"), 
 # Write to CSV
 st_write(dntw_crime_wkt, here("geojson", "crime_dma.geojson"), delete_dsn = TRUE)
 write.csv(dntw_crime_wkt, here("results", "Downtown Crime.csv"), row.names = F)
+# writexl::write_xlsx(dntw_crime_wkt, here("results", "Downtown Crime.x"))
 
