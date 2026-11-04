@@ -1,3 +1,7 @@
+
+
+
+
 #Load libraries
 library(tidyverse)
 library(sf)
@@ -14,11 +18,18 @@ library(here)
 dntw <- read_sf(here("Canvassing", "shapefiles","downtown_boundary.shp"))
 
 # Connect to CitiStat SQL Server
-balt_ctistat <- dbConnect(odbc(), 
-                          Driver = "SQL Server", 
-                          Server = "balt-sql-fc", 
-                          Database = "CitiStat", 
-                          trusted_connection = "Yes")
+balt_ctistat <- dbConnect(
+  odbc(),
+  Driver = "ODBC Driver 18 for SQL Server",
+  Server = "BCIT-SQL19-AG.baltimore.city",
+  Trusted_Connection = "Yes",
+  Encrypt = "Yes",
+  TrustServerCertificate = "Yes",
+  ApplicationIntent = "ReadWrite",
+  MultiSubnetFailover = "Yes",
+  Timeout = 30
+)
+
 
 # Get today's date
 today <- format(Sys.Date(), "%Y-%m-%d")
