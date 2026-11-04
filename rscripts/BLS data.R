@@ -1,169 +1,103 @@
-
-
-# Gathering data from the Bureau of Labor Statistics' (BLS) site. 
-# You will need your own API key which can be found here (BLS)[https://www.bls.gov/developers/home.htm].
-# The blsAPI package can be installed from Github (link)[https://github.com/mikeasilva/blsAPI] or library(devtools), install_github('mikeasilva/blsAPI')
-
-## API KEY JUST IN CASE> e7a00f69248d41e9b919cafdeca12a0f
-
-
 # Libraries
+library(tidycensus)
 library(r4OPI)
 library(tidyverse)
 library(blsR)
 library(jsonlite)
-library(blsAPI) 
-library(dplyr)
+# library(blsAPI) 
 library(httr)
+library(sf)
+library(fastmap)
+library(odbc)
+library(DBI)
+library(hms)
+library(readxl)
+library(stringr)
+library(dplyr)
+library(lubridate)
+library(rmarkdown)
+library(kableExtra)
+library(Microsoft365R)
+library(AzureGraph)
+library(ggplot2)
 library(here)
 
-####
-### Setting up for the Employment data
 
-# Example series ID: Quarterly employment for all employees, total nonfarm, seasonally adjusted
-# Series IDs for BLS vary by sector/area. Here's an example: CES0000000001 (Total Nonfarm)
-series_id <- "LNS12300000"
+# Load ACS 5-Year Estimates for employment
+# Variables:
+# B23025_001 = Total population 16 years and over
+# B23025_002 = In labor force
 
-# read the url
-url <- "https://api.bls.gov/publicAPI/v2/timeseries/data/"
+# Define available 5-year ACS years: 2009 to most recent available
+years <- 2009:2025  # or update dynamically with `as.numeric(format(Sys.Date(), "%Y")) - 1`
 
-# Get current year from system date
-current_year <- format(Sys.Date(), "%Y")
-
-# Create the request body (no API key needed for light use)
-body <- list(
-  seriesid = list(series_id),
-  startyear = "2020",
-  endyear = current_year
-)
-
-# make the post request to the BLS API
-response <- POST(url, body = body, encode = "json")
-json_text <- content(response, as = "text")
-parsed <- fromJSON(json_text)
-
-# Extract the data directly into a data frame
-employment_data <- as.data.frame(parsed$Results$series$data)
-
-####
-### Filter for the monthly data 
-
-# filtering for monthly data and setting the criteria for it
-monthly_data <- employment_data %>%
-  mutate(
-    value = as.numeric(value),
-    month = as.numeric(sub("M", "", period)),
-    date = as.Date(paste(year, month, "01", sep = "-"))
+# Function to get county-level labor data for Baltimore City
+get_labor_data_year <- function(year) {
+  message("Getting ACS data for ", year)
+  
+  df <- get_acs(
+    geography = "county",
+    variables = c(
+      total_16plus = "B23025_001",
+      in_labor_force = "B23025_002"
+    ),
+    state = "MD",
+    county = "Baltimore City",
+    year = year,
+    survey = "acs5",
+    output = "wide"
   ) %>%
-  arrange(date)
+    mutate(
+      LFPR = round(100 * in_labor_forceE / total_16plusE, 1),
+      Year = year
+    ) %>%
+    select(Year, GEOID, NAME, total_16plusE, in_labor_forceE, LFPR)
+  
+  return(df)
+}
 
-# remove unwanted columns
-monthly_data <- monthly_data |> 
-  select(-c(footnotes, latest))
+# Run for all years using purrr::map safely to avoid interruption
+safe_get_labor_data_year <- safely(get_labor_data_year)
 
-# write out the data to a xlsx file
-writexl::write_xlsx(monthly_data, here("results", "monthly_data.xlsx"))
+results <- map(years, safe_get_labor_data_year)
 
-#####
-### Unemployment rate by month
+# Keep only successful results
+labor_data_all_years <- results %>%
+  keep(~ is.null(.x$error)) %>%
+  map("result") %>%
+  bind_rows()
 
-# BLS series ID for Unemployment Rate (seasonally adjusted)
-un_series_id <- "LNS14000000"
 
-# API endpoint
-un_url <- "https://api.bls.gov/publicAPI/v2/timeseries/data/"
+## CHANGE THE YEAR AS NEEDED WHEN NEW DATA COMES OUT
 
-# Get current year dynamically
-current_year <- format(Sys.Date(), "%Y")
-
-# Create request body
-un_body <- list(
-  seriesid = list(un_series_id),
-  startyear = "2020",
-  endyear = current_year
+# one year only 
+labor_data <- get_acs(
+  geography = "county",
+  variables = c(
+    total_16plus = "B23025_001",
+    in_labor_force = "B23025_002"
+  ),
+  state = "MD",
+  county = "Baltimore City",
+  year = 2023,
+  survey = "acs5",
+  output = "wide"
 )
 
-# Make API request
-un_response <- POST(url, body = un_body, encode = "json")
-un_json_text <- content(un_response, as = "text")
-un_parsed <- fromJSON(un_json_text)
-
-# Extract and clean data
-unemployment_data <- as.data.frame(un_parsed$Results$series$data)
-monthly_unemployment <- unemployment_data |> 
+# calculation
+labor_data <- labor_data |> 
   mutate(
-    value = as.numeric(value),
-    month = as.numeric(sub("M", "", period)),
-    date = as.Date(paste(year, month, "01", sep = "-"))
+    LFPR = round(100 * in_labor_forceE / total_16plusE, 1),
+    Year = 2024
   ) |> 
-  arrange(date)
-
-# write out the data to a xlsx file
-writexl::write_xlsx(monthly_unemployment, here("results", "monthly_unemployment.xlsx"))
+  select(Year, GEOID, NAME, total_16plusE, in_labor_forceE, LFPR)
 
 
-#####
-### US Employment Rate
+# write the dataset out
+# make sure to change your path    
 
-# BLS series ID for Employment-Population Ratio (seasonally adjusted)
-em_series_id <- "LNS12300000"
-
-# API endpoint
-un_url <- "https://api.bls.gov/publicAPI/v2/timeseries/data/"
-
-# Get current year dynamically
-current_year <- format(Sys.Date(), "%Y")
-
-# Create request body
-un_body <- list(
-  seriesid = list(em_series_id),
-  startyear = "2020",
-  endyear = current_year
-)
-
-# Make API request
-un_response <- POST(un_url, body = un_body, encode = "json")
-un_json_text <- content(un_response, as = "text")
-un_parsed <- fromJSON(un_json_text)
-
-# Extract and clean data
-pop_employment_data <- as.data.frame(un_parsed$Results$series$data)
-
-monthly_pop_employment <- pop_employment_data %>%
-  mutate(
-    value = as.numeric(value),
-    month = as.numeric(sub("M", "", period)),
-    date = as.Date(paste(year, month, "01", sep = "-"))
-  ) %>%
-  arrange(date)
-
-# Grab the latest employment-population ratio
-latest_ratio <- tail(monthly_pop_employment, 1)
-
-print(latest_ratio)
-
-# Write out the data to Excel
-writexl::write_xlsx(monthly_pop_employment, here("results", "monthly_employment_ratio.xlsx"))
-writexl::write_xlsx(latest_ratio, here("results", "latest_monthly_employment_ratio.xlsx"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+write.csv(labor_data_all_years, ("C:/Users/selenea.gibson/OneDrive - City Of Baltimore/Projects/Downtown Rise/results/baltimore_labor_force.csv"), row.names = F)
+write.csv(labor_data, ("C:/Users/selenea.gibson/OneDrive - City Of Baltimore/Projects/Downtown Rise/results/balt_labor_force_1year.csv"), row.names = F)
 
 
 
