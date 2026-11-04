@@ -1,10 +1,14 @@
+
+
+
+
 # Load the packages
 library(lubridate)
 library(dplyr)
 library(tidyverse)
-library(lubridate)
 library(rmarkdown)
 library(DBI)
+library(odbc)
 library(kableExtra)
 library(Microsoft365R)
 library(AzureGraph)
@@ -16,12 +20,17 @@ library(here)
 #connect to the sql database, make sure you are connected to the VPN for
 #this to work
 sql_conn <- dbConnect(
-  odbc::odbc(),
-  Driver = "SQL Server",
-  Server = "BALT-SQL-FC",
-  Database = "CitiStat",  
-  Port = 1433
+  odbc(),
+  Driver = "ODBC Driver 18 for SQL Server",
+  Server = "BCIT-SQL19-AG.baltimore.city",
+  Trusted_Connection = "Yes",
+  Encrypt = "Yes",
+  TrustServerCertificate = "Yes",
+  ApplicationIntent = "ReadWrite",
+  MultiSubnetFailover = "Yes",
+  Timeout = 30
 )
+
 
 #SQL query
 data <- dbGetQuery(sql_conn, "SELECT 
@@ -230,135 +239,135 @@ dfmerged$ontime[is.na(dfmerged$ontime) & dfmerged$`Due Date` < current_date] <- 
 dfmerged_groups <- dfmerged %>%
   mutate(SR_groups = case_when(
     `SR Type` %in% c('tec-footways complaint', 
-                   'tec-footways contract/reconstruction', 
-                   'trm-potholes', 
-                   'tr-street cut issues', 
-                   'trm-street repairs', 
-                   'trm-footways repair', 
-                 
-                  
-                   'trm-(ada) sidewalk ramp concern (repair)', 
-                   'trm-snow/icy conditions', 
-                   'tec-alley reconstruction complaint', 
-                  
-                
-                   'trt-crosswalks', 
-                   'tec-street repair (misc)', 
-                   'trm-alleys', 
-                   'trt-street and crosswalk markings', 
-                   'ww-storm damaged inlet', 
-                   'tec-alley contract/reconstruction', 
-                   'tec-wo street markings', 
-                   'trm-curb repair', 
-                   'trm-pickup pothole', 
-                   'trm-street cut issues'
+                     'tec-footways contract/reconstruction', 
+                     'trm-potholes', 
+                     'tr-street cut issues', 
+                     'trm-street repairs', 
+                     'trm-footways repair', 
+                     
+                     
+                     'trm-(ada) sidewalk ramp concern (repair)', 
+                     'trm-snow/icy conditions', 
+                     'tec-alley reconstruction complaint', 
+                     
+                     
+                     'trt-crosswalks', 
+                     'tec-street repair (misc)', 
+                     'trm-alleys', 
+                     'trt-street and crosswalk markings', 
+                     'ww-storm damaged inlet', 
+                     'tec-alley contract/reconstruction', 
+                     'tec-wo street markings', 
+                     'trm-curb repair', 
+                     'trm-pickup pothole', 
+                     'trm-street cut issues'
     ) ~ 'Street & Curb Repairs',
     `SR Type` %in% c( 
-                   'trm-stlight pole missing', 
-                   'pabc-ada signage request on pabc lot', 
-                   'trm-sign damaged', 
-                   'trt-new stop sign', 
-                   'bge-stlight(s) out', 
-                   'trm-stlight pole access cover/plate missing', 
-                   'trm-stlighting inadequate/too bright', 
-                   'trt-new traffic sign', 
-                   'trm-illegal sign removal', 
-                   'trm-stlight pole pickup', 
-                    'trt-sign damaged/sign structure',
-                   'ecc-artest', 
-                   'trm-stlight damaged/knocked down/rusted', 
-                   'trm-street light out', 
-                   'trm-wo sign removal', 
-                   'trt-signal timing', 
-                   'trt-traffic sign request', 
-                   'trt-traffic signal repairs',
-                 'trt-sign damaged/sign structure',
-                   'trt-traffic calming', 
-                   'rp-street lighting repairs', 
-                
-                   'trm-wo sign installation', 
-                   'trt-new traffic signal'
+      'trm-stlight pole missing', 
+      'pabc-ada signage request on pabc lot', 
+      'trm-sign damaged', 
+      'trt-new stop sign', 
+      'bge-stlight(s) out', 
+      'trm-stlight pole access cover/plate missing', 
+      'trm-stlighting inadequate/too bright', 
+      'trt-new traffic sign', 
+      'trm-illegal sign removal', 
+      'trm-stlight pole pickup', 
+      'trt-sign damaged/sign structure',
+      'ecc-artest', 
+      'trm-stlight damaged/knocked down/rusted', 
+      'trm-street light out', 
+      'trm-wo sign removal', 
+      'trt-signal timing', 
+      'trt-traffic sign request', 
+      'trt-traffic signal repairs',
+      'trt-sign damaged/sign structure',
+      'trt-traffic calming', 
+      'rp-street lighting repairs', 
+      
+      'trm-wo sign installation', 
+      'trt-new traffic signal'
     ) ~ 'Traffic Signals, Lights, Signs',
     `SR Type` %in% c('for-broken branch in tree', 
-                   'for-down tree', 
-                   'sw-leaf collection scheduling', 
-                   'trm-grass mowing', 
-                   'for-stump removal', 
-                   'hcd-trees and shrubs', 
-                   'hcd-weatherization', 
-                   'sw-leaf removal', 
-                   'for-tree inspection', 
-                   'for-fallen limb', 
-                   'rp-grass cutting', 
-                   'ecc-grass mowing'
+                     'for-down tree', 
+                     'sw-leaf collection scheduling', 
+                     'trm-grass mowing', 
+                     'for-stump removal', 
+                     'hcd-trees and shrubs', 
+                     'hcd-weatherization', 
+                     'sw-leaf removal', 
+                     'for-tree inspection', 
+                     'for-fallen limb', 
+                     'rp-grass cutting', 
+                     'ecc-grass mowing'
     ) ~ 'Trees & Grass',
     `SR Type` %in% c('sw-city trash can or recycling cart concern', 
-                   'sw-municipal trash can concern', 
-                   'sw-residential recycling carts', 
-                   'hcd-illegal dumping', 
-                   'sw-inappropriate use of recycling bins', 
-                   'sw-mixed refuse', 
-                   'sw-bulk special', 
-                   'sw-city trash can or recycling cart lost or stolen', 
-                   'sw-dumpster collection', 
-                   'sw-municipal trash can stolen/lost', 
-                   'sw-trash can/recycling container complaint', 
-                   'trm-debris hanging from wires or poles', 
-                   'sw-public (corner) trash can issue', 
-                   'sw-recycling', 
-                   'sw-school recycling', 
-                   'sw- city trash can or recycling cart concern', 
-                   'sw-park cans'
+                     'sw-municipal trash can concern', 
+                     'sw-residential recycling carts', 
+                     'hcd-illegal dumping', 
+                     'sw-inappropriate use of recycling bins', 
+                     'sw-mixed refuse', 
+                     'sw-bulk special', 
+                     'sw-city trash can or recycling cart lost or stolen', 
+                     'sw-dumpster collection', 
+                     'sw-municipal trash can stolen/lost', 
+                     'sw-trash can/recycling container complaint', 
+                     'trm-debris hanging from wires or poles', 
+                     'sw-public (corner) trash can issue', 
+                     'sw-recycling', 
+                     'sw-school recycling', 
+                     'sw- city trash can or recycling cart concern', 
+                     'sw-park cans'
     ) ~ 'Trash & Recycling',
     `SR Type` %in% c('sw-graffiti removal-rec and parks', 
-                   'sw-graffiti removal proactive', 
-                   'trm-graffiti referral', 
-                   'hcd-graffiti',
-                   'hcd-illegal campaign signs on private property', 
-                   'sw-graffiti removal', 
-                   'sw-graffiti removal - rec and parks', 
-                   'sw-graffiti removal-owner\'s request'
+                     'sw-graffiti removal proactive', 
+                     'trm-graffiti referral', 
+                     'hcd-graffiti',
+                     'hcd-illegal campaign signs on private property', 
+                     'sw-graffiti removal', 
+                     'sw-graffiti removal - rec and parks', 
+                     'sw-graffiti removal-owner\'s request'
     ) ~ 'Graffiti',
     `SR Type` %in% c('sw-fire debris removal', 
-                   'sw-rat rubout alley concern', 
-                   'hcd-rodents', 
-                   'hcd-sanitation property', 
-                   'sw-mechanical alley sweeping', 
-                   'sw-rat rubout proactive', 
-                   'sw-dirty street', 
-                   'ww-sediment or erosion problem', 
-                   'hcd-snow and ice on sidewalks', 
-                   'sw-dirty alley proactive', 
-                   'sw-dirty street proactive', 
-                   'sw-mechanical street sweeping', 
-                   'sw-clean up', 
-                   'sw-siu clean up', 
-                   'sw-cleaning', 
-                   'sw-dirty alley'
+                     'sw-rat rubout alley concern', 
+                     'hcd-rodents', 
+                     'hcd-sanitation property', 
+                     'sw-mechanical alley sweeping', 
+                     'sw-rat rubout proactive', 
+                     'sw-dirty street', 
+                     'ww-sediment or erosion problem', 
+                     'hcd-snow and ice on sidewalks', 
+                     'sw-dirty alley proactive', 
+                     'sw-dirty street proactive', 
+                     'sw-mechanical street sweeping', 
+                     'sw-clean up', 
+                     'sw-siu clean up', 
+                     'sw-cleaning', 
+                     'sw-dirty alley'
     ) ~ 'Dirty Streets',
     `SR Type` %in% c('hcd-emergency sewer investigation', 
-                   'ww-water low pressure', 
-                   'ww-storm misc investigation', 
-                   'ww-storm water in basement', 
-                   'ww-water meter cover missing or damaged', 
-                   'ww-sewer misc investigation', 
-                   'ww-water leak (exterior)', 
-                   'ww-water meter leak', 
-                   'ww-water no water', 
-                   'ww-hcd acquisition/ remove meter', 
-                   'ww-storm flooded street', 
-                   'ww-water noise in pipe', 
-                   'ww-hydrant damaged', 
-                   'ww-hydrant open', 
-                   'ww-water odor/bad taste', 
-                   'ww-water water in basement', 
-                   'fccs-metered water', 
-                   'ww-hydrant leaking', 
-                   'ww-sewer water in basement', 
-                   'ww-waterway pollution investigation', 
-                   'sw-water way cleaning', 
-                   'ww-sewer overflow', 
-                   'ww-water discolored'
+                     'ww-water low pressure', 
+                     'ww-storm misc investigation', 
+                     'ww-storm water in basement', 
+                     'ww-water meter cover missing or damaged', 
+                     'ww-sewer misc investigation', 
+                     'ww-water leak (exterior)', 
+                     'ww-water meter leak', 
+                     'ww-water no water', 
+                     'ww-hcd acquisition/ remove meter', 
+                     'ww-storm flooded street', 
+                     'ww-water noise in pipe', 
+                     'ww-hydrant damaged', 
+                     'ww-hydrant open', 
+                     'ww-water odor/bad taste', 
+                     'ww-water water in basement', 
+                     'fccs-metered water', 
+                     'ww-hydrant leaking', 
+                     'ww-sewer water in basement', 
+                     'ww-waterway pollution investigation', 
+                     'sw-water way cleaning', 
+                     'ww-sewer overflow', 
+                     'ww-water discolored'
     ) ~ 'Water',
     TRUE ~ 'Other'  # Default case for any other categories
   ))
@@ -367,42 +376,62 @@ dfmerged_groups <- dfmerged %>%
 dfmerged_groups2 <- dfmerged_groups %>%
   mutate(internal = case_when(
     'SR Type' %in% c('tec-footways contract/reconstruction',
-                   'tr-street cut issues',
-                   'trm-footways repair',
-                   'trm-wo street and crosswalk markings',
-                   'tec-street repair (misc)',
-                   'tec-alley contract/reconstruction',
-                   'tec-wo st fccs-metered waterreet markings',
-                   'trm-pickup pothole',
-                   'trm-street cut issues',
-                   'trm-stlight pole pickup',
-                   'ecc-artest',
-                   'trm-wo sign removal',
-                   'trm-wo sign installation',
-                   'sw-leaf collection scheduling',
-                   'for-stump removal',
-                   'sw-residential recycling carts',
-                   'sw-municipal trash can stolen/lost',
-                   'sw- city trash can or recycling cart concern',
-                   'sw-graffiti removal-rec and parks',
-                   'sw-graffiti removal proactive',
-                   'sw-graffiti removal - rec and parks',
-                   'sw-fire debris removal',
-                   'sw-rat rubout alley concern',
-                   'sw-mechanical alley sweeping',
-                   'sw-rat rubout proactive',
-                   'sw-dirty alley proactive',
-                   'sw-dirty street proactive',
-                   'sw-clean up',
-                   'sw-siu clean up',
-                   'sw-cleaning',
-                   'ww-hcd acquisition/ remove meter',
-                   'fccs-metered water') ~ 'Internal'
+                     'tr-street cut issues',
+                     'trm-footways repair',
+                     'trm-wo street and crosswalk markings',
+                     'tec-street repair (misc)',
+                     'tec-alley contract/reconstruction',
+                     'tec-wo st fccs-metered waterreet markings',
+                     'trm-pickup pothole',
+                     'trm-street cut issues',
+                     'trm-stlight pole pickup',
+                     'ecc-artest',
+                     'trm-wo sign removal',
+                     'trm-wo sign installation',
+                     'sw-leaf collection scheduling',
+                     'for-stump removal',
+                     'sw-residential recycling carts',
+                     'sw-municipal trash can stolen/lost',
+                     'sw- city trash can or recycling cart concern',
+                     'sw-graffiti removal-rec and parks',
+                     'sw-graffiti removal proactive',
+                     'sw-graffiti removal - rec and parks',
+                     'sw-fire debris removal',
+                     'sw-rat rubout alley concern',
+                     'sw-mechanical alley sweeping',
+                     'sw-rat rubout proactive',
+                     'sw-dirty alley proactive',
+                     'sw-dirty street proactive',
+                     'sw-clean up',
+                     'sw-siu clean up',
+                     'sw-cleaning',
+                     'ww-hcd acquisition/ remove meter',
+                     'fccs-metered water') ~ 'Internal'
     ,TRUE ~ 'Non-Internal'  # Default case for any other categories
   ))
-    
-dfmerged_groups2 <- st_as_sf(dfmerged_groups2, coords = c("longitude", "latitude"), crs = 4326, remove = FALSE)
 
-#export the csv file with data, make sure to change your path  
-st_write(dfmerged_groups2, here("geojson", "sr_dma.geojson"), delete_dsn = TRUE)
-writexl::write_xlsx(dfmerged_groups2, here("data" , "downtownstatdata.xlsx"))
+# Convert to sf
+dfmerged_groups2 <- st_as_sf(
+  dfmerged_groups2,
+  coords = c("longitude", "latitude"),
+  crs = 4326,
+  remove = FALSE
+)
+
+# Export GeoJSON with actual spatial geometry
+st_write(
+  dfmerged_groups2,
+  here("geojson", "sr_dma.geojson"),
+  delete_dsn = TRUE
+)
+
+# Create Excel version
+# Convert geometry from sf object to regular text
+dfmerged_groups2_excel <- dfmerged_groups2 %>%
+  mutate(geometry = st_as_text(geometry))
+
+# Export Excel with a geometry column
+writexl::write_xlsx(
+  dfmerged_groups2_excel,
+  here("results", "downtownstatdata.xlsx")
+)
