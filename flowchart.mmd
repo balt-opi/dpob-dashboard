@@ -1,0 +1,23 @@
+flowchart LR
+    github_gist
+    frontend[website]
+    power_bi
+    maintainer
+
+    maintainer -->|update data| power_bi
+    power_bi -->|update with generated link| github_gist
+    github_gist -->|fetch latest powerbi dashboard link | frontend
+
+    maintainer -->|update website content| update_github_repo
+    update_github_repo -->|deploy| frontend
+
+
+    subgraph "data maintenance"
+        power_bi
+        github_gist
+    end
+
+    subgraph "website updates"
+        update_github_repo
+        frontend
+    end

@@ -1,8 +1,17 @@
-# ReadME 
+The Downtown Partnership of Baltimore (DPOB) dashboard highlights the economic
+geography of Baltimore’s Central Business District (CBD) and the downtown
+management area. This dashboard aims to be user-friendly, publicly accessible,
+and available to stakeholders both within and outside the city. By integrating a
+variety of datasets and analytical methods, the dashboard will provide valuable
+insights to support DPOB in identifying and addressing the services Baltimore
+needs to remain sustainable.
 
-## Project Information 
+## Links 
 
-The Downtown Partnership of Baltimore (DPOB) dashboard highlights the economic geography of Baltimore’s Central Business District (CBD) and the downtown management area. This dashboard aims to be user-friendly, publicly accessible, and available to stakeholders both within and outside the city. By integrating a variety of datasets and analytical methods, the dashboard will provide valuable insights to support DPOB in identifying and addressing the services Baltimore needs to remain sustainable.
+[downtown baltimore rise](https://www.downtownbaltimorerise.com/)
+[go downtown baltimore](https://godowntownbaltimore.com/)
+[opi](https://opi.baltimorecity.gov/)
+[baltimore city](https://www.baltimorecity.gov/)
  
 ## Datasets 
 
@@ -25,22 +34,20 @@ The Downtown Partnership of Baltimore (DPOB) dashboard highlights the economic g
 17. Trash Cans installed
 18. Unemployment Rate 
 
-## Methods 
+## Tools
 
 1. PowerBI
-2. VScode
-3. Ruby
-4. Rstudio
-5. Github/Github pages 
+2. Rstudio
+3. [Azure Static Web App](https://azure.github.io/static-web-apps-cli/)
+4. [just](https://just.systems/man/en/)
 
-## Links 
-https://www.downtownbaltimorerise.com/
 
-https://godowntownbaltimore.com/
+## Deploy
 
-https://opi.baltimorecity.gov/
+run `just deploy`
 
-https://www.baltimorecity.gov/
+The website `static/` is deployed on azure static web apps using their `swa`
+cli. Account with access to azure services is required.
 
-## Dashboard Direct Link
-https://app.powerbigov.us/view?r=eyJrIjoiYmY4ZjBhNjAtZWY1Ny00NTA5LWFjMWMtMTkyODc2MTU3ODA4IiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9&pageName=f8437cd04c5277282e9a
+
+[maintenance flowchart](./flowchart.mmd)
