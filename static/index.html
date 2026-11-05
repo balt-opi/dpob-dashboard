@@ -90,7 +90,27 @@
       </span>
       <a href="/data-dictionary.html">Data dictionary</a>
     </b-stack>
-    <iframe title="DowntownRISE Dashboard" width="800" height="486" src="https://app.powerbigov.us/view?r=eyJrIjoiNGE0ODRhZGItZGI1ZS00NGQ2LWJiMzctMTM4NTg0YTI1YWExIiwidCI6IjMxMmNiMTI2LWM2YWUtNGZjMi04MDBkLTMxOGU2NzljZTZjNyJ9&pageName=0d884a77cd403e189eb8" frameborder="0" allowFullScreen="true"></iframe>
+
+    <b-frame>
+      <style>
+        me {
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      </style>
+      <iframe
+        x-data="{data: {}}"
+        x-init="data = await (await fetch('https://gist.githubusercontent.com/Sgibson64/537b8a523c40fdc6421556bba2fe63ba/raw/dpob_dashboard.json')).json()"
+        title="DowntownRISE Dashboard"
+        width="800"
+        height="486"
+        frameborder="0"
+        :src="data.pbi_link"
+        allowFullScreen="true">
+        </iframe>
+      </b-frame>
   </b-sidebar>
   </b-stack>
 </b-box>
