@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "dpob-dashboard": {
+      "appLocation": ".",
+      "outputLocation": "./static",
+      "appName": "dpob-dash-selenea",
+      "resourceGroup": "dpob"
+    }
+  }
+}

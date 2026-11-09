@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DPOB Dashboard</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://yellow-sea-016d6801e.4.azurestaticapps.net//bundle.css" rel="stylesheet" type="text/css">
+<script src="https://yellow-sea-016d6801e.4.azurestaticapps.net/bundle.js"></script>
+<script src="https://yellow-sea-016d6801e.4.azurestaticapps.net/css-scope-inline@1.0.0.js"></script>
+<script src="https://yellow-sea-016d6801e.4.azurestaticapps.net/alpine@3.15.8.min.js"></script>
+</head>
+
+<body>
+<style>
+  me {
+    --dpob-color-main: #121f3f;
+    margin: 0;
+    &> b-box {
+      min-height: unset;
+    }
+  }
+</style>
+<b-box border >
+  <b-stack>
+  <header>
+    <style>
+      me {
+        h1 {
+          font-size: var(--bromo-size-step-6);
+          margin: auto;
+          text-align: center;
+        }
+      }
+    </style>
+    <b-box border >
+      <style>
+        me {
+          --bg-color-resolved: var(--dpob-color-main);
+        }
+      </style>
+    <b-sidebar side="left">
+      <b-center>
+        <b-cluster justify="center" align="center">
+          <style>
+            me {
+              img {
+                width: var(--bromo-size-step-9);
+                height: auto;
+              }
+            }
+          </style>
+          <b-icon>
+            <img src="/images/DowntownRiseColor.jpg">
+          </b-icon>
+          <b-icon>
+            <img src="/images/mbs_seal_logo.png">
+          </b-icon>
+        </b-cluster>
+      </b-center>
+      <b-center>
+        <h1>Downtown Economic Intelligence Dashboard</h1>
+      </b-center>
+    </b-sidebar>
+    </b-box>
+  </header>
+  <b-sidebar side="left">
+    <style>
+      me {
+        margin-block: var(--bromo-space-lg);
+      }
+    </style>
+    <b-stack>
+      <h6>We Are Downtown!</h6>
+
+      <p>
+      Downtown is on the RISE. With more than $6.9 billion of investment in
+      development downtown between 2018 and 2028, the recent announcement of Baltimore
+      as one of the 31 inaugural Tech Hubs, which will allow Baltimore City to unlock
+      up to $75M in federal investment, and the throngs of visitors coming to downtown
+      to cheer on the Orioles and the Ravens sports teams, attend concerts, and shop
+      small businesses &#8211; the renaissance of downtown Baltimore is happening now.
+
+      </p>
+
+      <span>
+        <i>
+          Dashboard Data is updated the first Monday of each month.
+        </i>
+      </span>
+      <a href="/data-dictionary.html">Data dictionary</a>
+    </b-stack>
+
+    <b-frame>
+      <style>
+        me {
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      </style>
+      <iframe
+        x-data="{data: {}}"
+        x-init="data = await (await fetch('https://gist.githubusercontent.com/Sgibson64/537b8a523c40fdc6421556bba2fe63ba/raw/dpob_dashboard.json')).json()"
+        title="DowntownRISE Dashboard"
+        width="800"
+        height="486"
+        frameborder="0"
+        :src="data.pbi_link"
+        allowFullScreen="true">
+        </iframe>
+      </b-frame>
+  </b-sidebar>
+  </b-stack>
+</b-box>
+<footer>
+  <b-center>
+    <b-box border>
+      <style>
+        me {
+          --bg-color-resolved: var(--bromo-color-white);
+        }
+      </style>
+    <p>This project is maintained by the <a href="https://opi.baltimorecity.gov/">Mayor's Office of Performance and Innovation (OPI)</a> and <a href="https://www.downtownbaltimorerise.com/">DowntownRISE</a>.</p>
+    </b-box>
+  </b-center>
+</footer>
+</body>
+
+</html>
